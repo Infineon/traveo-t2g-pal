@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "t2g_pal_generator"
+version = "0.1.0"
+description = "Generate Rust PAL of Traveo2G"
+authors = ["oreste <oreste.bernardi@infineon.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+semver = "^2.13.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
