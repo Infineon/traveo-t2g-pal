@@ -21,9 +21,9 @@ parser.add_argument("--generate",
 args = parser.parse_known_args()
 generate_type = args[0].generate
 
-#for generating the meta package crates e.g cyt2b9 we need the revision specific crates e.g cyt2b9_a, this parameter gives the location from where the libraries can be fetched
+#for generating the meta package crates e.g cyt2b9 we need the revision specific crates e.g cyt2b9_a, this argument gives the location from where the libraries can be fetched
 if generate_type == 'generate_meta_package':
-     option_parser = argparse.ArgumentParser(description='parser to fetch the location of meta package crates')
+     option_parser = argparse.ArgumentParser(description='parser to fetch the location of device specific crates')
      option_parser.add_argument("--library_location", 
                     choices=["infineon_artifactory", "cratesio", "local_file_system"], 
                     required=True, type=str, help="Location where the dependent revision specific libraries are available for the meta_package_crate")
@@ -101,7 +101,7 @@ def generate_meta_package_crate(package_name, package_details):
     os.mkdir(package_name)
     os.chdir(package_name)
     util.write_to_file("Cargo.toml",file_templates.get_meta_package_cargo_toml_text(package_name,package_details,config_input_parser,library_location))
-    util.write_to_file("build.rs",file_templates.get_meta_package_build_rs_text(package_name,package_details))
+    util.write_to_file("LICENSE.txt",file_templates.get_license_text())
     os.mkdir("src")
     os.chdir("src")
     util.write_to_file("lib.rs",file_templates.get_meta_package_lib_text(package_name,package_details))
@@ -110,7 +110,7 @@ def generate_meta_package_crate(package_name, package_details):
     check_call('cargo fmt')
     check_call('cargo check --target=thumbv7em-none-eabihf --target=thumbv6m-none-eabi  --all-features')
     check_call('cargo doc --target=thumbv7em-none-eabihf --target=thumbv6m-none-eabi --all-features --no-deps')
-    shutil.rmtree("target")
+    util.remove_folder("target")
     time.sleep(3)
     os.chdir("../")
 
@@ -164,7 +164,7 @@ def generate_crate(crate_name,cores):
         }
         util.write_to_file("Cargo.toml",file_templates.get_cargo_toml_text(crate_name,package_details))
         util.write_to_file("README.md",file_templates.get_package_readme_text(crate_name,package_details))
-
+        util.write_to_file("LICENSE.txt",file_templates.get_license_text())
         check_call('cargo fmt')
         check_call('cargo check --target=thumbv7em-none-eabihf --target=thumbv6m-none-eabi  --all-features')
         check_call('cargo doc --target=thumbv7em-none-eabihf --target=thumbv6m-none-eabi --all-features --no-deps')
@@ -216,7 +216,7 @@ if generate_type == "generate_rev_specific_crates" :
 #Generate meta packages only if the revision specific device crates are already available
 if generate_type == "generate_meta_package" :
     if not os.path.exists(util.output_folder_name):
-        raise Exception("First run the command poetry run 'python.exe generate_svd_crates.py --generate generate_rev_specific_crates' to generate the output folder with revision specifc crates")
+        raise Exception("First run the command poetry run 'python.exe generate_svd_crates.py --generate generate_rev_specific_crates' to generate the output folder with revision specific crates")
     else:
         os.chdir(util.output_folder_name) # assumption that output folder already exists after running python.exe generate_svd_crates.py --generate  generate_rev_specific_crates
         for k, v in meta_package_crates_db.items():

@@ -2,7 +2,7 @@
 name = "t2g_pal_generator"
 version = "0.1.0"
 description = "Generate Rust PAL of Traveo2G"
-authors = ["oreste <oreste.bernardi@infineon.com>"]
+authors = ["Infineon developers"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
