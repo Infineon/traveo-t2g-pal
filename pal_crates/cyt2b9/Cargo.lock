@@ -65,8 +65,6 @@ dependencies = [
 [[package]]
 name = "cyt2b9_c"
 version = "0.0.1"
-source = "registry+http://artifactory.intra.infineon.com/artifactory/git/cargo-atv-atvmrust-local.git"
-checksum = "a70ca0a3b15249c392ddfee353879ca17aca1528f885e38a741ea93a23b31b88"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -154,9 +152,9 @@ dependencies = [
 
 [[package]]
 name = "unicode-ident"
-version = "1.0.6"
+version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "84a22b9f218b40614adcb3f4ff08b703773ad44fa9423e4e0d346d5db86e4ebc"
+checksum = "775c11906edafc97bc378816b94585fbd9a054eabaf86fdd0ced94af449efab7"
 
 [[package]]
 name = "vcell"

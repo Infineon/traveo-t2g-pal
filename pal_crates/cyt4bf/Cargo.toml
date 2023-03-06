@@ -1,0 +1,31 @@
+[package]
+name = "cyt4bf"
+version = "0.0.1"
+authors = ["Infineon developers"]
+edition = "2021"
+rust-version = "1.64"
+description = "Peripheral access crate for cyt4bf T2G family"
+documentation = "https://docs.rs/cyt4bf"
+repository = "https://github.com/Infineon/traveo-t2g-pal/pal_crates/cyt4bf"
+license-file = "LICENSE.txt"
+readme = "README.md"
+keywords = ["t2g", "cyt4bf" ,"svd2rust", "no_std", "embedded", "traveo", "infineon"]
+categories = ["embedded", "no-std"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies] 
+cyt4bf_c = {path = "../cyt4bf_c",optional = true}
+
+cyt4bf_d = {path = "../cyt4bf_d",optional = true}
+
+[features]
+default = ["rev_d"]
+rev_c = ["cyt4bf_c"]
+rev_d = ["cyt4bf_d"]
+rt = ["cyt4bf_c?/rt","cyt4bf_d?/rt"]
+critical-section = ["cyt4bf_c?/critical-section","cyt4bf_d?/critical-section"]
+
+[package.metadata.docs.rs]
+targets = ["thumbv6m-none-eabi","thumbv7em-none-eabihf"]
+features = ["rt","critical-section","rev_c","rev_d"]

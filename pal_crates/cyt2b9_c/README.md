@@ -27,4 +27,3 @@ let mut peripherals = pac::Peripherals::take().unwrap();
 ## Resource
 [Documents](https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/#documents)
 
-## License

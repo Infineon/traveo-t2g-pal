@@ -35,4 +35,3 @@ This way of using meta package you dont have to change your project code each ti
 ## Resource
 [Documents](https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/#documents)
 
-## License
