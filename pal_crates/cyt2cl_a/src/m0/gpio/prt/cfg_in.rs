@@ -39,9 +39,9 @@ pub type VTRIP_SEL0_0_R = crate::BitReader<VTRIP_SEL0_0_A>;
 #[doc = "Configures the pin 0 input buffer mode (trip points and hysteresis)\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum VTRIP_SEL0_0_A {
-    #[doc = "0: S40S: Input buffer compatible with CMOS and I2C interfaces"]
+    #[doc = "0: S40S: Input buffer compatible with CMOS and I2C interfaces S40E full encoding is shown in CFG_IN_AUTOLVL.VTRIP_SEL0_1"]
     CMOS = 0,
-    #[doc = "1: S40S: Input buffer compatible with TTL and MediaLB interfaces"]
+    #[doc = "1: S40S: Input buffer compatible with CMOS and I2C interfaces S40E full encoding is shown in CFG_IN_AUTOLVL.VTRIP_SEL0_1"]
     TTL = 1,
 }
 impl From<VTRIP_SEL0_0_A> for bool {
@@ -74,12 +74,12 @@ impl VTRIP_SEL0_0_R {
 pub type VTRIP_SEL0_0_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, CFG_IN_SPEC, VTRIP_SEL0_0_A, O>;
 impl<'a, const O: u8> VTRIP_SEL0_0_W<'a, O> {
-    #[doc = "S40S: Input buffer compatible with CMOS and I2C interfaces"]
+    #[doc = "S40S: Input buffer compatible with CMOS and I2C interfaces S40E full encoding is shown in CFG_IN_AUTOLVL.VTRIP_SEL0_1"]
     #[inline(always)]
     pub fn cmos(self) -> &'a mut W {
         self.variant(VTRIP_SEL0_0_A::CMOS)
     }
-    #[doc = "S40S: Input buffer compatible with TTL and MediaLB interfaces"]
+    #[doc = "S40S: Input buffer compatible with CMOS and I2C interfaces S40E full encoding is shown in CFG_IN_AUTOLVL.VTRIP_SEL0_1"]
     #[inline(always)]
     pub fn ttl(self) -> &'a mut W {
         self.variant(VTRIP_SEL0_0_A::TTL)

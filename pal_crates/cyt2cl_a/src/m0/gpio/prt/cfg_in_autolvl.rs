@@ -34,9 +34,9 @@ impl From<crate::W<CFG_IN_AUTOLVL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `VTRIP_SEL0_1` reader - Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive."]
+#[doc = "Field `VTRIP_SEL0_1` reader - Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive. For GPIO OVT 1.2V variant, the encoding values of concatenation of CFG_IN_AUTOLVL.VTRIP_SEL0_1 and CFG_IN.VTRIP_SEL0_0 i.e. {CFG_IN_AUTOLVL.VTRIP_SEL0_1, CFG_IN.VTRIP_SEL0_0}are as below: 2'b00: CMOS 1.8V VIH/VIL = 65 percent/53 percent of VDDIO 2'b01: I2C 1.8V VIH/VIL = 70 percent/30 percent of VDDIO 2'b10: CMOS 1.2V VIH/VIL = 65 percent/35 percent of VDDIO 2'b11: I2C 1.2V VIH/VIL = 70 percent/30 percent of VDDIO"]
 pub type VTRIP_SEL0_1_R = crate::BitReader<VTRIP_SEL0_1_A>;
-#[doc = "Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive.\n\nValue on reset: 0"]
+#[doc = "Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive. For GPIO OVT 1.2V variant, the encoding values of concatenation of CFG_IN_AUTOLVL.VTRIP_SEL0_1 and CFG_IN.VTRIP_SEL0_0 i.e. {CFG_IN_AUTOLVL.VTRIP_SEL0_1, CFG_IN.VTRIP_SEL0_0}are as below: 2'b00: CMOS 1.8V VIH/VIL = 65 percent/53 percent of VDDIO 2'b01: I2C 1.8V VIH/VIL = 70 percent/30 percent of VDDIO 2'b10: CMOS 1.2V VIH/VIL = 65 percent/35 percent of VDDIO 2'b11: I2C 1.2V VIH/VIL = 70 percent/30 percent of VDDIO\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum VTRIP_SEL0_1_A {
     #[doc = "0: Input buffer compatible with CMOS/TTL interfaces as described in CFG_IN.VTRIP_SEL0_0."]
@@ -70,7 +70,7 @@ impl VTRIP_SEL0_1_R {
         *self == VTRIP_SEL0_1_A::AUTO
     }
 }
-#[doc = "Field `VTRIP_SEL0_1` writer - Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive."]
+#[doc = "Field `VTRIP_SEL0_1` writer - Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive. For GPIO OVT 1.2V variant, the encoding values of concatenation of CFG_IN_AUTOLVL.VTRIP_SEL0_1 and CFG_IN.VTRIP_SEL0_0 i.e. {CFG_IN_AUTOLVL.VTRIP_SEL0_1, CFG_IN.VTRIP_SEL0_0}are as below: 2'b00: CMOS 1.8V VIH/VIL = 65 percent/53 percent of VDDIO 2'b01: I2C 1.8V VIH/VIL = 70 percent/30 percent of VDDIO 2'b10: CMOS 1.2V VIH/VIL = 65 percent/35 percent of VDDIO 2'b11: I2C 1.2V VIH/VIL = 70 percent/30 percent of VDDIO"]
 pub type VTRIP_SEL0_1_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, CFG_IN_AUTOLVL_SPEC, VTRIP_SEL0_1_A, O>;
 impl<'a, const O: u8> VTRIP_SEL0_1_W<'a, O> {
@@ -114,7 +114,7 @@ pub type VTRIP_SEL7_1_R = crate::BitReader<bool>;
 #[doc = "Field `VTRIP_SEL7_1` writer - Input buffer compatible with automotive (elevated Vil) interfaces."]
 pub type VTRIP_SEL7_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_IN_AUTOLVL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 0 - Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive."]
+    #[doc = "Bit 0 - Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive. For GPIO OVT 1.2V variant, the encoding values of concatenation of CFG_IN_AUTOLVL.VTRIP_SEL0_1 and CFG_IN.VTRIP_SEL0_0 i.e. {CFG_IN_AUTOLVL.VTRIP_SEL0_1, CFG_IN.VTRIP_SEL0_0}are as below: 2'b00: CMOS 1.8V VIH/VIL = 65 percent/53 percent of VDDIO 2'b01: I2C 1.8V VIH/VIL = 70 percent/30 percent of VDDIO 2'b10: CMOS 1.2V VIH/VIL = 65 percent/35 percent of VDDIO 2'b11: I2C 1.2V VIH/VIL = 70 percent/30 percent of VDDIO"]
     #[inline(always)]
     pub fn vtrip_sel0_1(&self) -> VTRIP_SEL0_1_R {
         VTRIP_SEL0_1_R::new((self.bits & 1) != 0)
@@ -156,7 +156,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive."]
+    #[doc = "Bit 0 - Configures the input buffer mode (trip points and hysteresis) for GPIO upper bit. Lower bit is still selected by CFG_IN.VTRIP_SEL0_0 field. This field is used along with CFG_IN.VTRIP_SEL0_0 field as below: {CFG_IN_AUTOLVL.VTRIP_SEL0_1,CFG_IN.VTRIP_SEL0_0}: 0,0: CMOS 0,1: TTL 1,0: input buffer is compatible with automotive. 1,1: input buffer is compatible with automotive. For GPIO OVT 1.2V variant, the encoding values of concatenation of CFG_IN_AUTOLVL.VTRIP_SEL0_1 and CFG_IN.VTRIP_SEL0_0 i.e. {CFG_IN_AUTOLVL.VTRIP_SEL0_1, CFG_IN.VTRIP_SEL0_0}are as below: 2'b00: CMOS 1.8V VIH/VIL = 65 percent/53 percent of VDDIO 2'b01: I2C 1.8V VIH/VIL = 70 percent/30 percent of VDDIO 2'b10: CMOS 1.2V VIH/VIL = 65 percent/35 percent of VDDIO 2'b11: I2C 1.2V VIH/VIL = 70 percent/30 percent of VDDIO"]
     #[inline(always)]
     #[must_use]
     pub fn vtrip_sel0_1(&mut self) -> VTRIP_SEL0_1_W<0> {

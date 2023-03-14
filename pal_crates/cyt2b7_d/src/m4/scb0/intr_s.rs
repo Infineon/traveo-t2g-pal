@@ -34,9 +34,9 @@ impl From<crate::W<INTR_S_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `I2C_ARB_LOST` reader - I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine abort the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
+#[doc = "Field `I2C_ARB_LOST` reader - I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine aborts the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
 pub type I2C_ARB_LOST_R = crate::BitReader<bool>;
-#[doc = "Field `I2C_ARB_LOST` writer - I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine abort the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
+#[doc = "Field `I2C_ARB_LOST` writer - I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine aborts the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
 pub type I2C_ARB_LOST_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_S_SPEC, bool, O>;
 #[doc = "Field `I2C_NACK` reader - I2C slave negative acknowledgement received. Set to '1', when the slave receives a NACK (typically after the slave transmitted TX data)."]
 pub type I2C_NACK_R = crate::BitReader<bool>;
@@ -54,9 +54,9 @@ pub type I2C_WRITE_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_S_SP
 pub type I2C_STOP_R = crate::BitReader<bool>;
 #[doc = "Field `I2C_STOP` writer - I2C STOP event for I2C (read or write) transfer intended for this slave (address matching is performed). Set to '1', when STOP or REPEATED START event is detected. The REPEATED START event is included in this interrupt cause such that the I2C transfers separated by a REPEATED START can be distinguished and potentially treated separately by the Firmware. Note that the second I2C transfer (after a REPEATED START) may be to a different slave address. The event is detected on any I2C transfer intended for this slave. Note that a I2C address intended for the slave (address is matching) will result in a I2C_STOP event independent of whether the I2C address is ACK'd or NACK'd."]
 pub type I2C_STOP_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_S_SPEC, bool, O>;
-#[doc = "Field `I2C_START` reader - I2C slave START received. Set to '1', when START or REPEATED START event is detected. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (till the internally clocked logic takes over) (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL."]
+#[doc = "Field `I2C_START` reader - I2C slave START received. Set to '1', when START or REPEATED START event is detected. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL."]
 pub type I2C_START_R = crate::BitReader<bool>;
-#[doc = "Field `I2C_START` writer - I2C slave START received. Set to '1', when START or REPEATED START event is detected. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (till the internally clocked logic takes over) (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL."]
+#[doc = "Field `I2C_START` writer - I2C slave START received. Set to '1', when START or REPEATED START event is detected. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL."]
 pub type I2C_START_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_S_SPEC, bool, O>;
 #[doc = "Field `I2C_ADDR_MATCH` reader - I2C slave matching address received. If CTRL.ADDR_ACCEPT, the received address (including the R/W bit) is available in the RX FIFO. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') and internally clocked operation (CTRL.EC_OP_MODE is '0'), this field is set when the event is detected."]
 pub type I2C_ADDR_MATCH_R = crate::BitReader<bool>;
@@ -83,7 +83,7 @@ pub type SPI_BUS_ERROR_R = crate::BitReader<bool>;
 #[doc = "Field `SPI_BUS_ERROR` writer - SPI slave deselected at an unexpected time in the SPI transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
 pub type SPI_BUS_ERROR_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_S_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 0 - I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine abort the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
+    #[doc = "Bit 0 - I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine aborts the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
     #[inline(always)]
     pub fn i2c_arb_lost(&self) -> I2C_ARB_LOST_R {
         I2C_ARB_LOST_R::new((self.bits & 1) != 0)
@@ -108,7 +108,7 @@ impl R {
     pub fn i2c_stop(&self) -> I2C_STOP_R {
         I2C_STOP_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - I2C slave START received. Set to '1', when START or REPEATED START event is detected. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (till the internally clocked logic takes over) (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL."]
+    #[doc = "Bit 5 - I2C slave START received. Set to '1', when START or REPEATED START event is detected. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL."]
     #[inline(always)]
     pub fn i2c_start(&self) -> I2C_START_R {
         I2C_START_R::new(((self.bits >> 5) & 1) != 0)
@@ -145,7 +145,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine abort the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
+    #[doc = "Bit 0 - I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine aborts the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error."]
     #[inline(always)]
     #[must_use]
     pub fn i2c_arb_lost(&mut self) -> I2C_ARB_LOST_W<0> {
@@ -175,7 +175,7 @@ impl W {
     pub fn i2c_stop(&mut self) -> I2C_STOP_W<4> {
         I2C_STOP_W::new(self)
     }
-    #[doc = "Bit 5 - I2C slave START received. Set to '1', when START or REPEATED START event is detected. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (till the internally clocked logic takes over) (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL."]
+    #[doc = "Bit 5 - I2C slave START received. Set to '1', when START or REPEATED START event is detected. In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL."]
     #[inline(always)]
     #[must_use]
     pub fn i2c_start(&mut self) -> I2C_START_W<5> {

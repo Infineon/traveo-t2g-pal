@@ -72,13 +72,13 @@ pub type DRIVE_SEL0_R = crate::FieldReader<u8, DRIVE_SEL0_A>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DRIVE_SEL0_A {
-    #[doc = "0: N/A"]
+    #[doc = "0: Please refer to architecture TRM section I/O System"]
     DRIVE_SEL_ZERO = 0,
-    #[doc = "1: N/A"]
+    #[doc = "1: Please refer to architecture TRM section I/O System"]
     DRIVE_SEL_ONE = 1,
-    #[doc = "2: N/A"]
+    #[doc = "2: Please refer to architecture TRM section I/O System"]
     DRIVE_SEL_TWO = 2,
-    #[doc = "3: N/A"]
+    #[doc = "3: Please refer to architecture TRM section I/O System"]
     DRIVE_SEL_THREE = 3,
 }
 impl From<DRIVE_SEL0_A> for u8 {
@@ -124,22 +124,22 @@ impl DRIVE_SEL0_R {
 pub type DRIVE_SEL0_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, CFG_OUT_SPEC, u8, DRIVE_SEL0_A, 2, O>;
 impl<'a, const O: u8> DRIVE_SEL0_W<'a, O> {
-    #[doc = "N/A"]
+    #[doc = "Please refer to architecture TRM section I/O System"]
     #[inline(always)]
     pub fn drive_sel_zero(self) -> &'a mut W {
         self.variant(DRIVE_SEL0_A::DRIVE_SEL_ZERO)
     }
-    #[doc = "N/A"]
+    #[doc = "Please refer to architecture TRM section I/O System"]
     #[inline(always)]
     pub fn drive_sel_one(self) -> &'a mut W {
         self.variant(DRIVE_SEL0_A::DRIVE_SEL_ONE)
     }
-    #[doc = "N/A"]
+    #[doc = "Please refer to architecture TRM section I/O System"]
     #[inline(always)]
     pub fn drive_sel_two(self) -> &'a mut W {
         self.variant(DRIVE_SEL0_A::DRIVE_SEL_TWO)
     }
-    #[doc = "N/A"]
+    #[doc = "Please refer to architecture TRM section I/O System"]
     #[inline(always)]
     pub fn drive_sel_three(self) -> &'a mut W {
         self.variant(DRIVE_SEL0_A::DRIVE_SEL_THREE)

@@ -34,34 +34,34 @@ impl From<crate::W<FLASH_PWR_CTL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ENABLE` reader - Controls 'enable' pin of the Flash memory."]
+#[doc = "Field `ENABLE` reader - Enables power to the flash memory"]
 pub type ENABLE_R = crate::BitReader<bool>;
-#[doc = "Field `ENABLE` writer - Controls 'enable' pin of the Flash memory."]
+#[doc = "Field `ENABLE` writer - Enables power to the flash memory"]
 pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASH_PWR_CTL_SPEC, bool, O>;
-#[doc = "Field `ENABLE_HV` reader - Controls 'enable_hv' pin of the Flash memory."]
+#[doc = "Field `ENABLE_HV` reader - Enables HV power to the flash memory"]
 pub type ENABLE_HV_R = crate::BitReader<bool>;
-#[doc = "Field `ENABLE_HV` writer - Controls 'enable_hv' pin of the Flash memory."]
+#[doc = "Field `ENABLE_HV` writer - Enables HV power to the flash memory"]
 pub type ENABLE_HV_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLASH_PWR_CTL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 0 - Controls 'enable' pin of the Flash memory."]
+    #[doc = "Bit 0 - Enables power to the flash memory"]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Controls 'enable_hv' pin of the Flash memory."]
+    #[doc = "Bit 1 - Enables HV power to the flash memory"]
     #[inline(always)]
     pub fn enable_hv(&self) -> ENABLE_HV_R {
         ENABLE_HV_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Controls 'enable' pin of the Flash memory."]
+    #[doc = "Bit 0 - Enables power to the flash memory"]
     #[inline(always)]
     #[must_use]
     pub fn enable(&mut self) -> ENABLE_W<0> {
         ENABLE_W::new(self)
     }
-    #[doc = "Bit 1 - Controls 'enable_hv' pin of the Flash memory."]
+    #[doc = "Bit 1 - Enables HV power to the flash memory"]
     #[inline(always)]
     #[must_use]
     pub fn enable_hv(&mut self) -> ENABLE_HV_W<1> {

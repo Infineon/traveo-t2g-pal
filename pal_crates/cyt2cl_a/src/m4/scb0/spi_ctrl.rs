@@ -34,13 +34,13 @@ impl From<crate::W<SPI_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SSEL_CONTINUOUS` reader - Continuous SPI data transfers enabled ('1') or not ('0'). This field is used in master mode. In slave mode, both continuous and non-continuous SPI data transfers are supported independent of this field. When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection. When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: data frames are always separated by slave deselection."]
+#[doc = "Field `SSEL_CONTINUOUS` reader - Continuous SPI data transfers enabled ('1') or not ('0'). This field is used in master mode. In slave mode, both continuous and non-continuous SPI data transfers are supported independent of this field. When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection. When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: independent of the availability of TX FIFO data frames, data frames are sent out with slave deselection."]
 pub type SSEL_CONTINUOUS_R = crate::BitReader<bool>;
-#[doc = "Field `SSEL_CONTINUOUS` writer - Continuous SPI data transfers enabled ('1') or not ('0'). This field is used in master mode. In slave mode, both continuous and non-continuous SPI data transfers are supported independent of this field. When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection. When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: data frames are always separated by slave deselection."]
+#[doc = "Field `SSEL_CONTINUOUS` writer - Continuous SPI data transfers enabled ('1') or not ('0'). This field is used in master mode. In slave mode, both continuous and non-continuous SPI data transfers are supported independent of this field. When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection. When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: independent of the availability of TX FIFO data frames, data frames are sent out with slave deselection."]
 pub type SSEL_CONTINUOUS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
-#[doc = "Field `SELECT_PRECEDE` reader - Only used in SPI Texas Instruments' submode. When '1', the data frame start indication is a pulse on the SELECT line that precedes the transfer of the first data frame bit. When '0', the data frame start indication is a pulse on the SELECT line that coincides with the transfer of the first data frame bit."]
+#[doc = "Field `SELECT_PRECEDE` reader - Only used in SPI Texas Instruments' submode. When '1', the data frame start indication is a pulse on the Slave SELECT line that precedes the transfer of the first data frame bit. When '0', the data frame start indication is a pulse on the Slave SELECT line that coincides with the transfer of the first data frame bit."]
 pub type SELECT_PRECEDE_R = crate::BitReader<bool>;
-#[doc = "Field `SELECT_PRECEDE` writer - Only used in SPI Texas Instruments' submode. When '1', the data frame start indication is a pulse on the SELECT line that precedes the transfer of the first data frame bit. When '0', the data frame start indication is a pulse on the SELECT line that coincides with the transfer of the first data frame bit."]
+#[doc = "Field `SELECT_PRECEDE` writer - Only used in SPI Texas Instruments' submode. When '1', the data frame start indication is a pulse on the Slave SELECT line that precedes the transfer of the first data frame bit. When '0', the data frame start indication is a pulse on the Slave SELECT line that coincides with the transfer of the first data frame bit."]
 pub type SELECT_PRECEDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
 #[doc = "Field `CPHA` reader - Indicates the clock phase. This field, together with the CPOL field, indicates when MOSI data is driven and MISO data is captured: - Motorola mode 0. CPOL is '0', CPHA is '0': MOSI is driven on a falling edge of SCLK. MISO is captured on a rising edge of SCLK. - Motorola mode 1. CPOL is '0', CPHA is '1': MOSI is driven on a rising edge of SCLK. MISO is captured on a falling edge of SCLK. - Motorola mode 2. CPOL is '1', CPHA is '0': MOSI is driven on a rising edge of SCLK. MISO is captured on a falling edge of SCLK. - Motorola mode 3. CPOL is '1', CPHA is '1': MOSI is driven on a falling edge of SCLK. MISO is captured on a rising edge of SCLK. In SPI Motorola submode, all four CPOL/CPHA modes are valid. in SPI NS submode, only CPOL=0 CPHA=0 mode is valid. in SPI TI submode, only CPOL=0 CPHA=1 mode is valid."]
 pub type CPHA_R = crate::BitReader<bool>;
@@ -50,9 +50,9 @@ pub type CPHA_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool
 pub type CPOL_R = crate::BitReader<bool>;
 #[doc = "Field `CPOL` writer - Indicates the clock polarity. This field, together with the CPHA field, indicates when MOSI data is driven and MISO data is captured: - CPOL is '0': SCLK is '0' when not transmitting data. - CPOL is '1': SCLK is '1' when not transmitting data."]
 pub type CPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
-#[doc = "Field `LATE_MISO_SAMPLE` reader - Changes the SCLK edge on which MISO is captured. Only used in master mode. When '0', the default applies (for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master."]
+#[doc = "Field `LATE_MISO_SAMPLE` reader - Changes the SCLK edge on which MISO is captured. Only used in master mode. When '0', the default applies ( for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master."]
 pub type LATE_MISO_SAMPLE_R = crate::BitReader<bool>;
-#[doc = "Field `LATE_MISO_SAMPLE` writer - Changes the SCLK edge on which MISO is captured. Only used in master mode. When '0', the default applies (for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master."]
+#[doc = "Field `LATE_MISO_SAMPLE` writer - Changes the SCLK edge on which MISO is captured. Only used in master mode. When '0', the default applies ( for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master."]
 pub type LATE_MISO_SAMPLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
 #[doc = "Field `SCLK_CONTINUOUS` reader - Only applicable in master mode. '0': SCLK is generated, when the SPI master is enabled and data is transmitted. '1': SCLK is generated, when the SPI master is enabled. This mode is useful for slave devices that use SCLK for functional operation other than just SPI functionality."]
 pub type SCLK_CONTINUOUS_R = crate::BitReader<bool>;
@@ -87,9 +87,9 @@ pub type SSEL_INTER_FRAME_DEL_R = crate::BitReader<bool>;
 #[doc = "Field `SSEL_INTER_FRAME_DEL` writer - Indicates the SPI SELECT inter-dataframe delay (between SELECT deactivation and SELECT activation). '0': 1.5 SPI clock cycles '1': 2.5 SPI clock cycles Only applies in SPI MOTOROLA submode and when SPI_CTRL.SSEL_CONTINUOUS=0, CTRL.OVS>=3. above are ideal case at SCB block level, and there is inaccuracy of one clk_scb cycle."]
 pub type SSEL_INTER_FRAME_DEL_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
-#[doc = "Field `LOOPBACK` reader - Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode. '0': the SPI master MISO line 'spi_miso_in' is connected to the SPI MISO pin. '1': the SPI master MISO line 'spi_miso_in' is connected to the SPI master MOSI line 'spi_mosi_out'. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI."]
+#[doc = "Field `LOOPBACK` reader - Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode. '0': No local loopback '1': the SPI master MISO line is connected to the SPI master MOSI line. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI."]
 pub type LOOPBACK_R = crate::BitReader<bool>;
-#[doc = "Field `LOOPBACK` writer - Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode. '0': the SPI master MISO line 'spi_miso_in' is connected to the SPI MISO pin. '1': the SPI master MISO line 'spi_miso_in' is connected to the SPI master MOSI line 'spi_mosi_out'. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI."]
+#[doc = "Field `LOOPBACK` writer - Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode. '0': No local loopback '1': the SPI master MISO line is connected to the SPI master MOSI line. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI."]
 pub type LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
 #[doc = "Field `MODE` reader - N/A"]
 pub type MODE_R = crate::FieldReader<u8, MODE_A>;
@@ -97,11 +97,11 @@ pub type MODE_R = crate::FieldReader<u8, MODE_A>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum MODE_A {
-    #[doc = "0: SPI Motorola submode. In master mode, when not transmitting data (SELECT is inactive), SCLK is stable at CPOL. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive."]
+    #[doc = "0: SPI Motorola submode. In master mode, when not transmitting data (Slave SELECT is inactive), SCLK is stable at CPOL. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive."]
     SPI_MOTOROLA = 0,
-    #[doc = "1: SPI Texas Instruments submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive; i.e. no pulse is generated."]
+    #[doc = "1: SPI Texas Instruments submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive; i.e. no pulse is generated."]
     SPI_TI = 1,
-    #[doc = "2: SPI National Semiconductors submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive."]
+    #[doc = "2: SPI National Semiconductors submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive."]
     SPI_NS = 2,
 }
 impl From<MODE_A> for u8 {
@@ -140,37 +140,37 @@ impl MODE_R {
 #[doc = "Field `MODE` writer - N/A"]
 pub type MODE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CTRL_SPEC, u8, MODE_A, 2, O>;
 impl<'a, const O: u8> MODE_W<'a, O> {
-    #[doc = "SPI Motorola submode. In master mode, when not transmitting data (SELECT is inactive), SCLK is stable at CPOL. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive."]
+    #[doc = "SPI Motorola submode. In master mode, when not transmitting data (Slave SELECT is inactive), SCLK is stable at CPOL. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive."]
     #[inline(always)]
     pub fn spi_motorola(self) -> &'a mut W {
         self.variant(MODE_A::SPI_MOTOROLA)
     }
-    #[doc = "SPI Texas Instruments submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive; i.e. no pulse is generated."]
+    #[doc = "SPI Texas Instruments submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive; i.e. no pulse is generated."]
     #[inline(always)]
     pub fn spi_ti(self) -> &'a mut W {
         self.variant(MODE_A::SPI_TI)
     }
-    #[doc = "SPI National Semiconductors submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive."]
+    #[doc = "SPI National Semiconductors submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive."]
     #[inline(always)]
     pub fn spi_ns(self) -> &'a mut W {
         self.variant(MODE_A::SPI_NS)
     }
 }
-#[doc = "Field `SSEL` reader - Selects one of the four incoming/outgoing SPI slave select signals: - 0: Slave 0, SSEL\\[0\\]. - 1: Slave 1, SSEL\\[1\\]. - 2: Slave 2, SSEL\\[2\\]. - 3: Slave 3, SSEL\\[3\\]. The IP should be disabled when changes are made to this field."]
+#[doc = "Field `SSEL` reader - Selects one of the four incoming/outgoing SPI slave select signals: - 0: Slave 0, SSEL\\[0\\]. - 1: Slave 1, SSEL\\[1\\]. - 2: Slave 2, SSEL\\[2\\]. - 3: Slave 3, SSEL\\[3\\]. SCB block should be disabled when changes are made to this field."]
 pub type SSEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SSEL` writer - Selects one of the four incoming/outgoing SPI slave select signals: - 0: Slave 0, SSEL\\[0\\]. - 1: Slave 1, SSEL\\[1\\]. - 2: Slave 2, SSEL\\[2\\]. - 3: Slave 3, SSEL\\[3\\]. The IP should be disabled when changes are made to this field."]
+#[doc = "Field `SSEL` writer - Selects one of the four incoming/outgoing SPI slave select signals: - 0: Slave 0, SSEL\\[0\\]. - 1: Slave 1, SSEL\\[1\\]. - 2: Slave 2, SSEL\\[2\\]. - 3: Slave 3, SSEL\\[3\\]. SCB block should be disabled when changes are made to this field."]
 pub type SSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CTRL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `MASTER_MODE` reader - Master ('1') or slave ('0') mode. In master mode, transmission will commence on availability of data frames in the TX FIFO. In slave mode, when selected and there is no data frame in the TX FIFO, the slave will transmit all '1's. In both master and slave modes, received data frames will be lost if the RX FIFO is full."]
 pub type MASTER_MODE_R = crate::BitReader<bool>;
 #[doc = "Field `MASTER_MODE` writer - Master ('1') or slave ('0') mode. In master mode, transmission will commence on availability of data frames in the TX FIFO. In slave mode, when selected and there is no data frame in the TX FIFO, the slave will transmit all '1's. In both master and slave modes, received data frames will be lost if the RX FIFO is full."]
 pub type MASTER_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 0 - Continuous SPI data transfers enabled ('1') or not ('0'). This field is used in master mode. In slave mode, both continuous and non-continuous SPI data transfers are supported independent of this field. When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection. When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: data frames are always separated by slave deselection."]
+    #[doc = "Bit 0 - Continuous SPI data transfers enabled ('1') or not ('0'). This field is used in master mode. In slave mode, both continuous and non-continuous SPI data transfers are supported independent of this field. When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection. When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: independent of the availability of TX FIFO data frames, data frames are sent out with slave deselection."]
     #[inline(always)]
     pub fn ssel_continuous(&self) -> SSEL_CONTINUOUS_R {
         SSEL_CONTINUOUS_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Only used in SPI Texas Instruments' submode. When '1', the data frame start indication is a pulse on the SELECT line that precedes the transfer of the first data frame bit. When '0', the data frame start indication is a pulse on the SELECT line that coincides with the transfer of the first data frame bit."]
+    #[doc = "Bit 1 - Only used in SPI Texas Instruments' submode. When '1', the data frame start indication is a pulse on the Slave SELECT line that precedes the transfer of the first data frame bit. When '0', the data frame start indication is a pulse on the Slave SELECT line that coincides with the transfer of the first data frame bit."]
     #[inline(always)]
     pub fn select_precede(&self) -> SELECT_PRECEDE_R {
         SELECT_PRECEDE_R::new(((self.bits >> 1) & 1) != 0)
@@ -185,7 +185,7 @@ impl R {
     pub fn cpol(&self) -> CPOL_R {
         CPOL_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - Changes the SCLK edge on which MISO is captured. Only used in master mode. When '0', the default applies (for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master."]
+    #[doc = "Bit 4 - Changes the SCLK edge on which MISO is captured. Only used in master mode. When '0', the default applies ( for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master."]
     #[inline(always)]
     pub fn late_miso_sample(&self) -> LATE_MISO_SAMPLE_R {
         LATE_MISO_SAMPLE_R::new(((self.bits >> 4) & 1) != 0)
@@ -230,7 +230,7 @@ impl R {
     pub fn ssel_inter_frame_del(&self) -> SSEL_INTER_FRAME_DEL_R {
         SSEL_INTER_FRAME_DEL_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 16 - Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode. '0': the SPI master MISO line 'spi_miso_in' is connected to the SPI MISO pin. '1': the SPI master MISO line 'spi_miso_in' is connected to the SPI master MOSI line 'spi_mosi_out'. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI."]
+    #[doc = "Bit 16 - Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode. '0': No local loopback '1': the SPI master MISO line is connected to the SPI master MOSI line. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI."]
     #[inline(always)]
     pub fn loopback(&self) -> LOOPBACK_R {
         LOOPBACK_R::new(((self.bits >> 16) & 1) != 0)
@@ -240,7 +240,7 @@ impl R {
     pub fn mode(&self) -> MODE_R {
         MODE_R::new(((self.bits >> 24) & 3) as u8)
     }
-    #[doc = "Bits 26:27 - Selects one of the four incoming/outgoing SPI slave select signals: - 0: Slave 0, SSEL\\[0\\]. - 1: Slave 1, SSEL\\[1\\]. - 2: Slave 2, SSEL\\[2\\]. - 3: Slave 3, SSEL\\[3\\]. The IP should be disabled when changes are made to this field."]
+    #[doc = "Bits 26:27 - Selects one of the four incoming/outgoing SPI slave select signals: - 0: Slave 0, SSEL\\[0\\]. - 1: Slave 1, SSEL\\[1\\]. - 2: Slave 2, SSEL\\[2\\]. - 3: Slave 3, SSEL\\[3\\]. SCB block should be disabled when changes are made to this field."]
     #[inline(always)]
     pub fn ssel(&self) -> SSEL_R {
         SSEL_R::new(((self.bits >> 26) & 3) as u8)
@@ -252,13 +252,13 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Continuous SPI data transfers enabled ('1') or not ('0'). This field is used in master mode. In slave mode, both continuous and non-continuous SPI data transfers are supported independent of this field. When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection. When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: data frames are always separated by slave deselection."]
+    #[doc = "Bit 0 - Continuous SPI data transfers enabled ('1') or not ('0'). This field is used in master mode. In slave mode, both continuous and non-continuous SPI data transfers are supported independent of this field. When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection. When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: independent of the availability of TX FIFO data frames, data frames are sent out with slave deselection."]
     #[inline(always)]
     #[must_use]
     pub fn ssel_continuous(&mut self) -> SSEL_CONTINUOUS_W<0> {
         SSEL_CONTINUOUS_W::new(self)
     }
-    #[doc = "Bit 1 - Only used in SPI Texas Instruments' submode. When '1', the data frame start indication is a pulse on the SELECT line that precedes the transfer of the first data frame bit. When '0', the data frame start indication is a pulse on the SELECT line that coincides with the transfer of the first data frame bit."]
+    #[doc = "Bit 1 - Only used in SPI Texas Instruments' submode. When '1', the data frame start indication is a pulse on the Slave SELECT line that precedes the transfer of the first data frame bit. When '0', the data frame start indication is a pulse on the Slave SELECT line that coincides with the transfer of the first data frame bit."]
     #[inline(always)]
     #[must_use]
     pub fn select_precede(&mut self) -> SELECT_PRECEDE_W<1> {
@@ -276,7 +276,7 @@ impl W {
     pub fn cpol(&mut self) -> CPOL_W<3> {
         CPOL_W::new(self)
     }
-    #[doc = "Bit 4 - Changes the SCLK edge on which MISO is captured. Only used in master mode. When '0', the default applies (for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master."]
+    #[doc = "Bit 4 - Changes the SCLK edge on which MISO is captured. Only used in master mode. When '0', the default applies ( for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master."]
     #[inline(always)]
     #[must_use]
     pub fn late_miso_sample(&mut self) -> LATE_MISO_SAMPLE_W<4> {
@@ -330,7 +330,7 @@ impl W {
     pub fn ssel_inter_frame_del(&mut self) -> SSEL_INTER_FRAME_DEL_W<14> {
         SSEL_INTER_FRAME_DEL_W::new(self)
     }
-    #[doc = "Bit 16 - Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode. '0': the SPI master MISO line 'spi_miso_in' is connected to the SPI MISO pin. '1': the SPI master MISO line 'spi_miso_in' is connected to the SPI master MOSI line 'spi_mosi_out'. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI."]
+    #[doc = "Bit 16 - Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode. '0': No local loopback '1': the SPI master MISO line is connected to the SPI master MOSI line. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI."]
     #[inline(always)]
     #[must_use]
     pub fn loopback(&mut self) -> LOOPBACK_W<16> {
@@ -342,7 +342,7 @@ impl W {
     pub fn mode(&mut self) -> MODE_W<24> {
         MODE_W::new(self)
     }
-    #[doc = "Bits 26:27 - Selects one of the four incoming/outgoing SPI slave select signals: - 0: Slave 0, SSEL\\[0\\]. - 1: Slave 1, SSEL\\[1\\]. - 2: Slave 2, SSEL\\[2\\]. - 3: Slave 3, SSEL\\[3\\]. The IP should be disabled when changes are made to this field."]
+    #[doc = "Bits 26:27 - Selects one of the four incoming/outgoing SPI slave select signals: - 0: Slave 0, SSEL\\[0\\]. - 1: Slave 1, SSEL\\[1\\]. - 2: Slave 2, SSEL\\[2\\]. - 3: Slave 3, SSEL\\[3\\]. SCB block should be disabled when changes are made to this field."]
     #[inline(always)]
     #[must_use]
     pub fn ssel(&mut self) -> SSEL_W<26> {

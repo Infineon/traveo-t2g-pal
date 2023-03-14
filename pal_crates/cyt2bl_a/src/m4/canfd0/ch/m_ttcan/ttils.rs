@@ -34,289 +34,289 @@ impl From<crate::W<TTILS_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SBCL` reader - Start of Basic Cycle Interrupt Line"]
+#[doc = "Field `SBCL` reader - Start of Basic Cycle Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SBCL_R = crate::BitReader<bool>;
-#[doc = "Field `SBCL` writer - Start of Basic Cycle Interrupt Line"]
+#[doc = "Field `SBCL` writer - Start of Basic Cycle Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SBCL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `SMCL` reader - Start of Matrix Cycle Interrupt Line"]
+#[doc = "Field `SMCL` reader - Start of Matrix Cycle Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SMCL_R = crate::BitReader<bool>;
-#[doc = "Field `SMCL` writer - Start of Matrix Cycle Interrupt Line"]
+#[doc = "Field `SMCL` writer - Start of Matrix Cycle Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SMCL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `CSML` reader - Change of Synchronization Mode Interrupt Line"]
+#[doc = "Field `CSML` reader - Change of Synchronization Mode Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type CSML_R = crate::BitReader<bool>;
-#[doc = "Field `CSML` writer - Change of Synchronization Mode Interrupt Line"]
+#[doc = "Field `CSML` writer - Change of Synchronization Mode Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type CSML_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `SOGL` reader - Start of Gap Interrupt Line"]
+#[doc = "Field `SOGL` reader - Start of Gap Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SOGL_R = crate::BitReader<bool>;
-#[doc = "Field `SOGL` writer - Start of Gap Interrupt Line"]
+#[doc = "Field `SOGL` writer - Start of Gap Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SOGL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `RTMIL` reader - Register Time Mark Interrupt Line"]
+#[doc = "Field `RTMIL` reader - Register Time Mark Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type RTMIL_R = crate::BitReader<bool>;
-#[doc = "Field `RTMIL` writer - Register Time Mark Interrupt Line"]
+#[doc = "Field `RTMIL` writer - Register Time Mark Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type RTMIL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `TTMIL` reader - Trigger Time Mark Event Internal Line"]
+#[doc = "Field `TTMIL` reader - Trigger Time Mark Event Internal Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type TTMIL_R = crate::BitReader<bool>;
-#[doc = "Field `TTMIL` writer - Trigger Time Mark Event Internal Line"]
+#[doc = "Field `TTMIL` writer - Trigger Time Mark Event Internal Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type TTMIL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `SWEL` reader - Stop Watch Event Interrupt Line"]
+#[doc = "Field `SWEL` reader - Stop Watch Event Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SWEL_R = crate::BitReader<bool>;
-#[doc = "Field `SWEL` writer - Stop Watch Event Interrupt Line"]
+#[doc = "Field `SWEL` writer - Stop Watch Event Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SWEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `GTWL` reader - Global Time Wrap Interrupt Line"]
+#[doc = "Field `GTWL` reader - Global Time Wrap Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type GTWL_R = crate::BitReader<bool>;
-#[doc = "Field `GTWL` writer - Global Time Wrap Interrupt Line"]
+#[doc = "Field `GTWL` writer - Global Time Wrap Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type GTWL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `GTDL` reader - Global Time Discontinuity Interrupt Line"]
+#[doc = "Field `GTDL` reader - Global Time Discontinuity Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type GTDL_R = crate::BitReader<bool>;
-#[doc = "Field `GTDL` writer - Global Time Discontinuity Interrupt Line"]
+#[doc = "Field `GTDL` writer - Global Time Discontinuity Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type GTDL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `GTEL` reader - Global Time Error Interrupt Line"]
+#[doc = "Field `GTEL` reader - Global Time Error Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type GTEL_R = crate::BitReader<bool>;
-#[doc = "Field `GTEL` writer - Global Time Error Interrupt Line"]
+#[doc = "Field `GTEL` writer - Global Time Error Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type GTEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `TXUL` reader - Tx Count Underflow Interrupt Line"]
+#[doc = "Field `TXUL` reader - Tx Count Underflow Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type TXUL_R = crate::BitReader<bool>;
-#[doc = "Field `TXUL` writer - Tx Count Underflow Interrupt Line"]
+#[doc = "Field `TXUL` writer - Tx Count Underflow Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type TXUL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `TXOL` reader - Tx Count Overflow Interrupt Line"]
+#[doc = "Field `TXOL` reader - Tx Count Overflow Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type TXOL_R = crate::BitReader<bool>;
-#[doc = "Field `TXOL` writer - Tx Count Overflow Interrupt Line"]
+#[doc = "Field `TXOL` writer - Tx Count Overflow Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type TXOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `SE1L` reader - Scheduling Error 1 Interrupt Line"]
+#[doc = "Field `SE1L` reader - Scheduling Error 1 Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SE1L_R = crate::BitReader<bool>;
-#[doc = "Field `SE1L` writer - Scheduling Error 1 Interrupt Line"]
+#[doc = "Field `SE1L` writer - Scheduling Error 1 Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SE1L_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `SE2L` reader - Scheduling Error 2 Interrupt Line"]
+#[doc = "Field `SE2L` reader - Scheduling Error 2 Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SE2L_R = crate::BitReader<bool>;
-#[doc = "Field `SE2L` writer - Scheduling Error 2 Interrupt Line"]
+#[doc = "Field `SE2L` writer - Scheduling Error 2 Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type SE2L_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `ELCL` reader - Change Error Level Interrupt Line"]
+#[doc = "Field `ELCL` reader - Change Error Level Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type ELCL_R = crate::BitReader<bool>;
-#[doc = "Field `ELCL` writer - Change Error Level Interrupt Line"]
+#[doc = "Field `ELCL` writer - Change Error Level Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type ELCL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `IWTL` reader - Initialization Watch Trigger Interrupt Line"]
+#[doc = "Field `IWTL` reader - Initialization Watch Trigger Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type IWTL_R = crate::BitReader<bool>;
-#[doc = "Field `IWTL` writer - Initialization Watch Trigger Interrupt Line"]
+#[doc = "Field `IWTL` writer - Initialization Watch Trigger Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type IWTL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `WTL` reader - Watch Trigger Interrupt Line"]
+#[doc = "Field `WTL` reader - Watch Trigger Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type WTL_R = crate::BitReader<bool>;
-#[doc = "Field `WTL` writer - Watch Trigger Interrupt Line"]
+#[doc = "Field `WTL` writer - Watch Trigger Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type WTL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `AWL_` reader - Application Watchdog Interrupt Line"]
+#[doc = "Field `AWL_` reader - Application Watchdog Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type AWL__R = crate::BitReader<bool>;
-#[doc = "Field `AWL_` writer - Application Watchdog Interrupt Line"]
+#[doc = "Field `AWL_` writer - Application Watchdog Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type AWL__W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
-#[doc = "Field `CERL` reader - Configuration Error Interrupt Line"]
+#[doc = "Field `CERL` reader - Configuration Error Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type CERL_R = crate::BitReader<bool>;
-#[doc = "Field `CERL` writer - Configuration Error Interrupt Line"]
+#[doc = "Field `CERL` writer - Configuration Error Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
 pub type CERL_W<'a, const O: u8> = crate::BitWriter<'a, u32, TTILS_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 0 - Start of Basic Cycle Interrupt Line"]
+    #[doc = "Bit 0 - Start of Basic Cycle Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn sbcl(&self) -> SBCL_R {
         SBCL_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Start of Matrix Cycle Interrupt Line"]
+    #[doc = "Bit 1 - Start of Matrix Cycle Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn smcl(&self) -> SMCL_R {
         SMCL_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - Change of Synchronization Mode Interrupt Line"]
+    #[doc = "Bit 2 - Change of Synchronization Mode Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn csml(&self) -> CSML_R {
         CSML_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - Start of Gap Interrupt Line"]
+    #[doc = "Bit 3 - Start of Gap Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn sogl(&self) -> SOGL_R {
         SOGL_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - Register Time Mark Interrupt Line"]
+    #[doc = "Bit 4 - Register Time Mark Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn rtmil(&self) -> RTMIL_R {
         RTMIL_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - Trigger Time Mark Event Internal Line"]
+    #[doc = "Bit 5 - Trigger Time Mark Event Internal Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn ttmil(&self) -> TTMIL_R {
         TTMIL_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - Stop Watch Event Interrupt Line"]
+    #[doc = "Bit 6 - Stop Watch Event Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn swel(&self) -> SWEL_R {
         SWEL_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - Global Time Wrap Interrupt Line"]
+    #[doc = "Bit 7 - Global Time Wrap Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn gtwl(&self) -> GTWL_R {
         GTWL_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 8 - Global Time Discontinuity Interrupt Line"]
+    #[doc = "Bit 8 - Global Time Discontinuity Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn gtdl(&self) -> GTDL_R {
         GTDL_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - Global Time Error Interrupt Line"]
+    #[doc = "Bit 9 - Global Time Error Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn gtel(&self) -> GTEL_R {
         GTEL_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - Tx Count Underflow Interrupt Line"]
+    #[doc = "Bit 10 - Tx Count Underflow Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn txul(&self) -> TXUL_R {
         TXUL_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - Tx Count Overflow Interrupt Line"]
+    #[doc = "Bit 11 - Tx Count Overflow Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn txol(&self) -> TXOL_R {
         TXOL_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 12 - Scheduling Error 1 Interrupt Line"]
+    #[doc = "Bit 12 - Scheduling Error 1 Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn se1l(&self) -> SE1L_R {
         SE1L_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 13 - Scheduling Error 2 Interrupt Line"]
+    #[doc = "Bit 13 - Scheduling Error 2 Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn se2l(&self) -> SE2L_R {
         SE2L_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - Change Error Level Interrupt Line"]
+    #[doc = "Bit 14 - Change Error Level Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn elcl(&self) -> ELCL_R {
         ELCL_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 15 - Initialization Watch Trigger Interrupt Line"]
+    #[doc = "Bit 15 - Initialization Watch Trigger Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn iwtl(&self) -> IWTL_R {
         IWTL_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 16 - Watch Trigger Interrupt Line"]
+    #[doc = "Bit 16 - Watch Trigger Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn wtl(&self) -> WTL_R {
         WTL_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 17 - Application Watchdog Interrupt Line"]
+    #[doc = "Bit 17 - Application Watchdog Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn awl_(&self) -> AWL__R {
         AWL__R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 18 - Configuration Error Interrupt Line"]
+    #[doc = "Bit 18 - Configuration Error Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     pub fn cerl(&self) -> CERL_R {
         CERL_R::new(((self.bits >> 18) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Start of Basic Cycle Interrupt Line"]
+    #[doc = "Bit 0 - Start of Basic Cycle Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn sbcl(&mut self) -> SBCL_W<0> {
         SBCL_W::new(self)
     }
-    #[doc = "Bit 1 - Start of Matrix Cycle Interrupt Line"]
+    #[doc = "Bit 1 - Start of Matrix Cycle Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn smcl(&mut self) -> SMCL_W<1> {
         SMCL_W::new(self)
     }
-    #[doc = "Bit 2 - Change of Synchronization Mode Interrupt Line"]
+    #[doc = "Bit 2 - Change of Synchronization Mode Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn csml(&mut self) -> CSML_W<2> {
         CSML_W::new(self)
     }
-    #[doc = "Bit 3 - Start of Gap Interrupt Line"]
+    #[doc = "Bit 3 - Start of Gap Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn sogl(&mut self) -> SOGL_W<3> {
         SOGL_W::new(self)
     }
-    #[doc = "Bit 4 - Register Time Mark Interrupt Line"]
+    #[doc = "Bit 4 - Register Time Mark Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn rtmil(&mut self) -> RTMIL_W<4> {
         RTMIL_W::new(self)
     }
-    #[doc = "Bit 5 - Trigger Time Mark Event Internal Line"]
+    #[doc = "Bit 5 - Trigger Time Mark Event Internal Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn ttmil(&mut self) -> TTMIL_W<5> {
         TTMIL_W::new(self)
     }
-    #[doc = "Bit 6 - Stop Watch Event Interrupt Line"]
+    #[doc = "Bit 6 - Stop Watch Event Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn swel(&mut self) -> SWEL_W<6> {
         SWEL_W::new(self)
     }
-    #[doc = "Bit 7 - Global Time Wrap Interrupt Line"]
+    #[doc = "Bit 7 - Global Time Wrap Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn gtwl(&mut self) -> GTWL_W<7> {
         GTWL_W::new(self)
     }
-    #[doc = "Bit 8 - Global Time Discontinuity Interrupt Line"]
+    #[doc = "Bit 8 - Global Time Discontinuity Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn gtdl(&mut self) -> GTDL_W<8> {
         GTDL_W::new(self)
     }
-    #[doc = "Bit 9 - Global Time Error Interrupt Line"]
+    #[doc = "Bit 9 - Global Time Error Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn gtel(&mut self) -> GTEL_W<9> {
         GTEL_W::new(self)
     }
-    #[doc = "Bit 10 - Tx Count Underflow Interrupt Line"]
+    #[doc = "Bit 10 - Tx Count Underflow Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn txul(&mut self) -> TXUL_W<10> {
         TXUL_W::new(self)
     }
-    #[doc = "Bit 11 - Tx Count Overflow Interrupt Line"]
+    #[doc = "Bit 11 - Tx Count Overflow Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn txol(&mut self) -> TXOL_W<11> {
         TXOL_W::new(self)
     }
-    #[doc = "Bit 12 - Scheduling Error 1 Interrupt Line"]
+    #[doc = "Bit 12 - Scheduling Error 1 Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn se1l(&mut self) -> SE1L_W<12> {
         SE1L_W::new(self)
     }
-    #[doc = "Bit 13 - Scheduling Error 2 Interrupt Line"]
+    #[doc = "Bit 13 - Scheduling Error 2 Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn se2l(&mut self) -> SE2L_W<13> {
         SE2L_W::new(self)
     }
-    #[doc = "Bit 14 - Change Error Level Interrupt Line"]
+    #[doc = "Bit 14 - Change Error Level Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn elcl(&mut self) -> ELCL_W<14> {
         ELCL_W::new(self)
     }
-    #[doc = "Bit 15 - Initialization Watch Trigger Interrupt Line"]
+    #[doc = "Bit 15 - Initialization Watch Trigger Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn iwtl(&mut self) -> IWTL_W<15> {
         IWTL_W::new(self)
     }
-    #[doc = "Bit 16 - Watch Trigger Interrupt Line"]
+    #[doc = "Bit 16 - Watch Trigger Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn wtl(&mut self) -> WTL_W<16> {
         WTL_W::new(self)
     }
-    #[doc = "Bit 17 - Application Watchdog Interrupt Line"]
+    #[doc = "Bit 17 - Application Watchdog Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn awl_(&mut self) -> AWL__W<17> {
         AWL__W::new(self)
     }
-    #[doc = "Bit 18 - Configuration Error Interrupt Line"]
+    #[doc = "Bit 18 - Configuration Error Interrupt Select 0= Assign to interrupt enabled by ILE.EINT0 1= Assign to interrupt enabled by ILE.EINT1"]
     #[inline(always)]
     #[must_use]
     pub fn cerl(&mut self) -> CERL_W<18> {

@@ -34,19 +34,19 @@ impl From<crate::W<CM4_CA_CTL1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PWR_MODE` reader - Specifies power mode for CM4 cache. Refer CM0_CA_CTL1 for more details."]
+#[doc = "Field `PWR_MODE` reader - Specifies power mode for CM4 cache. The following sequnece should be followed for truning OFF/ON the cache SRAM. Turn OFF sequence: a) Write CM4_CA_CTL0 to disable cache. b) Write CM4_CA_CTL1 to turn OFF cache SRAM. Turn ON sequence: a) Write CM4_CA_CTL1 to turn ON cache SRAM. b) Delay to allow power up of cache SRAM. Delay should be at a minimum of CM4_CA_CTL2.PWRUP_DELAY CLK_SLOW clock cycles. c) Write CM4_CA_CTL0 to enable cache."]
 pub type PWR_MODE_R = crate::FieldReader<u8, PWR_MODE_A>;
-#[doc = "Specifies power mode for CM4 cache. Refer CM0_CA_CTL1 for more details.\n\nValue on reset: 3"]
+#[doc = "Specifies power mode for CM4 cache. The following sequnece should be followed for truning OFF/ON the cache SRAM. Turn OFF sequence: a) Write CM4_CA_CTL0 to disable cache. b) Write CM4_CA_CTL1 to turn OFF cache SRAM. Turn ON sequence: a) Write CM4_CA_CTL1 to turn ON cache SRAM. b) Delay to allow power up of cache SRAM. Delay should be at a minimum of CM4_CA_CTL2.PWRUP_DELAY CLK_SLOW clock cycles. c) Write CM4_CA_CTL0 to enable cache.\n\nValue on reset: 3"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PWR_MODE_A {
-    #[doc = "0: See CM0_CA_CTL1"]
+    #[doc = "0: Power OFF the CM4 cache, not retained."]
     OFF = 0,
     #[doc = "1: Undefined"]
     RSVD = 1,
-    #[doc = "2: See CM0_CA_CTL1"]
+    #[doc = "2: Put the CM4 cache in retained mode."]
     RETAINED = 2,
-    #[doc = "3: See CM0_CA_CTL1"]
+    #[doc = "3: Enable/Turn ON the CM4 cache."]
     ENABLED = 3,
 }
 impl From<PWR_MODE_A> for u8 {
@@ -88,11 +88,11 @@ impl PWR_MODE_R {
         *self == PWR_MODE_A::ENABLED
     }
 }
-#[doc = "Field `PWR_MODE` writer - Specifies power mode for CM4 cache. Refer CM0_CA_CTL1 for more details."]
+#[doc = "Field `PWR_MODE` writer - Specifies power mode for CM4 cache. The following sequnece should be followed for truning OFF/ON the cache SRAM. Turn OFF sequence: a) Write CM4_CA_CTL0 to disable cache. b) Write CM4_CA_CTL1 to turn OFF cache SRAM. Turn ON sequence: a) Write CM4_CA_CTL1 to turn ON cache SRAM. b) Delay to allow power up of cache SRAM. Delay should be at a minimum of CM4_CA_CTL2.PWRUP_DELAY CLK_SLOW clock cycles. c) Write CM4_CA_CTL0 to enable cache."]
 pub type PWR_MODE_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, CM4_CA_CTL1_SPEC, u8, PWR_MODE_A, 2, O>;
 impl<'a, const O: u8> PWR_MODE_W<'a, O> {
-    #[doc = "See CM0_CA_CTL1"]
+    #[doc = "Power OFF the CM4 cache, not retained."]
     #[inline(always)]
     pub fn off(self) -> &'a mut W {
         self.variant(PWR_MODE_A::OFF)
@@ -102,12 +102,12 @@ impl<'a, const O: u8> PWR_MODE_W<'a, O> {
     pub fn rsvd(self) -> &'a mut W {
         self.variant(PWR_MODE_A::RSVD)
     }
-    #[doc = "See CM0_CA_CTL1"]
+    #[doc = "Put the CM4 cache in retained mode."]
     #[inline(always)]
     pub fn retained(self) -> &'a mut W {
         self.variant(PWR_MODE_A::RETAINED)
     }
-    #[doc = "See CM0_CA_CTL1"]
+    #[doc = "Enable/Turn ON the CM4 cache."]
     #[inline(always)]
     pub fn enabled(self) -> &'a mut W {
         self.variant(PWR_MODE_A::ENABLED)
@@ -116,7 +116,7 @@ impl<'a, const O: u8> PWR_MODE_W<'a, O> {
 #[doc = "Field `VECTKEYSTAT` reader - Register key (to prevent accidental writes). - Should be written with a 0x05fa key value for the write to take effect. - Always reads as 0xfa05. Note: Although the SW attribute for this field says ''R', SW need to write the key 0x05fa in this field for this register write to happen. This is a built in protection provided to prevent accidental writes from SW."]
 pub type VECTKEYSTAT_R = crate::FieldReader<u16, u16>;
 impl R {
-    #[doc = "Bits 0:1 - Specifies power mode for CM4 cache. Refer CM0_CA_CTL1 for more details."]
+    #[doc = "Bits 0:1 - Specifies power mode for CM4 cache. The following sequnece should be followed for truning OFF/ON the cache SRAM. Turn OFF sequence: a) Write CM4_CA_CTL0 to disable cache. b) Write CM4_CA_CTL1 to turn OFF cache SRAM. Turn ON sequence: a) Write CM4_CA_CTL1 to turn ON cache SRAM. b) Delay to allow power up of cache SRAM. Delay should be at a minimum of CM4_CA_CTL2.PWRUP_DELAY CLK_SLOW clock cycles. c) Write CM4_CA_CTL0 to enable cache."]
     #[inline(always)]
     pub fn pwr_mode(&self) -> PWR_MODE_R {
         PWR_MODE_R::new((self.bits & 3) as u8)
@@ -128,7 +128,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:1 - Specifies power mode for CM4 cache. Refer CM0_CA_CTL1 for more details."]
+    #[doc = "Bits 0:1 - Specifies power mode for CM4 cache. The following sequnece should be followed for truning OFF/ON the cache SRAM. Turn OFF sequence: a) Write CM4_CA_CTL0 to disable cache. b) Write CM4_CA_CTL1 to turn OFF cache SRAM. Turn ON sequence: a) Write CM4_CA_CTL1 to turn ON cache SRAM. b) Delay to allow power up of cache SRAM. Delay should be at a minimum of CM4_CA_CTL2.PWRUP_DELAY CLK_SLOW clock cycles. c) Write CM4_CA_CTL0 to enable cache."]
     #[inline(always)]
     #[must_use]
     pub fn pwr_mode(&mut self) -> PWR_MODE_W<0> {

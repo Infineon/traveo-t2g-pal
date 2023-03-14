@@ -50,13 +50,13 @@ pub type EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_TX_SPEC, bool
 pub type OVERFLOW_R = crate::BitReader<bool>;
 #[doc = "Field `OVERFLOW` writer - Attempt to write to a full TX FIFO. Only used in FIFO mode."]
 pub type OVERFLOW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_TX_SPEC, bool, O>;
-#[doc = "Field `UNDERFLOW` reader - Attempt to read from an empty TX FIFO. This happens when the IP is ready to transfer data and EMPTY is '1'. Only used in FIFO mode."]
+#[doc = "Field `UNDERFLOW` reader - Attempt to read from an empty TX FIFO. This happens when SCB is ready to transfer data and EMPTY is '1'. Only used in FIFO mode."]
 pub type UNDERFLOW_R = crate::BitReader<bool>;
-#[doc = "Field `UNDERFLOW` writer - Attempt to read from an empty TX FIFO. This happens when the IP is ready to transfer data and EMPTY is '1'. Only used in FIFO mode."]
+#[doc = "Field `UNDERFLOW` writer - Attempt to read from an empty TX FIFO. This happens when SCB is ready to transfer data and EMPTY is '1'. Only used in FIFO mode."]
 pub type UNDERFLOW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_TX_SPEC, bool, O>;
-#[doc = "Field `BLOCKED` reader - AHB-Lite write transfer can not get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
+#[doc = "Field `BLOCKED` reader - SW cannot get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
 pub type BLOCKED_R = crate::BitReader<bool>;
-#[doc = "Field `BLOCKED` writer - AHB-Lite write transfer can not get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
+#[doc = "Field `BLOCKED` writer - SW cannot get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
 pub type BLOCKED_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_TX_SPEC, bool, O>;
 #[doc = "Field `UART_NACK` reader - UART transmitter received a negative acknowledgement in SmartCard mode. Set to '1', when event is detected. Write with '1' to clear bit."]
 pub type UART_NACK_R = crate::BitReader<bool>;
@@ -91,12 +91,12 @@ impl R {
     pub fn overflow(&self) -> OVERFLOW_R {
         OVERFLOW_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - Attempt to read from an empty TX FIFO. This happens when the IP is ready to transfer data and EMPTY is '1'. Only used in FIFO mode."]
+    #[doc = "Bit 6 - Attempt to read from an empty TX FIFO. This happens when SCB is ready to transfer data and EMPTY is '1'. Only used in FIFO mode."]
     #[inline(always)]
     pub fn underflow(&self) -> UNDERFLOW_R {
         UNDERFLOW_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - AHB-Lite write transfer can not get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
+    #[doc = "Bit 7 - SW cannot get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
     #[inline(always)]
     pub fn blocked(&self) -> BLOCKED_R {
         BLOCKED_R::new(((self.bits >> 7) & 1) != 0)
@@ -142,13 +142,13 @@ impl W {
     pub fn overflow(&mut self) -> OVERFLOW_W<5> {
         OVERFLOW_W::new(self)
     }
-    #[doc = "Bit 6 - Attempt to read from an empty TX FIFO. This happens when the IP is ready to transfer data and EMPTY is '1'. Only used in FIFO mode."]
+    #[doc = "Bit 6 - Attempt to read from an empty TX FIFO. This happens when SCB is ready to transfer data and EMPTY is '1'. Only used in FIFO mode."]
     #[inline(always)]
     #[must_use]
     pub fn underflow(&mut self) -> UNDERFLOW_W<6> {
         UNDERFLOW_W::new(self)
     }
-    #[doc = "Bit 7 - AHB-Lite write transfer can not get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
+    #[doc = "Bit 7 - SW cannot get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
     #[inline(always)]
     #[must_use]
     pub fn blocked(&mut self) -> BLOCKED_W<7> {

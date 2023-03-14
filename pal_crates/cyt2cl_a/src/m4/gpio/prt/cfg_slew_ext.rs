@@ -34,13 +34,13 @@ impl From<crate::W<CFG_SLEW_EXT_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SLEW0` reader - Enables slow slew rate for IO pin 0 HSIO_STDLIN: slew_ctl\\[SLEW_WIDTH\\]
+#[doc = "Field `SLEW0` reader - Enables slow slew rate for IO pin 0 HSIO_STDLN: slew_ctl\\[SLEW_WIDTH\\]
 = All 0s: Fastest slew rate slew_ctl\\[SLEW_WIDTH\\]
 = All 1s: Slowest slew rate HSIO_ENH: slew_sel\\[SLEW_WIDTH\\]
 = All 0s: Fastest slew rate slew_sel\\[SLEW_WIDTH\\]
 = All 1s: Slowest slew rate"]
 pub type SLEW0_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SLEW0` writer - Enables slow slew rate for IO pin 0 HSIO_STDLIN: slew_ctl\\[SLEW_WIDTH\\]
+#[doc = "Field `SLEW0` writer - Enables slow slew rate for IO pin 0 HSIO_STDLN: slew_ctl\\[SLEW_WIDTH\\]
 = All 0s: Fastest slew rate slew_ctl\\[SLEW_WIDTH\\]
 = All 1s: Slowest slew rate HSIO_ENH: slew_sel\\[SLEW_WIDTH\\]
 = All 0s: Fastest slew rate slew_sel\\[SLEW_WIDTH\\]
@@ -75,7 +75,7 @@ pub type SLEW7_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SLEW7` writer - Slew rate for IO pin 7"]
 pub type SLEW7_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_SLEW_EXT_SPEC, u8, u8, 3, O>;
 impl R {
-    #[doc = "Bits 0:2 - Enables slow slew rate for IO pin 0 HSIO_STDLIN: slew_ctl\\[SLEW_WIDTH\\]
+    #[doc = "Bits 0:2 - Enables slow slew rate for IO pin 0 HSIO_STDLN: slew_ctl\\[SLEW_WIDTH\\]
 = All 0s: Fastest slew rate slew_ctl\\[SLEW_WIDTH\\]
 = All 1s: Slowest slew rate HSIO_ENH: slew_sel\\[SLEW_WIDTH\\]
 = All 0s: Fastest slew rate slew_sel\\[SLEW_WIDTH\\]
@@ -121,7 +121,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:2 - Enables slow slew rate for IO pin 0 HSIO_STDLIN: slew_ctl\\[SLEW_WIDTH\\]
+    #[doc = "Bits 0:2 - Enables slow slew rate for IO pin 0 HSIO_STDLN: slew_ctl\\[SLEW_WIDTH\\]
 = All 0s: Fastest slew rate slew_ctl\\[SLEW_WIDTH\\]
 = All 1s: Slowest slew rate HSIO_ENH: slew_sel\\[SLEW_WIDTH\\]
 = All 0s: Fastest slew rate slew_sel\\[SLEW_WIDTH\\]

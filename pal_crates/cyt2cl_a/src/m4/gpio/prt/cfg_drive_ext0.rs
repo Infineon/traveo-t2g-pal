@@ -34,9 +34,9 @@ impl From<crate::W<CFG_DRIVE_EXT0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DRIVE_SEL_EXT0` reader - Sets the GPIO drive strength for IO pin 0"]
+#[doc = "Field `DRIVE_SEL_EXT0` reader - Sets the GPIO drive strength for IO pin 0. See description of CFG_OUT.DRIVE_SEL0 for options. For GPIO OVT 1.2V variant: Below are the encoding values: 3'b000 : 4mA drive strength, 1.8V 3'b001 : 3mA drive strength, 1.8V 3'b010 : 2mA drive strength, 1.8V 3'b011 : 1mA drive strength, 1.8V 3'b100 : 4mA drive strength, 1.2V 3'b101 : 3mA drive strength, 1.2V 3'b110 : 2mA drive strength, 1.2V 3'b111 : 1mA drive strength, 1.2V"]
 pub type DRIVE_SEL_EXT0_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `DRIVE_SEL_EXT0` writer - Sets the GPIO drive strength for IO pin 0"]
+#[doc = "Field `DRIVE_SEL_EXT0` writer - Sets the GPIO drive strength for IO pin 0. See description of CFG_OUT.DRIVE_SEL0 for options. For GPIO OVT 1.2V variant: Below are the encoding values: 3'b000 : 4mA drive strength, 1.8V 3'b001 : 3mA drive strength, 1.8V 3'b010 : 2mA drive strength, 1.8V 3'b011 : 1mA drive strength, 1.8V 3'b100 : 4mA drive strength, 1.2V 3'b101 : 3mA drive strength, 1.2V 3'b110 : 2mA drive strength, 1.2V 3'b111 : 1mA drive strength, 1.2V"]
 pub type DRIVE_SEL_EXT0_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, CFG_DRIVE_EXT0_SPEC, u8, u8, 5, O>;
 #[doc = "Field `DRIVE_SEL_EXT1` reader - Sets the GPIO drive strength for IO pin 1"]
@@ -55,7 +55,7 @@ pub type DRIVE_SEL_EXT3_R = crate::FieldReader<u8, u8>;
 pub type DRIVE_SEL_EXT3_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, CFG_DRIVE_EXT0_SPEC, u8, u8, 5, O>;
 impl R {
-    #[doc = "Bits 0:4 - Sets the GPIO drive strength for IO pin 0"]
+    #[doc = "Bits 0:4 - Sets the GPIO drive strength for IO pin 0. See description of CFG_OUT.DRIVE_SEL0 for options. For GPIO OVT 1.2V variant: Below are the encoding values: 3'b000 : 4mA drive strength, 1.8V 3'b001 : 3mA drive strength, 1.8V 3'b010 : 2mA drive strength, 1.8V 3'b011 : 1mA drive strength, 1.8V 3'b100 : 4mA drive strength, 1.2V 3'b101 : 3mA drive strength, 1.2V 3'b110 : 2mA drive strength, 1.2V 3'b111 : 1mA drive strength, 1.2V"]
     #[inline(always)]
     pub fn drive_sel_ext0(&self) -> DRIVE_SEL_EXT0_R {
         DRIVE_SEL_EXT0_R::new((self.bits & 0x1f) as u8)
@@ -77,7 +77,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - Sets the GPIO drive strength for IO pin 0"]
+    #[doc = "Bits 0:4 - Sets the GPIO drive strength for IO pin 0. See description of CFG_OUT.DRIVE_SEL0 for options. For GPIO OVT 1.2V variant: Below are the encoding values: 3'b000 : 4mA drive strength, 1.8V 3'b001 : 3mA drive strength, 1.8V 3'b010 : 2mA drive strength, 1.8V 3'b011 : 1mA drive strength, 1.8V 3'b100 : 4mA drive strength, 1.2V 3'b101 : 3mA drive strength, 1.2V 3'b110 : 2mA drive strength, 1.2V 3'b111 : 1mA drive strength, 1.2V"]
     #[inline(always)]
     #[must_use]
     pub fn drive_sel_ext0(&mut self) -> DRIVE_SEL_EXT0_W<0> {

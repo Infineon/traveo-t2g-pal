@@ -34,49 +34,49 @@ impl From<crate::W<INTR_MASK_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CTR0_INT` reader - Mask for sub-counter 0 for warning interrupt"]
+#[doc = "Field `CTR0_INT` reader - Interrupt Mask for sub-counter 0 for warning interrupt. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
 pub type CTR0_INT_R = crate::BitReader<bool>;
-#[doc = "Field `CTR0_INT` writer - Mask for sub-counter 0 for warning interrupt"]
+#[doc = "Field `CTR0_INT` writer - Interrupt Mask for sub-counter 0 for warning interrupt. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
 pub type CTR0_INT_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
-#[doc = "Field `CTR1_INT` reader - Mask for sub-counter 1 for warning interrupt"]
+#[doc = "Field `CTR1_INT` reader - Interrupt Mask for sub-counter 1 for warning interrupt. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
 pub type CTR1_INT_R = crate::BitReader<bool>;
-#[doc = "Field `CTR1_INT` writer - Mask for sub-counter 1 for warning interrupt"]
+#[doc = "Field `CTR1_INT` writer - Interrupt Mask for sub-counter 1 for warning interrupt. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
 pub type CTR1_INT_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
-#[doc = "Field `CTR2_INT` reader - Mask for sub-counter 2"]
+#[doc = "Field `CTR2_INT` reader - Interrupt Mask for sub-counter 2. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
 pub type CTR2_INT_R = crate::BitReader<bool>;
-#[doc = "Field `CTR2_INT` writer - Mask for sub-counter 2"]
+#[doc = "Field `CTR2_INT` writer - Interrupt Mask for sub-counter 2. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
 pub type CTR2_INT_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_MASK_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 0 - Mask for sub-counter 0 for warning interrupt"]
+    #[doc = "Bit 0 - Interrupt Mask for sub-counter 0 for warning interrupt. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
     #[inline(always)]
     pub fn ctr0_int(&self) -> CTR0_INT_R {
         CTR0_INT_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Mask for sub-counter 1 for warning interrupt"]
+    #[doc = "Bit 1 - Interrupt Mask for sub-counter 1 for warning interrupt. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
     #[inline(always)]
     pub fn ctr1_int(&self) -> CTR1_INT_R {
         CTR1_INT_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - Mask for sub-counter 2"]
+    #[doc = "Bit 2 - Interrupt Mask for sub-counter 2. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
     #[inline(always)]
     pub fn ctr2_int(&self) -> CTR2_INT_R {
         CTR2_INT_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Mask for sub-counter 0 for warning interrupt"]
+    #[doc = "Bit 0 - Interrupt Mask for sub-counter 0 for warning interrupt. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
     #[inline(always)]
     #[must_use]
     pub fn ctr0_int(&mut self) -> CTR0_INT_W<0> {
         CTR0_INT_W::new(self)
     }
-    #[doc = "Bit 1 - Mask for sub-counter 1 for warning interrupt"]
+    #[doc = "Bit 1 - Interrupt Mask for sub-counter 1 for warning interrupt. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
     #[inline(always)]
     #[must_use]
     pub fn ctr1_int(&mut self) -> CTR1_INT_W<1> {
         CTR1_INT_W::new(self)
     }
-    #[doc = "Bit 2 - Mask for sub-counter 2"]
+    #[doc = "Bit 2 - Interrupt Mask for sub-counter 2. The bit controls if the interrupt is forwarded to the CPU. The interrupt is blocked when the value of the bit is 0. The interrupt is forwarded if the value of the bit is 1."]
     #[inline(always)]
     #[must_use]
     pub fn ctr2_int(&mut self) -> CTR2_INT_W<2> {

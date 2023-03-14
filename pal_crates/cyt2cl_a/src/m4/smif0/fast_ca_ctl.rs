@@ -34,13 +34,13 @@ impl From<crate::W<FAST_CA_CTL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WAY` reader - See SLOW_CA_CTL.WAY."]
+#[doc = "Field `WAY` reader - this is for debug purpose only, and should be hidden to customers in technical document"]
 pub type WAY_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `WAY` writer - See SLOW_CA_CTL.WAY."]
+#[doc = "Field `WAY` writer - this is for debug purpose only, and should be hidden to customers in technical document"]
 pub type WAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FAST_CA_CTL_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SET_ADDR` reader - See SLOW_CA_CTL.SET_ADDR."]
+#[doc = "Field `SET_ADDR` reader - this is for debug purpose only, and should be hidden to customers in technical document"]
 pub type SET_ADDR_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SET_ADDR` writer - See SLOW_CA_CTL.SET_ADDR."]
+#[doc = "Field `SET_ADDR` writer - this is for debug purpose only, and should be hidden to customers in technical document"]
 pub type SET_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FAST_CA_CTL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PREF_EN` reader - See SLOW_CA_CTL.PREF_EN."]
 pub type PREF_EN_R = crate::BitReader<bool>;
@@ -51,12 +51,12 @@ pub type ENABLED_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLED` writer - See SLOW_CA_CTL.ENABLED."]
 pub type ENABLED_W<'a, const O: u8> = crate::BitWriter<'a, u32, FAST_CA_CTL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bits 16:17 - See SLOW_CA_CTL.WAY."]
+    #[doc = "Bits 16:17 - this is for debug purpose only, and should be hidden to customers in technical document"]
     #[inline(always)]
     pub fn way(&self) -> WAY_R {
         WAY_R::new(((self.bits >> 16) & 3) as u8)
     }
-    #[doc = "Bits 24:25 - See SLOW_CA_CTL.SET_ADDR."]
+    #[doc = "Bits 24:25 - this is for debug purpose only, and should be hidden to customers in technical document"]
     #[inline(always)]
     pub fn set_addr(&self) -> SET_ADDR_R {
         SET_ADDR_R::new(((self.bits >> 24) & 3) as u8)
@@ -73,13 +73,13 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:17 - See SLOW_CA_CTL.WAY."]
+    #[doc = "Bits 16:17 - this is for debug purpose only, and should be hidden to customers in technical document"]
     #[inline(always)]
     #[must_use]
     pub fn way(&mut self) -> WAY_W<16> {
         WAY_W::new(self)
     }
-    #[doc = "Bits 24:25 - See SLOW_CA_CTL.SET_ADDR."]
+    #[doc = "Bits 24:25 - this is for debug purpose only, and should be hidden to customers in technical document"]
     #[inline(always)]
     #[must_use]
     pub fn set_addr(&mut self) -> SET_ADDR_W<24> {

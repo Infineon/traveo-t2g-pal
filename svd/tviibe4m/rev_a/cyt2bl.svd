@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator version: 1.6.0.217 -->
-<!-- Database revision: TVIIBE4M_WW2014_BTO -->
+<!-- Generator version: 1.6.0.1501 -->
+<!-- Database revision: TVIIBE4M_WW2310_for_BTO -->
 <device schemaVersion="1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
   <vendor>Cypress Semiconductor</vendor>
   <vendorID>Cypress</vendorID>
@@ -17901,7 +17901,7 @@ Note: during a program operation, a read operation can not be performed. An AHB-
             <fields>
               <field>
                 <name>IO0_SEL</name>
-                <description>Selects connection for IO pin 0 route.</description>
+                <description>Selects the peripheral connections of Pin 0. Note that available connectivity options vary depending on the device, port and the pin. See the device Datasheet for a list of peripheral connections available at each pin.</description>
                 <bitRange>[4:0]</bitRange>
                 <access>read-write</access>
                 <enumeratedValues>
@@ -17927,12 +17927,12 @@ Note: during a program operation, a read operation can not be performed. An AHB-
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>AMUXA</name>
-                    <description>Analog mux bus A</description>
+                    <description>AMUXBUS A</description>
                     <value>4</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>AMUXB</name>
-                    <description>Analog mux bus B</description>
+                    <description>AMUXBUS B</description>
                     <value>5</value>
                   </enumeratedValue>
                   <enumeratedValue>
@@ -17947,141 +17947,141 @@ Note: during a program operation, a read operation can not be performed. An AHB-
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_0</name>
-                    <description>Active functionality 0</description>
+                    <description>Active peripheral 0</description>
                     <value>8</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_1</name>
-                    <description>Active functionality 1</description>
+                    <description>Active peripheral 1</description>
                     <value>9</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_2</name>
-                    <description>Active functionality 2</description>
+                    <description>Active peripheral 2</description>
                     <value>10</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_3</name>
-                    <description>Active functionality 3</description>
+                    <description>Active peripheral 3</description>
                     <value>11</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DS_0</name>
-                    <description>DeepSleep functionality 0</description>
+                    <description>Deep Sleep peripheral 0</description>
                     <value>12</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DS_1</name>
-                    <description>DeepSleep functionality 1</description>
+                    <description>Deep Sleep peripheral 1</description>
                     <value>13</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DS_2</name>
-                    <description>DeepSleep functionality 2</description>
+                    <description>Deep Sleep peripheral 2</description>
                     <value>14</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DS_3</name>
-                    <description>DeepSleep functionality 3</description>
+                    <description>Deep Sleep peripheral 3</description>
                     <value>15</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_4</name>
-                    <description>Active functionality 4</description>
+                    <description>Active peripheral 4</description>
                     <value>16</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_5</name>
-                    <description>Active functionality 5</description>
+                    <description>Active peripheral 5</description>
                     <value>17</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_6</name>
-                    <description>Active functionality 6</description>
+                    <description>Active peripheral 6</description>
                     <value>18</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_7</name>
-                    <description>Active functionality 7</description>
+                    <description>Active peripheral 7</description>
                     <value>19</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_8</name>
-                    <description>Active functionality 8</description>
+                    <description>Active peripheral 8</description>
                     <value>20</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_9</name>
-                    <description>Active functionality 9</description>
+                    <description>Active peripheral 9</description>
                     <value>21</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_10</name>
-                    <description>Active functionality 10</description>
+                    <description>Active peripheral 10</description>
                     <value>22</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_11</name>
-                    <description>Active functionality 11</description>
+                    <description>Active peripheral 11</description>
                     <value>23</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_12</name>
-                    <description>Active functionality 12</description>
+                    <description>Active peripheral 12</description>
                     <value>24</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_13</name>
-                    <description>Active functionality 13</description>
+                    <description>Active peripheral 13</description>
                     <value>25</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_14</name>
-                    <description>Active functionality 14</description>
+                    <description>Active peripheral 14</description>
                     <value>26</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>ACT_15</name>
-                    <description>Active functionality 15</description>
+                    <description>Active peripheral 15</description>
                     <value>27</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DS_4</name>
-                    <description>DeepSleep functionality 4</description>
+                    <description>Deep Sleep peripheral 4</description>
                     <value>28</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DS_5</name>
-                    <description>DeepSleep functionality 5</description>
+                    <description>Deep Sleep peripheral 5</description>
                     <value>29</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DS_6</name>
-                    <description>DeepSleep functionality 6</description>
+                    <description>Deep Sleep peripheral 6</description>
                     <value>30</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DS_7</name>
-                    <description>DeepSleep functionality 7</description>
+                    <description>Deep Sleep peripheral 7</description>
                     <value>31</value>
                   </enumeratedValue>
                 </enumeratedValues>
               </field>
               <field>
                 <name>IO1_SEL</name>
-                <description>Selects connection for IO pin 1 route.</description>
+                <description>Selects the peripheral connections of Pin 1.</description>
                 <bitRange>[12:8]</bitRange>
                 <access>read-write</access>
               </field>
               <field>
                 <name>IO2_SEL</name>
-                <description>Selects connection for IO pin 2 route.</description>
+                <description>Selects the peripheral connections of Pin 2.</description>
                 <bitRange>[20:16]</bitRange>
                 <access>read-write</access>
               </field>
               <field>
                 <name>IO3_SEL</name>
-                <description>Selects connection for IO pin 3 route.</description>
+                <description>Selects the peripheral connections of Pin 3.</description>
                 <bitRange>[28:24]</bitRange>
                 <access>read-write</access>
               </field>
@@ -18098,26 +18098,25 @@ Note: during a program operation, a read operation can not be performed. An AHB-
             <fields>
               <field>
                 <name>IO4_SEL</name>
-                <description>Selects connection for IO pin 4 route.
-See PORT_SEL0 for connection details.</description>
+                <description>Selects the peripheral connections of Pin 4. See PORT_SEL0 for connection details.</description>
                 <bitRange>[4:0]</bitRange>
                 <access>read-write</access>
               </field>
               <field>
                 <name>IO5_SEL</name>
-                <description>Selects connection for IO pin 5 route.</description>
+                <description>Selects the peripheral connections of Pin 4.</description>
                 <bitRange>[12:8]</bitRange>
                 <access>read-write</access>
               </field>
               <field>
                 <name>IO6_SEL</name>
-                <description>Selects connection for IO pin 6 route.</description>
+                <description>Selects the peripheral connections of Pin 5.</description>
                 <bitRange>[20:16]</bitRange>
                 <access>read-write</access>
               </field>
               <field>
                 <name>IO7_SEL</name>
-                <description>Selects connection for IO pin 7 route.</description>
+                <description>Selects the peripheral connections of Pin 6.</description>
                 <bitRange>[28:24]</bitRange>
                 <access>read-write</access>
               </field>
@@ -18551,7 +18550,8 @@ This connectivity works ONLY in ACTIVE mode.</description>
                 <name>IN0</name>
                 <description>IO pin state for pin 0
 '0': Low logic level present on pin.
-'1': High logic level present on pin.</description>
+'1': High logic level present on pin.
+On reset assertion , IN register will get reset. The Pad value takes 2 clock cycles to be reflected into IN Register.  It's value then depends on the external pin value.</description>
                 <bitRange>[0:0]</bitRange>
                 <access>read-only</access>
               </field>
@@ -19208,9 +19208,150 @@ When D_OUT_EN = 0:
               </field>
               <field>
                 <name>DRIVE_MODE1</name>
-                <description>The GPIO drive mode for IO pin 1</description>
+                <description>The GPIO drive mode for IO pin 1. Resistive pull-up and pull-down is selected in the drive mode.
+Note: when initializing IO's that are connected to a live bus (such as I2C), make sure the peripheral and HSIOM (HSIOM_PRT_SELx) is properly configured  before turning the IO on here to avoid producing glitches on the bus.
+Note: that peripherals other than GPIO &amp; UDB/DSI directly control both the output and output-enable of the output buffer (peripherals can drive strong 0 or strong 1 in any mode except OFF='0').  
+Note: D_OUT, D_OUT_EN are pins of GPIO cell.</description>
                 <bitRange>[6:4]</bitRange>
                 <access>read-write</access>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <name>HIGHZ</name>
+                    <description>Output buffer is off creating a high impedance input
+D_OUT = '0': High Impedance
+D_OUT = '1': High Impedance</description>
+                    <value>0</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>RSVD</name>
+                    <description>N/A</description>
+                    <value>1</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP</name>
+                    <description>Resistive pull up
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Weak/resistive pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull up
+   D_OUT = '1': Weak/resistive pull up</description>
+                    <value>2</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLDOWN</name>
+                    <description>Resistive pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Weak/resistive pull down</description>
+                    <value>3</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESLOW</name>
+                    <description>Open drain, drives low
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': High Impedance
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>4</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESHIGH</name>
+                    <description>Open drain, drives high
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>5</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>STRONG</name>
+                    <description>Strong D_OUTput buffer
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>6</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP_DOWN</name>
+                    <description>Pull up or pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = '0':
+    GPIO_DSI_OUT = '0': Weak/resistive pull down
+    GPIO_DSI_OUT = '1': Weak/resistive pull up
+where 'GPIO_DSI_OUT' is a function of PORT_SEL, OUT &amp; DSI_DATA_OUT.
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+    D_OUT = '0': Weak/resistive pull down
+    D_OUT = '1': Weak/resistive pull up</description>
+                    <value>7</value>
+                  </enumeratedValue>
+                </enumeratedValues>
               </field>
               <field>
                 <name>IN_EN1</name>
@@ -19220,9 +19361,150 @@ When D_OUT_EN = 0:
               </field>
               <field>
                 <name>DRIVE_MODE2</name>
-                <description>The GPIO drive mode for IO pin 2</description>
+                <description>The GPIO drive mode for IO pin 2. Resistive pull-up and pull-down is selected in the drive mode.
+Note: when initializing IO's that are connected to a live bus (such as I2C), make sure the peripheral and HSIOM (HSIOM_PRT_SELx) is properly configured  before turning the IO on here to avoid producing glitches on the bus.
+Note: that peripherals other than GPIO &amp; UDB/DSI directly control both the output and output-enable of the output buffer (peripherals can drive strong 0 or strong 1 in any mode except OFF='0').  
+Note: D_OUT, D_OUT_EN are pins of GPIO cell.</description>
                 <bitRange>[10:8]</bitRange>
                 <access>read-write</access>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <name>HIGHZ</name>
+                    <description>Output buffer is off creating a high impedance input
+D_OUT = '0': High Impedance
+D_OUT = '1': High Impedance</description>
+                    <value>0</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>RSVD</name>
+                    <description>N/A</description>
+                    <value>1</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP</name>
+                    <description>Resistive pull up
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Weak/resistive pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull up
+   D_OUT = '1': Weak/resistive pull up</description>
+                    <value>2</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLDOWN</name>
+                    <description>Resistive pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Weak/resistive pull down</description>
+                    <value>3</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESLOW</name>
+                    <description>Open drain, drives low
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': High Impedance
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>4</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESHIGH</name>
+                    <description>Open drain, drives high
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>5</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>STRONG</name>
+                    <description>Strong D_OUTput buffer
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>6</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP_DOWN</name>
+                    <description>Pull up or pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = '0':
+    GPIO_DSI_OUT = '0': Weak/resistive pull down
+    GPIO_DSI_OUT = '1': Weak/resistive pull up
+where 'GPIO_DSI_OUT' is a function of PORT_SEL, OUT &amp; DSI_DATA_OUT.
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+    D_OUT = '0': Weak/resistive pull down
+    D_OUT = '1': Weak/resistive pull up</description>
+                    <value>7</value>
+                  </enumeratedValue>
+                </enumeratedValues>
               </field>
               <field>
                 <name>IN_EN2</name>
@@ -19232,9 +19514,150 @@ When D_OUT_EN = 0:
               </field>
               <field>
                 <name>DRIVE_MODE3</name>
-                <description>The GPIO drive mode for IO pin 3</description>
+                <description>The GPIO drive mode for IO pin 3. Resistive pull-up and pull-down is selected in the drive mode.
+Note: when initializing IO's that are connected to a live bus (such as I2C), make sure the peripheral and HSIOM (HSIOM_PRT_SELx) is properly configured  before turning the IO on here to avoid producing glitches on the bus.
+Note: that peripherals other than GPIO &amp; UDB/DSI directly control both the output and output-enable of the output buffer (peripherals can drive strong 0 or strong 1 in any mode except OFF='0').  
+Note: D_OUT, D_OUT_EN are pins of GPIO cell.</description>
                 <bitRange>[14:12]</bitRange>
                 <access>read-write</access>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <name>HIGHZ</name>
+                    <description>Output buffer is off creating a high impedance input
+D_OUT = '0': High Impedance
+D_OUT = '1': High Impedance</description>
+                    <value>0</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>RSVD</name>
+                    <description>N/A</description>
+                    <value>1</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP</name>
+                    <description>Resistive pull up
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Weak/resistive pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull up
+   D_OUT = '1': Weak/resistive pull up</description>
+                    <value>2</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLDOWN</name>
+                    <description>Resistive pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Weak/resistive pull down</description>
+                    <value>3</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESLOW</name>
+                    <description>Open drain, drives low
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': High Impedance
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>4</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESHIGH</name>
+                    <description>Open drain, drives high
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>5</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>STRONG</name>
+                    <description>Strong D_OUTput buffer
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>6</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP_DOWN</name>
+                    <description>Pull up or pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = '0':
+    GPIO_DSI_OUT = '0': Weak/resistive pull down
+    GPIO_DSI_OUT = '1': Weak/resistive pull up
+where 'GPIO_DSI_OUT' is a function of PORT_SEL, OUT &amp; DSI_DATA_OUT.
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+    D_OUT = '0': Weak/resistive pull down
+    D_OUT = '1': Weak/resistive pull up</description>
+                    <value>7</value>
+                  </enumeratedValue>
+                </enumeratedValues>
               </field>
               <field>
                 <name>IN_EN3</name>
@@ -19244,9 +19667,150 @@ When D_OUT_EN = 0:
               </field>
               <field>
                 <name>DRIVE_MODE4</name>
-                <description>The GPIO drive mode for IO pin4</description>
+                <description>The GPIO drive mode for IO pin 4. Resistive pull-up and pull-down is selected in the drive mode.
+Note: when initializing IO's that are connected to a live bus (such as I2C), make sure the peripheral and HSIOM (HSIOM_PRT_SELx) is properly configured  before turning the IO on here to avoid producing glitches on the bus.
+Note: that peripherals other than GPIO &amp; UDB/DSI directly control both the output and output-enable of the output buffer (peripherals can drive strong 0 or strong 1 in any mode except OFF='0').  
+Note: D_OUT, D_OUT_EN are pins of GPIO cell.</description>
                 <bitRange>[18:16]</bitRange>
                 <access>read-write</access>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <name>HIGHZ</name>
+                    <description>Output buffer is off creating a high impedance input
+D_OUT = '0': High Impedance
+D_OUT = '1': High Impedance</description>
+                    <value>0</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>RSVD</name>
+                    <description>N/A</description>
+                    <value>1</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP</name>
+                    <description>Resistive pull up
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Weak/resistive pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull up
+   D_OUT = '1': Weak/resistive pull up</description>
+                    <value>2</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLDOWN</name>
+                    <description>Resistive pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Weak/resistive pull down</description>
+                    <value>3</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESLOW</name>
+                    <description>Open drain, drives low
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': High Impedance
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>4</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESHIGH</name>
+                    <description>Open drain, drives high
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>5</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>STRONG</name>
+                    <description>Strong D_OUTput buffer
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>6</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP_DOWN</name>
+                    <description>Pull up or pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = '0':
+    GPIO_DSI_OUT = '0': Weak/resistive pull down
+    GPIO_DSI_OUT = '1': Weak/resistive pull up
+where 'GPIO_DSI_OUT' is a function of PORT_SEL, OUT &amp; DSI_DATA_OUT.
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+    D_OUT = '0': Weak/resistive pull down
+    D_OUT = '1': Weak/resistive pull up</description>
+                    <value>7</value>
+                  </enumeratedValue>
+                </enumeratedValues>
               </field>
               <field>
                 <name>IN_EN4</name>
@@ -19256,9 +19820,150 @@ When D_OUT_EN = 0:
               </field>
               <field>
                 <name>DRIVE_MODE5</name>
-                <description>The GPIO drive mode for IO pin 5</description>
+                <description>The GPIO drive mode for IO pin 5. Resistive pull-up and pull-down is selected in the drive mode.
+Note: when initializing IO's that are connected to a live bus (such as I2C), make sure the peripheral and HSIOM (HSIOM_PRT_SELx) is properly configured  before turning the IO on here to avoid producing glitches on the bus.
+Note: that peripherals other than GPIO &amp; UDB/DSI directly control both the output and output-enable of the output buffer (peripherals can drive strong 0 or strong 1 in any mode except OFF='0').  
+Note: D_OUT, D_OUT_EN are pins of GPIO cell.</description>
                 <bitRange>[22:20]</bitRange>
                 <access>read-write</access>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <name>HIGHZ</name>
+                    <description>Output buffer is off creating a high impedance input
+D_OUT = '0': High Impedance
+D_OUT = '1': High Impedance</description>
+                    <value>0</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>RSVD</name>
+                    <description>N/A</description>
+                    <value>1</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP</name>
+                    <description>Resistive pull up
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Weak/resistive pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull up
+   D_OUT = '1': Weak/resistive pull up</description>
+                    <value>2</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLDOWN</name>
+                    <description>Resistive pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Weak/resistive pull down</description>
+                    <value>3</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESLOW</name>
+                    <description>Open drain, drives low
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': High Impedance
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>4</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESHIGH</name>
+                    <description>Open drain, drives high
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>5</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>STRONG</name>
+                    <description>Strong D_OUTput buffer
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>6</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP_DOWN</name>
+                    <description>Pull up or pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = '0':
+    GPIO_DSI_OUT = '0': Weak/resistive pull down
+    GPIO_DSI_OUT = '1': Weak/resistive pull up
+where 'GPIO_DSI_OUT' is a function of PORT_SEL, OUT &amp; DSI_DATA_OUT.
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+    D_OUT = '0': Weak/resistive pull down
+    D_OUT = '1': Weak/resistive pull up</description>
+                    <value>7</value>
+                  </enumeratedValue>
+                </enumeratedValues>
               </field>
               <field>
                 <name>IN_EN5</name>
@@ -19268,9 +19973,150 @@ When D_OUT_EN = 0:
               </field>
               <field>
                 <name>DRIVE_MODE6</name>
-                <description>The GPIO drive mode for IO pin 6</description>
+                <description>The GPIO drive mode for IO pin 6. Resistive pull-up and pull-down is selected in the drive mode.
+Note: when initializing IO's that are connected to a live bus (such as I2C), make sure the peripheral and HSIOM (HSIOM_PRT_SELx) is properly configured  before turning the IO on here to avoid producing glitches on the bus.
+Note: that peripherals other than GPIO &amp; UDB/DSI directly control both the output and output-enable of the output buffer (peripherals can drive strong 0 or strong 1 in any mode except OFF='0').  
+Note: D_OUT, D_OUT_EN are pins of GPIO cell.</description>
                 <bitRange>[26:24]</bitRange>
                 <access>read-write</access>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <name>HIGHZ</name>
+                    <description>Output buffer is off creating a high impedance input
+D_OUT = '0': High Impedance
+D_OUT = '1': High Impedance</description>
+                    <value>0</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>RSVD</name>
+                    <description>N/A</description>
+                    <value>1</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP</name>
+                    <description>Resistive pull up
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Weak/resistive pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull up
+   D_OUT = '1': Weak/resistive pull up</description>
+                    <value>2</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLDOWN</name>
+                    <description>Resistive pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Weak/resistive pull down</description>
+                    <value>3</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESLOW</name>
+                    <description>Open drain, drives low
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': High Impedance
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>4</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESHIGH</name>
+                    <description>Open drain, drives high
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>5</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>STRONG</name>
+                    <description>Strong D_OUTput buffer
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>6</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP_DOWN</name>
+                    <description>Pull up or pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = '0':
+    GPIO_DSI_OUT = '0': Weak/resistive pull down
+    GPIO_DSI_OUT = '1': Weak/resistive pull up
+where 'GPIO_DSI_OUT' is a function of PORT_SEL, OUT &amp; DSI_DATA_OUT.
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+    D_OUT = '0': Weak/resistive pull down
+    D_OUT = '1': Weak/resistive pull up</description>
+                    <value>7</value>
+                  </enumeratedValue>
+                </enumeratedValues>
               </field>
               <field>
                 <name>IN_EN6</name>
@@ -19280,9 +20126,150 @@ When D_OUT_EN = 0:
               </field>
               <field>
                 <name>DRIVE_MODE7</name>
-                <description>The GPIO drive mode for IO pin 7</description>
+                <description>The GPIO drive mode for IO pin 7. Resistive pull-up and pull-down is selected in the drive mode.
+Note: when initializing IO's that are connected to a live bus (such as I2C), make sure the peripheral and HSIOM (HSIOM_PRT_SELx) is properly configured  before turning the IO on here to avoid producing glitches on the bus.
+Note: that peripherals other than GPIO &amp; UDB/DSI directly control both the output and output-enable of the output buffer (peripherals can drive strong 0 or strong 1 in any mode except OFF='0').  
+Note: D_OUT, D_OUT_EN are pins of GPIO cell.</description>
                 <bitRange>[30:28]</bitRange>
                 <access>read-write</access>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <name>HIGHZ</name>
+                    <description>Output buffer is off creating a high impedance input
+D_OUT = '0': High Impedance
+D_OUT = '1': High Impedance</description>
+                    <value>0</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>RSVD</name>
+                    <description>N/A</description>
+                    <value>1</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP</name>
+                    <description>Resistive pull up
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Weak/resistive pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull up
+   D_OUT = '1': Weak/resistive pull up</description>
+                    <value>2</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLDOWN</name>
+                    <description>Resistive pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': Weak/resistive pull down
+   D_OUT = '1': Weak/resistive pull down</description>
+                    <value>3</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESLOW</name>
+                    <description>Open drain, drives low
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': High Impedance
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>4</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>OD_DRIVESHIGH</name>
+                    <description>Open drain, drives high
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>5</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>STRONG</name>
+                    <description>Strong D_OUTput buffer
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High impedance
+   D_OUT = '1': High impedance
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+   D_OUT = '0': High Impedance
+   D_OUT = '1': High Impedance</description>
+                    <value>6</value>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <name>PULLUP_DOWN</name>
+                    <description>Pull up or pull down
+
+For GPIO &amp; UDB/DSI peripherals:
+When D_OUT_EN = '0':
+    GPIO_DSI_OUT = '0': Weak/resistive pull down
+    GPIO_DSI_OUT = '1': Weak/resistive pull up
+where 'GPIO_DSI_OUT' is a function of PORT_SEL, OUT &amp; DSI_DATA_OUT.
+
+For peripherals other than GPIO &amp; UDB/DSI:
+When D_OUT_EN = 1:
+   D_OUT = '0': Strong pull down
+   D_OUT = '1': Strong pull up
+When D_OUT_EN = 0:
+    D_OUT = '0': Weak/resistive pull down
+    D_OUT = '1': Weak/resistive pull up</description>
+                    <value>7</value>
+                  </enumeratedValue>
+                </enumeratedValues>
               </field>
               <field>
                 <name>IN_EN7</name>
@@ -19309,12 +20296,14 @@ When D_OUT_EN = 0:
                 <enumeratedValues>
                   <enumeratedValue>
                     <name>CMOS</name>
-                    <description>S40S: Input buffer compatible with CMOS and I2C interfaces</description>
+                    <description>PSoC 6:: Input buffer compatible with CMOS and I2C interfaces
+Traveo II: Full encoding is shown in CFG_IN_AUTOLVL.VTRIP_SEL0_1</description>
                     <value>0</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>TTL</name>
-                    <description>S40S: Input buffer compatible with TTL and MediaLB interfaces</description>
+                    <description>PSoC 6:: Input buffer compatible with TTL and MediaLB interfaces
+Traveo II: full encoding is shown in CFG_IN_AUTOLVL.VTRIP_SEL0_1</description>
                     <value>1</value>
                   </enumeratedValue>
                 </enumeratedValues>
@@ -19424,40 +20413,41 @@ When D_OUT_EN = 0:
               </field>
               <field>
                 <name>DRIVE_SEL0</name>
-                <description>Sets the GPIO drive strength for IO pin 0</description>
+                <description>Documentation:
+Note: DRIVE_SELx are used among GPIO cells and HSIO_STD but the encoding values may differ as shown on the right side of this table</description>
                 <bitRange>[17:16]</bitRange>
                 <access>read-write</access>
                 <enumeratedValues>
                   <enumeratedValue>
                     <name>DRIVE_SEL_ZERO</name>
-                    <description>S40E GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec.
-S40E_GPIO_SMC: GPIO_SMC default mode.
-S40E_HSIO_STD: HSIO default mode.
-S40S GPIO cells and HSIO_STD cells: Full drive strength: GPIO drives current at its max rated spec.</description>
+                    <description>Traveo II: GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec.
+Traveo II:_GPIO_SMC: GPIO_SMC default mode.
+Traveo II:_HSIO_STD: HSIO default mode.
+PSoC 6: GPIO cells and HSIO_STD cells: Full drive strength: GPIO drives current at its max rated spec.</description>
                     <value>0</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DRIVE_SEL_ONE</name>
-                    <description>S40E GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec.
-S40E_GPIO_SMC: GPIO full drive strength.
-S40E_HSIO_STD: GPIO full drive strength.
-S40S GPIO cells and HSIO_STD cells: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec</description>
+                    <description>Traveo II: GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec.
+Traveo II:_GPIO_SMC: GPIO full drive strength.
+Traveo II:_HSIO_STD: GPIO full drive strength.
+PSoC 6: GPIO cells and HSIO_STD cells: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec</description>
                     <value>1</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DRIVE_SEL_TWO</name>
-                    <description>S40E GPIO_STD/GPIO_ENH: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec.
-S40E_GPIO_SMC: GPIO 1/2 drive strength.
-S40E_HSIO_STD: GPIO 1/2 drive strength.
-S40S GPIO cells and HSIO_STD cells: 1/4 drive strength. GPIO drives current at 1/4 of its max rated spec.</description>
+                    <description>Traveo II: GPIO_STD/GPIO_ENH: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec.
+Traveo II:_GPIO_SMC: GPIO 1/2 drive strength.
+Traveo II:_HSIO_STD: GPIO 1/2 drive strength.
+PSoC 6: GPIO cells and HSIO_STD cells: 1/4 drive strength. GPIO drives current at 1/4 of its max rated spec.</description>
                     <value>2</value>
                   </enumeratedValue>
                   <enumeratedValue>
                     <name>DRIVE_SEL_THREE</name>
-                    <description>S40E GPIO_STD/GPIO_ENH: 1/4 drive strength: GPIO drives current at 1/4 of its max rated spec.
-S40E_GPIO_SMC: GPIO 1/4 drive strength.
-S40E_HSIO_STD: GPIO 1/4 drive strength.
-S40S GPIO cells and HSIO_STD cells: 1/8 drive strength. GPIO drives current at 1/8 of its max rated spec.</description>
+                    <description>Traveo II: GPIO_STD/GPIO_ENH: 1/4 drive strength: GPIO drives current at 1/4 of its max rated spec.
+Traveo II:_GPIO_SMC: GPIO 1/4 drive strength.
+Traveo II:_HSIO_STD: GPIO 1/4 drive strength.
+PSoC 6: GPIO cells and HSIO_STD cells: 1/8 drive strength. GPIO drives current at 1/8 of its max rated spec.</description>
                     <value>3</value>
                   </enumeratedValue>
                 </enumeratedValues>
@@ -19517,10 +20507,7 @@ S40S GPIO cells and HSIO_STD cells: 1/8 drive strength. GPIO drives current at 1
             <fields>
               <field>
                 <name>VREG_EN01</name>
-                <description>Selects the output buffer mode:
-'0': Unregulated output buffer
-'1': Regulated output buffer
-The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode. If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used.</description>
+                <description>The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used.</description>
                 <bitRange>[0:0]</bitRange>
                 <access>read-write</access>
               </field>
@@ -19555,16 +20542,17 @@ In differential input buffer mode (IBUF_SEL = '1')
               </field>
               <field>
                 <name>VOH_SEL01</name>
-                <description>Selects the regulated Voh output level and trip point of the input buffer for a specific SIO pin pair. Voh depends on the selected reference voltage (VREF_SEL). 
-'0': Voh = 1*reference; e.g. reference at 1.2V -&gt; Voh = 1.2V 
-'1': Voh = 1.25*reference; e.g. reference at 1.2V -&gt; Voh = 1.5V
-'2': Voh = 1.49*reference; e.g. reference at 1.2V -&gt; Voh = ~1.8V
-'3': Voh = 1.67*reference; e.g. reference at 1.2V -&gt; Voh = 2V
-'4': Voh = 2.08*reference; e.g. reference at 1.2V -&gt; Voh = 2.5V
-'5': Voh = 2.5*reference; e.g. reference at 1.2V -&gt; Voh = 3V
-'6': Voh = 2.78*reference; e.g. reference at 1.2V -&gt; Voh = ~3.3V
-'7': Voh = 4.16*reference; e.g. reference at 1.2V -&gt; Voh = 5.0V
-Note: The upper value on Voh is limited to Vddio - 400mV</description>
+                <description>Selects trip-point of input buffer. In single ended input buffer mode (IBUF01_SEL = '0'):
+0: input buffer functions as a CMOS input buffer.
+1: input buffer functions as a LVTTL input buffer.
+In differential input buffer mode (IBUF01_SEL = '1'):                                                                  VTRIP_SEL=0:                                                                                                                                a) VREF_SEL=00, VOH_SEL=X -&gt; Trip point=50 percent of vddio
+b) VREF_SEL=01, VOH_SEL=000 -&gt; Trip point=Vohref (buffered)
+c) VREF_SEL=01, VOH_SEL=[1-7] -&gt; Input buffer functions as CMOS input buffer.                                                                                                                                             
+d) VREF_SEL=10/11, VOH_SEL=000 -&gt; Trip point=Amuxbus_a/b (buffered)
+e) VREF_SEL=10/11, VOH_SEL=[1-7]  -&gt;  Input buffer functions as CMOS input buffer.                                                                                                                                             VTRIP_SEL=1:                                                                                                                                a) VREF_SEL=00, VOH_SEL=X -&gt; Trip point=40 percent of vddio
+b) VREF_SEL=01, VOH_SEL=000 -&gt; Trip point=0.5*Vohref
+c) VREF_SEL=01, VOH_SEL=[1-7] -&gt; Input buffer functions as LVTTL input buffer.                                                                                                                                            d) VREF_SEL=10/11, VOH_SEL=000 -&gt; Trip point=0.5*Amuxbus_a/b (buffered)
+e) VREF_SEL=10/11, VOH_SEL=[1-7]  -&gt; Input buffer functions as LVTTL input buffer.</description>
                 <bitRange>[7:5]</bitRange>
                 <access>read-write</access>
               </field>
@@ -25982,175 +26970,234 @@ Message RAM bit error sets CCCR.INIT to '1'. This is done to avoid transmission 
               <fields>
                 <field>
                   <name>RF0NE</name>
-                  <description>Rx FIFO 0 New Message Interrupt Enable</description>
+                  <description>Rx FIFO 0 New Message Interrupt Enable
+ 
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[0:0]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF0WE</name>
-                  <description>Rx FIFO 0 Watermark Reached Interrupt Enable</description>
+                  <description>Rx FIFO 0 Watermark Reached Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[1:1]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF0FE</name>
-                  <description>Rx FIFO 0 Full Interrupt Enable</description>
+                  <description>Rx FIFO 0 Full Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[2:2]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF0LE</name>
-                  <description>Rx FIFO 0 Message Lost Interrupt Enable</description>
+                  <description>Rx FIFO 0 Message Lost Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[3:3]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF1NE</name>
-                  <description>Rx FIFO 1 New Message Interrupt Enable</description>
+                  <description>Rx FIFO 1 New Message Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[4:4]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF1WE</name>
-                  <description>Rx FIFO 1 Watermark Reached Interrupt Enable</description>
+                  <description>Rx FIFO 1 Watermark Reached Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[5:5]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF1FE</name>
-                  <description>Rx FIFO 1 Full Interrupt Enable</description>
+                  <description>Rx FIFO 1 Full Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[6:6]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF1LE</name>
-                  <description>Rx FIFO 1 Message Lost Interrupt Enable</description>
+                  <description>Rx FIFO 1 Message Lost Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[7:7]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>HPME</name>
-                  <description>High Priority Message Interrupt Enable</description>
+                  <description>High Priority Message Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[8:8]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TCE</name>
-                  <description>Transmission Completed Interrupt Enable</description>
+                  <description>Transmission Completed Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[9:9]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TCFE</name>
-                  <description>Transmission Cancellation Finished Interrupt Enable</description>
+                  <description>Transmission Cancellation Finished Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[10:10]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TFEE</name>
-                  <description>Tx FIFO Empty Interrupt Enable</description>
+                  <description>Tx FIFO Empty Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt EnabledTx FIFO Empty Interrupt Enable</description>
                   <bitRange>[11:11]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TEFNE</name>
-                  <description>Tx Event FIDO New Entry Interrupt Enable</description>
+                  <description>Tx Event FIDO New Entry Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[12:12]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TEFWE</name>
-                  <description>Tx Event FIFO Watermark Reached Interrupt Enable</description>
+                  <description>Tx Event FIFO Watermark Reached Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[13:13]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TEFFE</name>
-                  <description>Tx Event FIFO Full Interrupt Enable</description>
+                  <description>Tx Event FIFO Full Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[14:14]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TEFLE</name>
-                  <description>Tx Event FIFO Event Lost Interrupt Enable</description>
+                  <description>Tx Event FIFO Event Lost Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[15:15]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TSWE</name>
-                  <description>Timestamp Wraparound Interrupt Enable</description>
+                  <description>Timestamp Wraparound Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[16:16]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>MRAFE</name>
-                  <description>Message RAM Access Failure Interrupt Enable</description>
+                  <description>Message RAM Access Failure Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[17:17]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TOOE</name>
-                  <description>Timeout Occurred Interrupt Enable</description>
+                  <description>Timeout Occurred Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[18:18]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>DRXE</name>
-                  <description>Message stored to Dedicated Rx Buffer Interrupt Enable</description>
+                  <description>Message stored to Dedicated Rx Buffer Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[19:19]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>BECE</name>
-                  <description>Bit Error Corrected Interrupt Enable (not used in M_TTCAN)</description>
+                  <description>Bit Error Corrected Interrupt Enable (not used in M_TTCAN)
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[20:20]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>BEUE</name>
-                  <description>Bit Error Uncorrected Interrupt Enable</description>
+                  <description>Bit Error Uncorrected Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[21:21]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>ELOE</name>
-                  <description>Error Logging Overflow Interrupt Enable</description>
+                  <description>Error Logging Overflow Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[22:22]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>EPE</name>
-                  <description>Error Passive Interrupt Enable</description>
+                  <description>Error Passive Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[23:23]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>EWE</name>
-                  <description>Warning Status Interrupt Enable</description>
+                  <description>Warning Status Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[24:24]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>BOE</name>
-                  <description>Bus_Off Status Interrupt Enable</description>
+                  <description>Bus_Off Status Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[25:25]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>WDIE</name>
-                  <description>Watchdog Interrupt Enable</description>
+                  <description>Watchdog Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[26:26]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>PEAE</name>
-                  <description>Protocol Error in Arbitration Phase Enable</description>
+                  <description>Protocol Error in Arbitration Phase Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[27:27]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>PEDE</name>
-                  <description>Protocol Error in Data Phase Enable</description>
+                  <description>Protocol Error in Data Phase Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[28:28]</bitRange>
                   <access>read-write</access>
                 </field>
@@ -26173,175 +27220,233 @@ Message RAM bit error sets CCCR.INIT to '1'. This is done to avoid transmission 
               <fields>
                 <field>
                   <name>RF0NL</name>
-                  <description>Rx FIFO 0 New Message Interrupt Line</description>
+                  <description>Rx FIFO 0 New Message Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[0:0]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF0WL</name>
-                  <description>Rx FIFO 0 Watermark Reached Interrupt Line</description>
+                  <description>Rx FIFO 0 Watermark Reached Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[1:1]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF0FL</name>
-                  <description>Rx FIFO 0 Full Interrupt Line</description>
+                  <description>Rx FIFO 0 Full Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[2:2]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF0LL</name>
-                  <description>Rx FIFO 0 Message Lost Interrupt Line</description>
+                  <description>Rx FIFO 0 Message Lost Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[3:3]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF1NL</name>
-                  <description>Rx FIFO 1 New Message Interrupt Line</description>
+                  <description>Rx FIFO 1 New Message Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[4:4]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF1WL</name>
-                  <description>Rx FIFO 1 Watermark Reached Interrupt Line</description>
+                  <description>Rx FIFO 1 Watermark Reached Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[5:5]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF1FL</name>
-                  <description>Rx FIFO 1 Full Interrupt Line</description>
+                  <description>Rx FIFO 1 Full Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[6:6]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RF1LL</name>
-                  <description>Rx FIFO 1 Message Lost Interrupt Line</description>
+                  <description>Rx FIFO 1 Message Lost Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[7:7]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>HPML</name>
-                  <description>High Priority Message Interrupt Line</description>
+                  <description>High Priority Message Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[8:8]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TCL</name>
-                  <description>Transmission Completed Interrupt Line</description>
+                  <description>Transmission Completed Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[9:9]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TCFL</name>
-                  <description>Transmission Cancellation Finished Interrupt Line</description>
+                  <description>Transmission Cancellation Finished Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[10:10]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TFEL</name>
-                  <description>Tx FIFO Empty Interrupt Line</description>
+                  <description>Tx FIFO Empty Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[11:11]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TEFNL</name>
-                  <description>Tx Event FIFO New Entry Interrupt Line</description>
+                  <description>Tx Event FIFO New Entry Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[12:12]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TEFWL</name>
-                  <description>Tx Event FIFO Watermark Reached Interrupt Line</description>
+                  <description>Tx Event FIFO Watermark Reached Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[13:13]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TEFFL</name>
-                  <description>Tx Event FIFO Full Interrupt Line</description>
+                  <description>Tx Event FIFO Full Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[14:14]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TEFLL</name>
-                  <description>Tx Event FIFO Event Lost Interrupt Line</description>
+                  <description>Tx Event FIFO Event Lost Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[15:15]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TSWL</name>
-                  <description>Timestamp Wraparound Interrupt Line</description>
+                  <description>Timestamp Wraparound Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[16:16]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>MRAFL</name>
-                  <description>Message RAM Access Failure Interrupt Line</description>
+                  <description>Message RAM Access Failure Interrupt Select  
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[17:17]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TOOL</name>
-                  <description>Timeout Occurred Interrupt Line</description>
+                  <description>Timeout Occurred Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[18:18]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>DRXL</name>
-                  <description>Message stored to Dedicated Rx Buffer Interrupt Line</description>
+                  <description>Message stored to Dedicated Rx Buffer Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[19:19]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>BECL</name>
-                  <description>Bit Error Corrected Interrupt Line  (not used in M_TTCAN)</description>
+                  <description>Bit Error Corrected Interrupt Select  (not used in M_TTCAN) 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[20:20]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>BEUL</name>
-                  <description>Bit Error Uncorrected Interrupt Line</description>
+                  <description>Bit Error Uncorrected Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[21:21]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>ELOL</name>
-                  <description>Error Logging Overflow Interrupt Line</description>
+                  <description>Error Logging Overflow Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[22:22]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>EPL</name>
-                  <description>Error Passive Interrupt Line</description>
+                  <description>Error Passive Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[23:23]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>EWL</name>
-                  <description>Warning Status Interrupt Line</description>
+                  <description>Warning Status Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[24:24]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>BOL</name>
-                  <description>Bus_Off Status Interrupt Line</description>
+                  <description>Bus_Off Status Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[25:25]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>WDIL</name>
-                  <description>Watchdog Interrupt Line</description>
+                  <description>Watchdog Interrupt Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[26:26]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>PEAL</name>
-                  <description>Protocol Error in Arbitration Phase Line</description>
+                  <description>Protocol Error in Arbitration Phase Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[27:27]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>PEDL</name>
-                  <description>Protocol Error in Data Phase Line</description>
+                  <description>Protocol Error in Data Phase Select 
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[28:28]</bitRange>
                   <access>read-write</access>
                 </field>
@@ -27906,115 +29011,153 @@ Trigger out of order.
               <fields>
                 <field>
                   <name>SBCE</name>
-                  <description>Start of Basic Cycle Interrupt Enable</description>
+                  <description>Start of Basic Cycle Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[0:0]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SMCE</name>
-                  <description>Start of Matrix Cycle Interrupt Enable</description>
+                  <description>Start of Matrix Cycle Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[1:1]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>CSME</name>
-                  <description>Change of Synchronization Mode Interrupt Enable</description>
+                  <description>Change of Synchronization Mode Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[2:2]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SOGE</name>
-                  <description>Start of Gap Interrupt Enable</description>
+                  <description>Start of Gap Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[3:3]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RTMIE</name>
-                  <description>Register Time Mark Interrupt Enable</description>
+                  <description>Register Time Mark Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[4:4]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TTMIE</name>
-                  <description>Trigger Time Mark Event Internal Enable</description>
+                  <description>Trigger Time Mark Event Internal Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[5:5]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SWEE</name>
-                  <description>Stop Watch Event Interrupt Enable</description>
+                  <description>Stop Watch Event Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[6:6]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>GTWE</name>
-                  <description>Global Time Wrap Interrupt Enable</description>
+                  <description>Global Time Wrap Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[7:7]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>GTDE</name>
-                  <description>Global Time Discontinuity Interrupt Enable</description>
+                  <description>Global Time Discontinuity Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[8:8]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>GTEE</name>
-                  <description>Global Time Error Interrupt Enable</description>
+                  <description>Global Time Error Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[9:9]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TXUE</name>
-                  <description>Tx Count Underflow Interrupt Enable</description>
+                  <description>Tx Count Underflow Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[10:10]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TXOE</name>
-                  <description>Tx Count Overflow Interrupt Enable</description>
+                  <description>Tx Count Overflow Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[11:11]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SE1E</name>
-                  <description>Scheduling Error 1 Interrupt Enable</description>
+                  <description>Scheduling Error 1 Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[12:12]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SE2E</name>
-                  <description>Scheduling Error 2 Interrupt Enable</description>
+                  <description>Scheduling Error 2 Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[13:13]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>ELCE</name>
-                  <description>Change Error Level Interrupt Enable</description>
+                  <description>Change Error Level Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[14:14]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>IWTE</name>
-                  <description>Initialization Watch Trigger Interrupt Enable</description>
+                  <description>Initialization Watch Trigger Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[15:15]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>WTE</name>
-                  <description>Watch Trigger Interrupt Enable</description>
+                  <description>Watch Trigger Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[16:16]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>AWE_</name>
-                  <description>Application Watchdog Interrupt Enable</description>
+                  <description>Application Watchdog Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[17:17]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>CERE</name>
-                  <description>Configuration Error Interrupt Enable</description>
+                  <description>Configuration Error Interrupt Enable
+0= Interrupt Disabled
+1= Interrupt Enabled</description>
                   <bitRange>[18:18]</bitRange>
                   <access>read-write</access>
                 </field>
@@ -28031,115 +29174,153 @@ Trigger out of order.
               <fields>
                 <field>
                   <name>SBCL</name>
-                  <description>Start of Basic Cycle Interrupt Line</description>
+                  <description>Start of Basic Cycle Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[0:0]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SMCL</name>
-                  <description>Start of Matrix Cycle Interrupt Line</description>
+                  <description>Start of Matrix Cycle Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[1:1]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>CSML</name>
-                  <description>Change of Synchronization Mode Interrupt Line</description>
+                  <description>Change of Synchronization Mode Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[2:2]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SOGL</name>
-                  <description>Start of Gap Interrupt Line</description>
+                  <description>Start of Gap Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[3:3]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>RTMIL</name>
-                  <description>Register Time Mark Interrupt Line</description>
+                  <description>Register Time Mark Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[4:4]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TTMIL</name>
-                  <description>Trigger Time Mark Event Internal Line</description>
+                  <description>Trigger Time Mark Event Internal Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[5:5]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SWEL</name>
-                  <description>Stop Watch Event Interrupt Line</description>
+                  <description>Stop Watch Event Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[6:6]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>GTWL</name>
-                  <description>Global Time Wrap Interrupt Line</description>
+                  <description>Global Time Wrap Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[7:7]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>GTDL</name>
-                  <description>Global Time Discontinuity Interrupt Line</description>
+                  <description>Global Time Discontinuity Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[8:8]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>GTEL</name>
-                  <description>Global Time Error Interrupt Line</description>
+                  <description>Global Time Error Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[9:9]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TXUL</name>
-                  <description>Tx Count Underflow Interrupt Line</description>
+                  <description>Tx Count Underflow Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[10:10]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>TXOL</name>
-                  <description>Tx Count Overflow Interrupt Line</description>
+                  <description>Tx Count Overflow Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[11:11]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SE1L</name>
-                  <description>Scheduling Error 1 Interrupt Line</description>
+                  <description>Scheduling Error 1 Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[12:12]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>SE2L</name>
-                  <description>Scheduling Error 2 Interrupt Line</description>
+                  <description>Scheduling Error 2 Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[13:13]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>ELCL</name>
-                  <description>Change Error Level Interrupt Line</description>
+                  <description>Change Error Level Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[14:14]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>IWTL</name>
-                  <description>Initialization Watch Trigger Interrupt Line</description>
+                  <description>Initialization Watch Trigger Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[15:15]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>WTL</name>
-                  <description>Watch Trigger Interrupt Line</description>
+                  <description>Watch Trigger Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[16:16]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>AWL_</name>
-                  <description>Application Watchdog Interrupt Line</description>
+                  <description>Application Watchdog Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[17:17]</bitRange>
                   <access>read-write</access>
                 </field>
                 <field>
                   <name>CERL</name>
-                  <description>Configuration Error Interrupt Line</description>
+                  <description>Configuration Error Interrupt Select
+0= Assign to interrupt  enabled by ILE.EINT0
+1= Assign to interrupt enabled by ILE.EINT1</description>
                   <bitRange>[18:18]</bitRange>
                   <access>read-write</access>
                 </field>
@@ -28535,7 +29716,7 @@ The m_ttcan_clkstop_req of each TTCAN IP is directly driven by these bits.</desc
 When the MRAM is off any access attempt to it is considered an address error (as if MRAM_SIZE=0).
 After switching the MRAM on again software needs to allow for a certain power up time before MRAM can be used, i.e. before STOP_REQ can be de-asserted. The power up time is equivalent to the system SRAM power up time specified in the CPUSS.RAM_PWR_DELAY_CTL register.
 
-To meet S8 platform requirements, MRAM_OFF should be set to 0 prior to transitioning to Hibernate mode.</description>
+MRAM_OFF should be set to 0 prior to transitioning to Hibernate mode.</description>
               <bitRange>[31:31]</bitRange>
               <access>read-write</access>
             </field>
@@ -28726,7 +29907,15 @@ When this bit is set (and ECC_EN=1) a non-correctable error (ECC or address erro
             </field>
             <field>
               <name>EC_AM_MODE</name>
-              <description>Internally clocked mode ('0') or externally clocked mode ('1') address matching (I2C) or selection (SPI). In internally clocked mode, the serial interface protocols run off the peripheral clock. In externally clocked mode, the serial interface protocols run off the clock as provided by the serial interface. Externally clocked mode is only used for synchronous serial interface protocols (SPI and I2C) in slave mode. In SPI mode, only Motorola submode (all Motorola modes: 0, 1, 2, 3) is supported.
+              <description>This field specifies the clocking for the address matching (I2C) or slave selection detection logic (SPI)
+'0': Internally clocked mode 
+'1': Externally clocked mode 
+
+In internally clocked mode, the serial interface protocols run off the SCB clock. In externally clocked mode, the serial interface protocols run off the clock as provided by the serial interface.
+
+The clocking for the rest of the logic is determined by CTRL.EC_OP_MODE.
+
+Externally clocked mode is only used for synchronous serial interface protocols (SPI and I2C) in slave mode. In SPI mode, only Motorola submode (all Motorola modes: 0, 1, 2, 3) is supported.
 
 In UART mode this field should be '0'.</description>
               <bitRange>[8:8]</bitRange>
@@ -28734,7 +29923,12 @@ In UART mode this field should be '0'.</description>
             </field>
             <field>
               <name>EC_OP_MODE</name>
-              <description>Internally clocked mode ('0') or externally clocked mode ('1') operation. In internally clocked mode, the serial interface protocols run off the peripheral clock. In externally clocked mode, the serial interface protocols run off the clock as provided by the serial interface. Externally clocked operation mode is only used for synchronous serial interface protocols (SPI and I2C) in slave mode AND EZ mode. In SPI mode, only Motorola submode (all Motorola modes: 0, 1, 2, 3) is supported. The maximum SPI slave, EZ mode bitrate is 48 Mbps (transmission and IO delays outside the IP will degrade the effective bitrate).
+              <description>This field specifies the clocking for the SCB block
+'0': Internally clocked mode 
+'1': externally clocked mode
+ In internally clocked mode, the serial interface protocols run off the SCB clock. In externally clocked mode, the serial interface protocols run off the clock as provided by the serial interface. 
+
+Externally clocked operation mode is only used for synchronous serial interface protocols (SPI and I2C) in slave mode AND EZ mode. In SPI mode, only Motorola submode (all Motorola modes: 0, 1, 2, 3) is supported. The maximum SPI slave, EZ mode bitrate is 48 Mbps (transmission and IO delays outside the IP will degrade the effective bitrate).
 
 In UART mode this field should be '0'.</description>
               <bitRange>[9:9]</bitRange>
@@ -28742,7 +29936,8 @@ In UART mode this field should be '0'.</description>
             </field>
             <field>
               <name>EZ_MODE</name>
-              <description>Non EZ mode ('0') or EZ mode ('1'). In EZ mode, a meta protocol is applied to the serial interface protocol. This meta protocol adds meaning to the data frames transferred by the serial interface protocol: a data frame can represent a memory address, a write memory data element or a read memory data element. EZ mode is only used for synchronous serial interface protocols: SPI and I2C. In SPI mode, only Motorola submode (all Motorola modes: 0, 1, 2, 3) is supported and the transmitter should use continuous data frames; i.e. data frames mot separated by slave deselection. This mode is only applicable to slave functionality. In EZ mode, the slave can read from and write to an addressable memory structure of up to 256 bytes. In EZ mode, data frames should 8-bit in size and should be transmitted and received with the Most Significant Bit (MSB) first.
+              <description>Non EZ mode ('0') or EZ mode ('1').
+In EZ mode, a meta protocol is applied to the serial interface protocol. This meta protocol adds meaning to the data frames transferred by the serial interface protocol: a data frame can represent a memory address, a write memory data element or a read memory data element. EZ mode is only used for synchronous serial interface protocols: SPI and I2C. In SPI mode, only Motorola submode (all Motorola modes: 0, 1, 2, 3) is supported and the transmitter should use continuous data frames; i.e. data frames not separated by slave deselection. This mode is only applicable to slave functionality. In EZ mode, the slave can read from and write to an addressable memory structure of 32 bytes. In EZ mode, data frames should 8-bit in size and should be transmitted and received with the Most Significant Bit (MSB) first.
 
 In UART mode this field should be '0'.</description>
               <bitRange>[10:10]</bitRange>
@@ -28791,7 +29986,7 @@ This mode provides the smallest amount of FIFO entries, but TX_CTRL.DATA_WIDTH a
               <name>ADDR_ACCEPT</name>
               <description>Determines whether a received matching address is accepted in the RX FIFO ('1') or not ('0').
 
-In I2C mode, this field is used to allow the slave to put the received slave address or general call address in the RX FIFO. Note that a received matching address is put in the RX FIFO when ADDR_ACCEPT is '1' for both I2C read and write transfers.
+In I2C mode, this field is used to allow the slave to put the received slave address or general call address in the RX FIFO. Note that a received matching address is put in the RX FIFO when this bit is '1' for both I2C read and write transfers.
 
 In multi-processor UART receiver mode, this field is used to allow the receiver to put the received address in the RX FIFO. Note: non-matching addresses are never put in the RX FIFO.</description>
               <bitRange>[16:16]</bitRange>
@@ -28799,7 +29994,7 @@ In multi-processor UART receiver mode, this field is used to allow the receiver 
             </field>
             <field>
               <name>BLOCK</name>
-              <description>Only used in externally clocked mode. If the externally clocked logic and the MMIO SW accesses to EZ memory coincide/collide, this bit determines whether a SW access should block and result in bus wait states ('BLOCK is 1') or not (BLOCK is '0'). IF BLOCK is '0' and the accesses collide, MMIO read operations return 0xffff:ffff and MMIO write operations are ignored. Colliding accesses are registered as interrupt causes: field BLOCKED of MMIO registers INTR_TX and INTR_RX.</description>
+              <description>Only used in externally clocked mode. If the externally clocked logic and the internal CPU accesses to EZ memory coincide/collide, this bit determines whether the CPU access should block and result in bus wait states ('BLOCK is 1') or not (BLOCK is '0'). IF BLOCK is '0' and the accesses collide, CPU read operations return 0xffff:ffff and CPU write operations are ignored. Colliding accesses are registered as interrupt causes: INTR_TX.BLOCKED and INTR_RX.BLOCKED.</description>
               <bitRange>[17:17]</bitRange>
               <access>read-write</access>
             </field>
@@ -28828,9 +30023,9 @@ In multi-processor UART receiver mode, this field is used to allow the receiver 
             </field>
             <field>
               <name>EC_ACCESS</name>
-              <description>used to enable I2CS_EC or SPIS_EC access to internal SRAM memory.
-0: enable clock_scb_en, has no effect on ec_busy_pp
-1: disable clock_scb_en, enable ec_busy_pp (grant I2CS_EC or SPIS_EC access)
+              <description>EC_ACCESS is used to enable I2CS_EC or SPIS_EC access to internal EZ memory.
+1: enable clk_scb
+0: disable clk_scb
 
 Before going to deepsleep this field should be set to 1. 
 when waking up from DeepSleep power mode, and PLL is locked (clk_scb is at expected frequency), this filed should be set to 0.</description>
@@ -28839,12 +30034,12 @@ when waking up from DeepSleep power mode, and PLL is locked (clk_scb is at expec
             </field>
             <field>
               <name>ENABLED</name>
-              <description>IP enabled ('1') or not ('0'). The proper order in which to initialize the IP is as follows:
-- Program protocol specific information using SPI_CTRL, UART_CTRL (and UART_TX_CTRL and UART_RX_CTRL) or I2C_CTRL. This includes selection of a submode, master/slave functionality and transmitter/receiver functionality when applicable.
+              <description>SCB block is enabled ('1') or not ('0'). The proper order in which to initialize SCB is as follows:
+- Program protocol specific information using SPI_CTRL, UART_CTRL (and UART_TX_CTRL and UART_RX_CTRL) or I2C_CTRL registers. This includes selection of a submode, master/slave functionality and transmitter/receiver functionality when applicable.
 - Program generic transmitter (TX_CTRL) and receiver (RX_CTRL) information. This includes enabling of the transmitter and receiver functionality.
 - Program transmitter FIFO (TX_FIFO_CTRL) and receiver FIFO (RX_FIFO_CTRL) information.
-- Program CTRL to enable IP, select the specific operation mode and oversampling factor.
-Generally hen the IP is enabled, no control information should be changed. Changes should be made AFTER disabling the IP, e.g. to modify the operation mode (from I2C to SPI) or to go from externally to internally clocked. The change takes effect after the IP is re-enabled. Note that disabling the IP will cause re-initialization of the design and associated state is lost (e.g. FIFO content).
+- Program CTRL register to enable SCB, select the specific operation mode and oversampling factor.
+Generally when this block is enabled, no control information should be changed. Changes should be made AFTER disabling this block, e.g. to modify the operation mode (from I2C to SPI) or to go from externally to internally clocked. The change takes effect after the block is re-enabled. Note that disabling the block will cause re-initialization of the design and associated state is lost (e.g. FIFO content).
 
 Specific to SPI master case,  when SCB is idle,  below registers can be changed without disabling SCB block,
       TX_CTRL
@@ -28885,13 +30080,13 @@ Specific to SPI master case,  when SCB is idle,  below registers can be changed 
           <fields>
             <field>
               <name>BASE_RD_ADDR</name>
-              <description>I2C/SPI read base address for CMD_RESP mode. Address is used by a I2C CMD_RESP mode read transfer (CTRL.MODE is I2C) or a SPI CMD_RESP mode read transfer (CTRL.MODE is SPI): at the start of a read transfer BASE_RD_ADDR is copied to CMD_RESP_STATUS.CURR_RD_ADDR. This field should not be modified during ongoing bus transfers.</description>
+              <description>I2C/SPI read base address for CMD_RESP mode. At the start of a read transfer this BASE_RD_ADDR is copied to CMD_RESP_STATUS.CURR_RD_ADDR. This field should not be modified during ongoing bus transfers.</description>
               <bitRange>[8:0]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>BASE_WR_ADDR</name>
-              <description>I2C/SPI write base address for CMD_RESP mode. Address is used by a I2C CMD_RESP mode write transfer (CTRL.MODE is I2C) or a SPI CMD_RESP mode write transfer (CTRL.MODE is SPI): at the start of a write transfer BASE_WE_ADDR is copied to CMD_RESP_STATUS.CURR_WR_ADDR. This field should not be modified during ongoing bus transfers.</description>
+              <description>I2C/SPI write base address for CMD_RESP mode. At the start of a write transfer this BASE_WR_ADDR is copied to CMD_RESP_STATUS.CURR_WR_ADDR. This field should not be modified during ongoing bus transfers.</description>
               <bitRange>[24:16]</bitRange>
               <access>read-write</access>
             </field>
@@ -28912,17 +30107,17 @@ Specific to SPI master case,  when SCB is idle,  below registers can be changed 
 
 The field is used to determine how many bytes have been read (# bytes = CURR_RD_ADDR - CMD_RESP_CTRL.BASE_RD_ADDR). 
 
-This field is reliable during when there is no bus transfer. This field is potentially unreliable when there is a bus transfer bus transfer: when CMD_RESP_EC_BUSY is '0', the field is reliable.</description>
+This field is reliable when there is no bus transfer. This field is potentially unreliable when there is a ongoing bus transfer, i.e. when CMD_RESP_EC_BUSY is '0', the field is reliable.</description>
               <bitRange>[8:0]</bitRange>
               <access>read-only</access>
             </field>
             <field>
               <name>CURR_WR_ADDR</name>
-              <description>I2C/SPI write current address for CMD_RESP mode. HW increments the field after a read access to the memory buffer. However, when the last memory buffer address is reached, the address is NOT incremented (but remains at the maximum memory buffer address).
+              <description>I2C/SPI write current address for CMD_RESP mode. HW increments the field after a write access to the memory buffer. However, when the last memory buffer address is reached, the address is NOT incremented (but remains at the maximum memory buffer address).
 
 The field is used to determine how many bytes have been written (# bytes = CURR_WR_ADDR - CMD_RESP_CTRL.BASE_WR_ADDR).
 
-This field is reliable during when there is no bus transfer. This field is potentially unreliable when there is a bus transfer bus transfer: when CMD_RESP_EC_BUSY is '0', the field is reliable.</description>
+This field is reliable when there is no bus transfer. This field is potentially unreliable when there is a ongoing bus transfer, i.e. when CMD_RESP_EC_BUSY is '0', the field is reliable.</description>
               <bitRange>[24:16]</bitRange>
               <access>read-only</access>
             </field>
@@ -28932,7 +30127,7 @@ This field is reliable during when there is no bus transfer. This field is poten
 '0': no ongoing bus transfer.
 '1': ongoing bus transfer.
 
-For SPI, the field is '1' when the slave is selected.
+For SPI, the field is '1' when slave mode is selected.
 
 For I2C, the field is set to '1' at a I2C START/RESTART. In case of an address match, the  field is set to '0' on a I2C STOP. In case of NO address match, the field is set to '0' after the failing address match.</description>
               <bitRange>[30:30]</bitRange>
@@ -28965,7 +30160,7 @@ For I2C, the field is set to '1' at a I2C START/RESTART. In case of an address m
 
 When continuous transfers are enabled individual data frame transfers are not necessarily separated by slave deselection (as indicated by the level or pulse on the SELECT line): if the TX FIFO has multiple data frames, data frames are send out without slave deselection.
 
-When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: data frames are always separated by slave deselection.</description>
+When continuous transfers are not enabled individual data frame transfers are always separated by slave deselection: independent of the availability of TX FIFO data frames, data frames are sent out with slave deselection.</description>
               <bitRange>[0:0]</bitRange>
               <access>read-write</access>
             </field>
@@ -28973,9 +30168,9 @@ When continuous transfers are not enabled individual data frame transfers are al
               <name>SELECT_PRECEDE</name>
               <description>Only used in SPI Texas Instruments' submode.
 
-When '1', the data frame start indication is a pulse on the SELECT line that precedes the transfer of the first data frame bit.
+When '1', the data frame start indication is a pulse on the Slave SELECT line that precedes the transfer of the first data frame bit.
 
-When '0', the data frame start indication is a pulse on the SELECT line that coincides with the transfer of the first data frame bit.</description>
+When '0', the data frame start indication is a pulse on the Slave SELECT line that coincides with the transfer of the first data frame bit.</description>
               <bitRange>[1:1]</bitRange>
               <access>read-write</access>
             </field>
@@ -29005,7 +30200,10 @@ in SPI TI submode, only CPOL=0 CPHA=1 mode is valid.</description>
               <name>LATE_MISO_SAMPLE</name>
               <description>Changes the SCLK edge on which MISO is captured. Only used in master mode.
 
-When '0', the default applies (for Motorola as determined by CPOL and CPHA, for Texas Instruments on the falling edge of SCLK and for National Semiconductors on the rising edge of SCLK). 
+When '0', the default applies (
+for Motorola as determined by CPOL and CPHA, 
+for Texas Instruments on the falling edge of SCLK and 
+for National Semiconductors on the rising edge of SCLK). 
 
 When '1', the alternate clock edge is used (which comes half a SPI SCLK period later). Late sampling addresses the round trip delay associated with transmitting SCLK from the master to the slave and transmitting MISO from the slave to the master.</description>
               <bitRange>[4:4]</bitRange>
@@ -29084,8 +30282,8 @@ above are ideal case at SCB block level, and there is inaccuracy of one clk_scb 
             <field>
               <name>LOOPBACK</name>
               <description>Local loopback control (does NOT affect the information on the pins). Only used in master mode. Not used in National Semiconductors submode.
-'0': the SPI master MISO line 'spi_miso_in' is connected to the SPI MISO pin.
-'1': the SPI master MISO line 'spi_miso_in' is connected to the SPI master MOSI line 'spi_mosi_out'. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI.</description>
+'0': No local loopback
+'1': the SPI master MISO line is connected to the SPI master MOSI line. In other words, in loopback mode the SPI master receives on MISO what it transmits on MOSI.</description>
               <bitRange>[16:16]</bitRange>
               <access>read-write</access>
             </field>
@@ -29097,17 +30295,17 @@ above are ideal case at SCB block level, and there is inaccuracy of one clk_scb 
               <enumeratedValues>
                 <enumeratedValue>
                   <name>SPI_MOTOROLA</name>
-                  <description>SPI Motorola submode. In master mode, when not transmitting data (SELECT is inactive), SCLK is stable at CPOL. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive.</description>
+                  <description>SPI Motorola submode. In master mode, when not transmitting data (Slave SELECT is inactive), SCLK is stable at CPOL. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive.</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>SPI_TI</name>
-                  <description>SPI Texas Instruments submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive; i.e. no pulse is generated.</description>
+                  <description>SPI Texas Instruments submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive; i.e. no pulse is generated.</description>
                   <value>1</value>
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>SPI_NS</name>
-                  <description>SPI National Semiconductors submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), SELECT is inactive.</description>
+                  <description>SPI National Semiconductors submode. In master mode, when not transmitting data, SCLK is stable at '0'. In slave mode, when not selected, SCLK is ignored; i.e. it can be either stable or clocking. In master mode, when there is no data to transmit (TX FIFO is empty), Slave SELECT is inactive.</description>
                   <value>2</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -29119,7 +30317,7 @@ above are ideal case at SCB block level, and there is inaccuracy of one clk_scb 
 - 1: Slave 1, SSEL[1].
 - 2: Slave 2, SSEL[2].
 - 3: Slave 3, SSEL[3].
-The IP should be disabled when changes are made to this field.</description>
+SCB block should be disabled when changes are made to this field.</description>
               <bitRange>[27:26]</bitRange>
               <access>read-write</access>
             </field>
@@ -29229,8 +30427,9 @@ The IP should be disabled when changes are made to this field.</description>
           <fields>
             <field>
               <name>LOOPBACK</name>
-              <description>Local loopback control (does NOT affect the information on the pins). When '0', the transmitter TX line 'uart_tx_out' is connected to the TX pin and the receiver RX line 'uart_rx_in' is connected to the RX pin. When '1', the transmitter TX line 'uart_tx_out' is connected to the receiver RX line 'uart_rx_in'. A similar connections scheme is followed for 'uart_rts_out' and 'uart_cts_in'.
-
+              <description>Local loopback control (does NOT affect the information on the pins). 
+0: Loopback is not enabled
+1: UART_TX is connected to UART_RX. UART_RTS is connected to UART_CTS.
 This allows a SCB UART transmitter to communicate with its receiver counterpart.</description>
               <bitRange>[16:16]</bitRange>
               <access>read-write</access>
@@ -29253,7 +30452,7 @@ This allows a SCB UART transmitter to communicate with its receiver counterpart.
                 </enumeratedValue>
                 <enumeratedValue>
                   <name>UART_IRDA</name>
-                  <description>Infrared Data Association (IrDA) submode. Return to Zero modulation scheme.</description>
+                  <description>Infrared Data Association (IrDA) submode. Return to Zero modulation scheme. In this mode, the oversampling factor should be 16, that is OVS should be set to 15.</description>
                   <value>2</value>
                 </enumeratedValue>
               </enumeratedValues>
@@ -29306,9 +30505,9 @@ This allows a SCB UART transmitter to communicate with its receiver counterpart.
           <fields>
             <field>
               <name>STOP_BITS</name>
-              <description>Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of halve bit periods. Valid range is [1, 7]; i.e. a stop period should last at least one bit period.
+              <description>Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of half bit periods. Valid range is [1, 7]; i.e. a stop period should last at least one bit period. 
 
-Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle ('1') time between data frames and the data frame value.</description>
+Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle time between data frames and the data frame value.</description>
               <bitRange>[2:0]</bitRange>
               <access>read-write</access>
             </field>
@@ -29326,19 +30525,24 @@ Note that in case of a stop bits error, the successive data frames may get lost 
             </field>
             <field>
               <name>POLARITY</name>
-              <description>Inverts incoming RX line signal 'uart_rx_in'. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality.</description>
+              <description>Inverts incoming RX line signal. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality.</description>
               <bitRange>[6:6]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>DROP_ON_PARITY_ERROR</name>
-              <description>Behavior when a parity check fails. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field).</description>
+              <description>Behavior when a parity check fails. 
+When '0', received data is sent to the RX FIFO. 
+When '1', received data is dropped and lost. 
+Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field).</description>
               <bitRange>[8:8]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>DROP_ON_FRAME_ERROR</name>
-              <description>Behavior when an error is detected in a start or stop period. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost.</description>
+              <description>Behavior when an error is detected in a start or stop period. 
+When '0', received data is sent to the RX FIFO.
+ When '1', received data is dropped and lost.</description>
               <bitRange>[9:9]</bitRange>
               <access>read-write</access>
             </field>
@@ -29386,7 +30590,7 @@ Note that in case of a stop bits error, the successive data frames may get lost 
           <fields>
             <field>
               <name>BR_COUNTER</name>
-              <description>Amount of peripheral clock periods that constitute the transmission of a 0x55 data frame (sent least significant bit first) as determined by the receiver. BR_COUNTER / 8 is the amount of peripheral clock periods that constitute a bit period. This field has valid data when INTR_RX.BAUD_DETECT is set to '1'.</description>
+              <description>Amount of SCB clock periods that constitute the transmission of a 0x55 data frame (sent least significant bit first) as determined by the receiver. BR_COUNTER / 8 is the amount of SCB clock periods that constitute a bit period. This field has valid data when INTR_RX.BAUD_DETECT is set to '1'.</description>
               <bitRange>[11:0]</bitRange>
               <access>read-only</access>
             </field>
@@ -29403,35 +30607,35 @@ Note that in case of a stop bits error, the successive data frames may get lost 
           <fields>
             <field>
               <name>TRIGGER_LEVEL</name>
-              <description>Trigger level. When the receiver FIFO has less entries than the amount of this field, a Ready To Send (RTS) output signal 'uart_rts_out' is activated. By setting this field to '0', flow control is effectively SW disabled (may be useful for debug purposes).</description>
+              <description>Trigger level. When the receiver FIFO has less entries than the amount of this field, a Ready To Send (RTS) output signal is activated. By setting this field to '0', flow control is effectively disabled (may be useful for debug purposes).</description>
               <bitRange>[7:0]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>RTS_POLARITY</name>
-              <description>Polarity of the RTS output signal 'uart_rts_out':
-'0': RTS is low/'0' active; 'uart_rts_out' is '0' when active and 'uart_rts_out' is '1' when inactive.
-'1': RTS is high/'1' active; 'uart_rts_out' is '1' when active and 'uart_rts_out' is '0' when inactive.
+              <description>Polarity of the RTS output signal:
+'0': RTS is active low; 
+'1': RTS is active high; 
 
-During IP reset (Hibernate system power mode), 'uart_rts_out' is '1'. This represents an inactive state assuming a low/'0' active polarity.</description>
+During SCB reset (Hibernate system power mode), RTS output signal is '1'. This represents an inactive state assuming an active low polarity.</description>
               <bitRange>[16:16]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>CTS_POLARITY</name>
-              <description>Polarity of the CTS input signal 'uart_cts_in':
-'0': CTS is low/'0' active; 'uart_cts_in' is '0' when active and 'uart_cts_in' is '1' when inactive.
-'1': CTS is high/'1' active; 'uart_cts_in' is '1' when active and 'uart_cts_in' is '0' when inactive.</description>
+              <description>Polarity of the CTS input signal
+'0': CTS is active low ; 
+'1': CTS is active high;</description>
               <bitRange>[24:24]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>CTS_ENABLED</name>
-              <description>Enable use of CTS input signal 'uart_cts_in' by the UART transmitter:
-'0': Disabled. The UART transmitter ignores 'uart_cts_in', and transmits when a data frame is available for transmission in the TX FIFO or the TX shift register.
-'1': Enabled. The UART transmitter uses 'uart_cts_in' to qualify the transmission of data. It transmits when 'uart_cts_in' is active and a data frame is available for transmission in the TX FIFO or the TX shift register.
+              <description>Enable use of CTS input signal by the UART transmitter:
+'0': Disabled. The UART transmitter ignores the CTS input signal and transmits when a data frame is available for transmission in the TX FIFO or the TX shift register.
+'1': Enabled. The UART transmitter uses CTS input signal to qualify the transmission of data. It transmits when CTS input signal is active and a data frame is available for transmission in the TX FIFO or the TX shift register.
 
-If UART_CTRL.LOOPBACK is '1', 'uart_cts_in' is connected to 'uart_rts_out' in the IP (both signals are subjected to signal polarity changes as indicated by RTS_POLARITY and CTS_POLARITY).</description>
+If UART_CTRL.LOOPBACK is '1', the CTS input signal is driven by the RTS output signal locally in SCB (both signals are subjected to signal polarity changes are indicated by RTS_POLARITY and CTS_POLARITY).</description>
               <bitRange>[25:25]</bitRange>
               <access>read-write</access>
             </field>
@@ -29448,17 +30652,17 @@ If UART_CTRL.LOOPBACK is '1', 'uart_cts_in' is connected to 'uart_rts_out' in th
           <fields>
             <field>
               <name>HIGH_PHASE_OVS</name>
-              <description>Serial I2C interface high phase oversampling factor. HIGH_PHASE_OVS + 1 peripheral clock periods constitute the high phase of a bit period. The valid range is [5, 15] with input signal median filtering and [4, 15] without input signal median filtering.
+              <description>Serial I2C interface high phase oversampling factor. HIGH_PHASE_OVS + 1 SCB clock periods constitute the high phase of a bit period. The valid range is [5, 15] with input signal median filtering and [4, 15] without input signal median filtering.
 
-The field is only used in master mode. In slave mode, the field is NOT used. However, there is a frequency requirement for the IP clock wrt. the regular interface (IF) high time to guarantee functional correct behavior. With input signal median filtering, the IF high time should be &gt;= 6 IP clock cycles and &lt;= 16 IP clock cycles. Without input signal median filtering, the IF high time should be &gt;= 5 IP clock cycles and &lt;= 16 IP clock cycles.</description>
+The field is only used in master mode. In slave mode, the field is NOT used. However, there is a frequency requirement for the SCB clock wrt. the regular interface (IF) high time to guarantee functional correct behavior. With input signal median filtering, the IF high time should be &gt;= 6 SCB clock cycles and &lt;= 16 SCB clock cycles. Without input signal median filtering, the IF high time should be &gt;= 5 SCB clock cycles and &lt;= 16 SCB clock cycles.</description>
               <bitRange>[3:0]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>LOW_PHASE_OVS</name>
-              <description>Serial I2C interface low phase oversampling factor. LOW_PHASE_OVS + 1 peripheral clock periods constitute the low phase of a bit period. The valid range is [7, 15] with input signal median filtering and [6, 15] without input signal median filtering. 
+              <description>Serial I2C interface low phase oversampling factor. LOW_PHASE_OVS + 1 SCB clock periods constitute the low phase of a bit period. The valid range is [7, 15] with input signal median filtering and [6, 15] without input signal median filtering. 
 
-The field is mainly used in master mode. In slave mode, there is a frequency requirement for the IP clock wrt. the regular (no stretching) interface (IF) low time to guarantee functional correct behavior. With input signal median filtering, the IF low time should be &gt;= 8 IP clock cycles and &lt;= 16 IP clock cycles. Without input signal median filtering, the IF low time should be &gt;= 7 IP clock cycles and &lt;= 16 IP clock cycles.
+The field is only used in master mode. In slave mode, the field is NOT used. However, there is a frequency requirement for the SCB clock wrt. the regular (no stretching) interface (IF) low time to guarantee functionally correct behavior. With input signal median filtering, the IF low time should be &gt;= 8 SCB clock cycles and &lt;= 16 IP clock cycles. Without input signal median filtering, the IF low time should be &gt;= 7 SCB clock cycles and &lt;= 16 SCB clock cycles.
 
 in slave mode, this field is used to define number of clk_scb cycles for tSU-DAT timing (from ACK/NACK/data ready, to SCL rising edge (released from I2C slave clock stretching))</description>
               <bitRange>[7:4]</bitRange>
@@ -29496,8 +30700,9 @@ in slave mode, this field is used to define number of clk_scb cycles for tSU-DAT
             </field>
             <field>
               <name>S_NOT_READY_ADDR_NACK</name>
-              <description>For internally clocked logic (EC_AM is '0' and EC_OP is '0') on an address match or general call address (and S_GENERAL_IGNORE is '0'). Only used when:
-- EC_AM is '0', EC_OP is '0' and non EZ mode.
+              <description>This field is used during an address match or general call address in internally clocked mode 
+Only used when:
+ - EC_AM_MODE is '0', EC_OP_MODE is '0', S_GENERAL_IGNORE is '0] and non EZ mode.
 Functionality is as follows:
 - 1: a received (matching) slave address is immediately NACK'd when the receiver FIFO is full.
 - 0: clock stretching is performed (till the receiver FIFO is no longer full). 
@@ -29507,15 +30712,17 @@ For externally clocked logic (EC_AM is '1') on an address match or general call 
 - EC_AM is '1' and general call address match.
 - EC_AM is '1' and non EZ mode.
 Functionality is as follows:
-- 1: a received (matching or general) slave address is always immediately NACK'd. There are two possibilities: 1). the internally clocked logic is enabled (we are in Active system power mode) and it handles the rest of the current transfer. In this case the I2C master will not observe the NACK. 2). the internally clocked logic is not enabled (we are in DeepSleep system power mode). In this case the I2C master will observe the NACK and may retry the transfer in the future (which gives the internally clocked logic the time to wake up from DeepSleep system power mode). 
-- 0: clock stretching is performed (till the internally clocked logic takes over). The internally clocked logic will handle the ongoing transfer as soon as it is enabled.</description>
+- 1: a received (matching or general) slave address is always immediately NACK'd. There are two possibilities:
+       1). the SCB clock is available (in Active system power mode) and it handles the rest of the current transfer. In this case the I2C master will not observe the NACK. 
+       2).SCB clock is not present (in DeepSleep system power mode). In this case the I2C master will observe the NACK and may retry the transfer in the future (which gives the internally clocked logic the time to wake up from DeepSleep system power mode). 
+- 0: clock stretching is performed (till the SCB clock is available). The logic will handle the ongoing transfer as soon as the clock is enabled.</description>
               <bitRange>[14:14]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>S_NOT_READY_DATA_NACK</name>
-              <description>For internally clocked logic only. Only used when:
-- non EZ mode.
+              <description>Only used when:
+- non EZ mode
 Functionality is as follows:
 - 1: a received data element byte the slave is immediately NACK'd when the receiver FIFO is full.
 - 0: clock stretching is performed (till the receiver FIFO is no longer full).</description>
@@ -29524,7 +30731,9 @@ Functionality is as follows:
             </field>
             <field>
               <name>LOOPBACK</name>
-              <description>Local loopback control (does NOT affect the information on the pins). Only applicable in master/slave mode. When '0', the I2C SCL and SDA lines are connected to the I2C SCL and SDA pins. When '1', I2C SCL and SDA lines are routed internally in the peripheral, and as a result unaffected by other I2C devices. This allows a SCB I2C peripheral to address itself.</description>
+              <description>Local loopback control (does NOT affect the information on the pins). Only applicable in master/slave mode. 
+When '0', no loopback
+When '1', loopback is enabled internally in the peripheral, and as a result unaffected by other I2C devices. This allows a SCB I2C peripheral to address itself.</description>
               <bitRange>[16:16]</bitRange>
               <access>read-write</access>
             </field>
@@ -29553,7 +30762,7 @@ Functionality is as follows:
           <fields>
             <field>
               <name>BUS_BUSY</name>
-              <description>I2C bus is busy. The bus is considered busy ('1'), from the time a START is detected or from the time the SCL line is '0'. The bus is considered idle ('0'), from the time a STOP is detected. If the IP is disabled, BUS_BUSY is '0'. After enabling the IP, it takes time for the BUS_BUSY to detect a busy bus. This time is the maximum high time of the SCL line. For a 100 kHz interface frequency, this maximum high time may last roughly 5 us (half a bit period).
+              <description>I2C bus is busy. The bus is considered busy ('1'), from the time a START is detected or from the time the SCL line is '0'. The bus is considered idle ('0'), from the time a STOP is detected. If SCB block is disabled, BUS_BUSY is '0'. After enabling the block, it takes time for the BUS_BUSY to detect a busy bus. This time is the maximum high time of the SCL line. For a 100 kHz interface frequency, this maximum high time may last roughly 5 us (half a bit period).
 
 For single master systems, BUS_BUSY does not have to be used to detect an idle bus before a master starts a transfer using I2C_M_CMD.M_START (no bus collisions).
 
@@ -29678,15 +30887,13 @@ This bit can be used by SW to determine whether I2CS_IC is busy before entering 
           <fields>
             <field>
               <name>SDA_IN_FILT_TRIM</name>
-              <description>Trim bits for 'i2c_sda_in' 50 ns filter. 
-for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values.
-For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values.</description>
+              <description>Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required</description>
               <bitRange>[1:0]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>SDA_IN_FILT_SEL</name>
-              <description>Selection of 'i2c_sda_in' filter delay:
+              <description>Enable for 50ns glitch filter on SDA input
 '0': 0 ns.
 '1: 50 ns (filter enabled).</description>
               <bitRange>[4:4]</bitRange>
@@ -29694,15 +30901,13 @@ For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib B
             </field>
             <field>
               <name>SCL_IN_FILT_TRIM</name>
-              <description>Trim bits for 'i2c_scl_in' 50 ns filter. 
-for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values.
-For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values.</description>
+              <description>Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required</description>
               <bitRange>[9:8]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>SCL_IN_FILT_SEL</name>
-              <description>Selection of 'i2c_scl_in' filter delay:
+              <description>Enable for 50ns glitch filter on SCL input
 '0': 0 ns.
 '1: 50 ns (filter enabled).</description>
               <bitRange>[12:12]</bitRange>
@@ -29710,31 +30915,25 @@ For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib B
             </field>
             <field>
               <name>SDA_OUT_FILT0_TRIM</name>
-              <description>Trim bits for 'i2c_sda_out' 50 ns filter 0. 
-for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values.
-For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values.</description>
+              <description>Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required</description>
               <bitRange>[17:16]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>SDA_OUT_FILT1_TRIM</name>
-              <description>Trim bits for 'i2c_sda_out' 50 ns filter 1. 
-for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values.
-For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values.</description>
+              <description>Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required</description>
               <bitRange>[19:18]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>SDA_OUT_FILT2_TRIM</name>
-              <description>Trim bits for 'i2c_sda_out' 50 ns filter 2. 
-for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values.
-For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values.</description>
+              <description>Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required</description>
               <bitRange>[21:20]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>SDA_OUT_FILT_SEL</name>
-              <description>Selection of cumulative 'i2c_sda_out' filter delay:
+              <description>Selection of cumulative filter delay on SDA output to meet tHD_DAT parameter
 '0': 0 ns.
 '1': 50 ns (filter 0 enabled).
 '2': 100 ns (filters 0 and 1 enabled).
@@ -29978,7 +31177,7 @@ In I2C slave mode, only bits 7 down to 1 are used. This reflects the organizatio
             </field>
             <field>
               <name>MASK</name>
-              <description>Slave device address mask. This field is a mask that specifies which of the ADDR field bits in the ADDR field take part in the matching of the slave address: MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK)).</description>
+              <description>Slave device address mask. This field is a mask that specifies which of the slave address bits take part in the matching. MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK)).</description>
               <bitRange>[23:16]</bitRange>
               <access>read-write</access>
             </field>
@@ -29995,11 +31194,11 @@ In I2C slave mode, only bits 7 down to 1 are used. This reflects the organizatio
           <fields>
             <field>
               <name>DATA</name>
-              <description>Data read from the receiver FIFO. Reading a data frame will remove the data frame from the FIFO; i.e. behavior is similar to that of a POP operation. Note that when CTRL.MEM_WIDTH is '0', only DATA[7:0] are used and when CTRL.MEM_WIDTH is '1', only DATA[15:0] are used.
+              <description>Data read from the receiver FIFO. Reading a data frame will remove the data frame from the FIFO; i.e. behavior is similar to that of a POP operation. Note that when CTRL.MEM_WIDTH is '0', only DATA[7:0] are used and when CTRL.MEM_WIDTH is '1', only DATA[15:0] are used
 
-This register has a side effect when read by software: a data frame is removed from the FIFO. This may be undesirable during debug; i.e. a read during debug should NOT have a side effect. To this end, the IP uses the AHB-Lite 'hmaster[0]' input signal. When this signal is '1' in the address cycle of a bus transfer, a read transfer will not have a side effect. As a result, a read from this register will not remove a data frame from the FIFO. As a result, a read from this register behaves as a read from the SCB_RX_FIFO_RD_SILENT register.
+A read from an empty RX FIFO sets INTR_RX.UNDERFLOW to '1'.
 
-A read from an empty RX FIFO sets INTR_RX.UNDERFLOW to '1'.</description>
+When this register is read through the debugger, the data frame will not be removed from the FIFO. Similar in operation to RX_FIFO_RD_SILENT</description>
               <bitRange>[31:0]</bitRange>
               <access>read-only</access>
             </field>
@@ -30084,7 +31283,7 @@ A read from an empty RX FIFO sets INTR_RX.UNDERFLOW to '1'.</description>
               <name>WAKE_UP</name>
               <description>Wake up request. Active on incoming slave request (with address match).
 
-Only used when EC_AM is '1'.</description>
+Only used when CTRL.EC_AM_MODE is '1'.</description>
               <bitRange>[0:0]</bitRange>
               <access>read-write</access>
             </field>
@@ -30092,7 +31291,7 @@ Only used when EC_AM is '1'.</description>
               <name>EZ_STOP</name>
               <description>STOP detection. Activated on the end of a every transfer (I2C STOP).
 
-Only available for a slave request with an address match, in EZ and CMD_RESP modes, when EC_OP is '1'.</description>
+Only available for a slave request with an address match, in EZ and CMD_RESP modes, when CTRL.EC_OP_MODE is '1'.</description>
               <bitRange>[1:1]</bitRange>
               <access>read-write</access>
             </field>
@@ -30100,7 +31299,7 @@ Only available for a slave request with an address match, in EZ and CMD_RESP mod
               <name>EZ_WRITE_STOP</name>
               <description>STOP detection after a write transfer occurred. Activated on the end of a write transfer (I2C STOP). This event is an indication that a buffer memory location has been written to. For EZ mode: a  transfer that only writes the base address does NOT activate this event. 
 
-Only available for a slave request with an address match, in EZ and CMD_RESP modes, when EC_OP is '1'.</description>
+Only available for a slave request with an address match, in EZ and CMD_RESP modes, when CTRL.EC_OP_MODE is '1'.</description>
               <bitRange>[2:2]</bitRange>
               <access>read-write</access>
             </field>
@@ -30108,7 +31307,7 @@ Only available for a slave request with an address match, in EZ and CMD_RESP mod
               <name>EZ_READ_STOP</name>
               <description>STOP detection after a read transfer occurred. Activated on the end of a read transfer (I2C STOP). This event is an indication that a buffer memory location has been read from.
 
-Only available for a slave request with an address match, in EZ and CMD_RESP modes, when EC_OP is '1'.</description>
+Only available for a slave request with an address match, in EZ and CMD_RESP modes, when CTRL.EC_OP_MODE is '1'.</description>
               <bitRange>[3:3]</bitRange>
               <access>read-write</access>
             </field>
@@ -30197,7 +31396,7 @@ Only available for a slave request with an address match, in EZ and CMD_RESP mod
               <name>WAKE_UP</name>
               <description>Wake up request. Active on incoming slave request when externally clocked selection is '1'.
 
-Only used when EC_AM is '1'.</description>
+Only used when CTRL.EC_AM_MODE is '1'.</description>
               <bitRange>[0:0]</bitRange>
               <access>read-write</access>
             </field>
@@ -30205,7 +31404,7 @@ Only used when EC_AM is '1'.</description>
               <name>EZ_STOP</name>
               <description>STOP detection. Activated on the end of a every transfer (SPI deselection).
 
-Only available in EZ and CMD_RESP mode and when EC_OP is '1'.</description>
+Only available in EZ and CMD_RESP mode and when CTRL.EC_OP_MODE is '1'.</description>
               <bitRange>[1:1]</bitRange>
               <access>read-write</access>
             </field>
@@ -30213,7 +31412,7 @@ Only available in EZ and CMD_RESP mode and when EC_OP is '1'.</description>
               <name>EZ_WRITE_STOP</name>
               <description>STOP detection after a write transfer occurred. Activated on the end of a write transfer (SPI deselection). This event is an indication that a buffer memory location has been written to. For EZ mode: a  transfer that only writes the base address does NOT activate this event. 
 
-Only used in EZ and CMD_RESP modes and when EC_OP is '1'.</description>
+Only used in EZ and CMD_RESP modes and when CTRL.EC_OP_MODE is '1'.</description>
               <bitRange>[2:2]</bitRange>
               <access>read-write</access>
             </field>
@@ -30221,7 +31420,7 @@ Only used in EZ and CMD_RESP modes and when EC_OP is '1'.</description>
               <name>EZ_READ_STOP</name>
               <description>STOP detection after a read transfer occurred. Activated on the end of a read transfer (SPI deselection). This event is an indication that a buffer memory location has been read from.
 
-Only used in EZ and CMD_RESP modes and when EC_OP is '1'.</description>
+Only used in EZ and CMD_RESP modes and when CTRL.EC_OP_MODE is '1'.</description>
               <bitRange>[3:3]</bitRange>
               <access>read-write</access>
             </field>
@@ -30496,7 +31695,7 @@ Only used in EZ and CMD_RESP modes and when EC_OP is '1'.</description>
           <fields>
             <field>
               <name>I2C_ARB_LOST</name>
-              <description>I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine abort the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error.</description>
+              <description>I2C slave lost arbitration: the value driven on the SDA line is not the same as the value observed on the SDA line (while the SCL line is '1'). This should not occur, it represents erroneous I2C bus behavior. In case of lost arbitration, the I2C slave state machine aborts the ongoing transfer. The Firmware may decide to clear the TX and RX FIFOs in case of this error.</description>
               <bitRange>[0:0]</bitRange>
               <access>read-write</access>
             </field>
@@ -30534,7 +31733,7 @@ The event is detected on any I2C transfer intended for this slave. Note that a I
               <name>I2C_START</name>
               <description>I2C slave START received. Set to '1', when START or REPEATED START event is detected.
 
-In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (till the internally clocked logic takes over) (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL.</description>
+In the case of externally clocked address matching (CTRL.EC_AM_MODE is '1') AND clock stretching is performed (I2C_CTRL.S_NOT_READY_ADDR_NACK is '0'), this field is NOT set. The Firmware should use INTR_S_EC.WAKE_UP, INTR_S.I2C_ADDR_MATCH and INTR_S.I2C_GENERAL.</description>
               <bitRange>[5:5]</bitRange>
               <access>read-write</access>
             </field>
@@ -30871,7 +32070,7 @@ Only used in FIFO mode.</description>
             </field>
             <field>
               <name>UNDERFLOW</name>
-              <description>Attempt to read from an empty TX FIFO. This happens when the IP is ready to transfer data and EMPTY is '1'.
+              <description>Attempt to read from an empty TX FIFO. This happens when SCB is ready to transfer data and EMPTY is '1'.
 
 Only used in FIFO mode.</description>
               <bitRange>[6:6]</bitRange>
@@ -30879,7 +32078,7 @@ Only used in FIFO mode.</description>
             </field>
             <field>
               <name>BLOCKED</name>
-              <description>AHB-Lite write transfer can not get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'.</description>
+              <description>SW cannot get access to the EZ memory (EZ data access), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'.</description>
               <bitRange>[7:7]</bitRange>
               <access>read-write</access>
             </field>
@@ -31152,7 +32351,7 @@ Only used in FIFO mode.</description>
             </field>
             <field>
               <name>BLOCKED</name>
-              <description>AHB-Lite read transfer can not get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'.</description>
+              <description>SW cannot get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'.</description>
               <bitRange>[7:7]</bitRange>
               <access>read-write</access>
             </field>

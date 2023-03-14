@@ -13,7 +13,7 @@ impl From<crate::R<IN_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `IN0` reader - IO pin state for pin 0 '0': Low logic level present on pin. '1': High logic level present on pin."]
+#[doc = "Field `IN0` reader - IO pin state for pin 0 '0': Low logic level present on pin. '1': High logic level present on pin. On reset assertion , IN register will get reset. The Pad value takes 2 clock cycles to be reflected into IN Register. It's value then depends on the external pin value."]
 pub type IN0_R = crate::BitReader<bool>;
 #[doc = "Field `IN1` reader - IO pin state for pin 1"]
 pub type IN1_R = crate::BitReader<bool>;
@@ -32,7 +32,7 @@ pub type IN7_R = crate::BitReader<bool>;
 #[doc = "Field `FLT_IN` reader - Reads of this register return the logical state of the filtered pin as selected in the INTR_CFG.FLT_SEL register."]
 pub type FLT_IN_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 0 - IO pin state for pin 0 '0': Low logic level present on pin. '1': High logic level present on pin."]
+    #[doc = "Bit 0 - IO pin state for pin 0 '0': Low logic level present on pin. '1': High logic level present on pin. On reset assertion , IN register will get reset. The Pad value takes 2 clock cycles to be reflected into IN Register. It's value then depends on the external pin value."]
     #[inline(always)]
     pub fn in0(&self) -> IN0_R {
         IN0_R::new((self.bits & 1) != 0)

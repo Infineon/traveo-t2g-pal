@@ -34,9 +34,9 @@ impl From<crate::W<PORT_SEL0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `IO0_SEL` reader - Selects connection for IO pin 0 route."]
+#[doc = "Field `IO0_SEL` reader - Selects the peripheral connections of Pin 0. Note that available connectivity options vary depending on the device, port and the pin. See the device Datasheet for a list of peripheral connections available at each pin."]
 pub type IO0_SEL_R = crate::FieldReader<u8, IO0_SEL_A>;
-#[doc = "Selects connection for IO pin 0 route.\n\nValue on reset: 0"]
+#[doc = "Selects the peripheral connections of Pin 0. Note that available connectivity options vary depending on the device, port and the pin. See the device Datasheet for a list of peripheral connections available at each pin.\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum IO0_SEL_A {
@@ -48,61 +48,61 @@ pub enum IO0_SEL_A {
     DSI_DSI = 2,
     #[doc = "3: DSI controls 'out', GPIO controls 'output enable'"]
     DSI_GPIO = 3,
-    #[doc = "4: Analog mux bus A"]
+    #[doc = "4: AMUXBUS A"]
     AMUXA = 4,
-    #[doc = "5: Analog mux bus B"]
+    #[doc = "5: AMUXBUS B"]
     AMUXB = 5,
     #[doc = "6: Analog mux bus A, DSI control"]
     AMUXA_DSI = 6,
     #[doc = "7: Analog mux bus B, DSI control"]
     AMUXB_DSI = 7,
-    #[doc = "8: Active functionality 0"]
+    #[doc = "8: Active peripheral 0"]
     ACT_0 = 8,
-    #[doc = "9: Active functionality 1"]
+    #[doc = "9: Active peripheral 1"]
     ACT_1 = 9,
-    #[doc = "10: Active functionality 2"]
+    #[doc = "10: Active peripheral 2"]
     ACT_2 = 10,
-    #[doc = "11: Active functionality 3"]
+    #[doc = "11: Active peripheral 3"]
     ACT_3 = 11,
-    #[doc = "12: DeepSleep functionality 0"]
+    #[doc = "12: Deep Sleep peripheral 0"]
     DS_0 = 12,
-    #[doc = "13: DeepSleep functionality 1"]
+    #[doc = "13: Deep Sleep peripheral 1"]
     DS_1 = 13,
-    #[doc = "14: DeepSleep functionality 2"]
+    #[doc = "14: Deep Sleep peripheral 2"]
     DS_2 = 14,
-    #[doc = "15: DeepSleep functionality 3"]
+    #[doc = "15: Deep Sleep peripheral 3"]
     DS_3 = 15,
-    #[doc = "16: Active functionality 4"]
+    #[doc = "16: Active peripheral 4"]
     ACT_4 = 16,
-    #[doc = "17: Active functionality 5"]
+    #[doc = "17: Active peripheral 5"]
     ACT_5 = 17,
-    #[doc = "18: Active functionality 6"]
+    #[doc = "18: Active peripheral 6"]
     ACT_6 = 18,
-    #[doc = "19: Active functionality 7"]
+    #[doc = "19: Active peripheral 7"]
     ACT_7 = 19,
-    #[doc = "20: Active functionality 8"]
+    #[doc = "20: Active peripheral 8"]
     ACT_8 = 20,
-    #[doc = "21: Active functionality 9"]
+    #[doc = "21: Active peripheral 9"]
     ACT_9 = 21,
-    #[doc = "22: Active functionality 10"]
+    #[doc = "22: Active peripheral 10"]
     ACT_10 = 22,
-    #[doc = "23: Active functionality 11"]
+    #[doc = "23: Active peripheral 11"]
     ACT_11 = 23,
-    #[doc = "24: Active functionality 12"]
+    #[doc = "24: Active peripheral 12"]
     ACT_12 = 24,
-    #[doc = "25: Active functionality 13"]
+    #[doc = "25: Active peripheral 13"]
     ACT_13 = 25,
-    #[doc = "26: Active functionality 14"]
+    #[doc = "26: Active peripheral 14"]
     ACT_14 = 26,
-    #[doc = "27: Active functionality 15"]
+    #[doc = "27: Active peripheral 15"]
     ACT_15 = 27,
-    #[doc = "28: DeepSleep functionality 4"]
+    #[doc = "28: Deep Sleep peripheral 4"]
     DS_4 = 28,
-    #[doc = "29: DeepSleep functionality 5"]
+    #[doc = "29: Deep Sleep peripheral 5"]
     DS_5 = 29,
-    #[doc = "30: DeepSleep functionality 6"]
+    #[doc = "30: Deep Sleep peripheral 6"]
     DS_6 = 30,
-    #[doc = "31: DeepSleep functionality 7"]
+    #[doc = "31: Deep Sleep peripheral 7"]
     DS_7 = 31,
 }
 impl From<IO0_SEL_A> for u8 {
@@ -312,7 +312,7 @@ impl IO0_SEL_R {
         *self == IO0_SEL_A::DS_7
     }
 }
-#[doc = "Field `IO0_SEL` writer - Selects connection for IO pin 0 route."]
+#[doc = "Field `IO0_SEL` writer - Selects the peripheral connections of Pin 0. Note that available connectivity options vary depending on the device, port and the pin. See the device Datasheet for a list of peripheral connections available at each pin."]
 pub type IO0_SEL_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, PORT_SEL0_SPEC, u8, IO0_SEL_A, 5, O>;
 impl<'a, const O: u8> IO0_SEL_W<'a, O> {
@@ -336,12 +336,12 @@ impl<'a, const O: u8> IO0_SEL_W<'a, O> {
     pub fn dsi_gpio(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DSI_GPIO)
     }
-    #[doc = "Analog mux bus A"]
+    #[doc = "AMUXBUS A"]
     #[inline(always)]
     pub fn amuxa(self) -> &'a mut W {
         self.variant(IO0_SEL_A::AMUXA)
     }
-    #[doc = "Analog mux bus B"]
+    #[doc = "AMUXBUS B"]
     #[inline(always)]
     pub fn amuxb(self) -> &'a mut W {
         self.variant(IO0_SEL_A::AMUXB)
@@ -356,181 +356,181 @@ impl<'a, const O: u8> IO0_SEL_W<'a, O> {
     pub fn amuxb_dsi(self) -> &'a mut W {
         self.variant(IO0_SEL_A::AMUXB_DSI)
     }
-    #[doc = "Active functionality 0"]
+    #[doc = "Active peripheral 0"]
     #[inline(always)]
     pub fn act_0(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_0)
     }
-    #[doc = "Active functionality 1"]
+    #[doc = "Active peripheral 1"]
     #[inline(always)]
     pub fn act_1(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_1)
     }
-    #[doc = "Active functionality 2"]
+    #[doc = "Active peripheral 2"]
     #[inline(always)]
     pub fn act_2(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_2)
     }
-    #[doc = "Active functionality 3"]
+    #[doc = "Active peripheral 3"]
     #[inline(always)]
     pub fn act_3(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_3)
     }
-    #[doc = "DeepSleep functionality 0"]
+    #[doc = "Deep Sleep peripheral 0"]
     #[inline(always)]
     pub fn ds_0(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DS_0)
     }
-    #[doc = "DeepSleep functionality 1"]
+    #[doc = "Deep Sleep peripheral 1"]
     #[inline(always)]
     pub fn ds_1(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DS_1)
     }
-    #[doc = "DeepSleep functionality 2"]
+    #[doc = "Deep Sleep peripheral 2"]
     #[inline(always)]
     pub fn ds_2(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DS_2)
     }
-    #[doc = "DeepSleep functionality 3"]
+    #[doc = "Deep Sleep peripheral 3"]
     #[inline(always)]
     pub fn ds_3(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DS_3)
     }
-    #[doc = "Active functionality 4"]
+    #[doc = "Active peripheral 4"]
     #[inline(always)]
     pub fn act_4(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_4)
     }
-    #[doc = "Active functionality 5"]
+    #[doc = "Active peripheral 5"]
     #[inline(always)]
     pub fn act_5(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_5)
     }
-    #[doc = "Active functionality 6"]
+    #[doc = "Active peripheral 6"]
     #[inline(always)]
     pub fn act_6(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_6)
     }
-    #[doc = "Active functionality 7"]
+    #[doc = "Active peripheral 7"]
     #[inline(always)]
     pub fn act_7(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_7)
     }
-    #[doc = "Active functionality 8"]
+    #[doc = "Active peripheral 8"]
     #[inline(always)]
     pub fn act_8(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_8)
     }
-    #[doc = "Active functionality 9"]
+    #[doc = "Active peripheral 9"]
     #[inline(always)]
     pub fn act_9(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_9)
     }
-    #[doc = "Active functionality 10"]
+    #[doc = "Active peripheral 10"]
     #[inline(always)]
     pub fn act_10(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_10)
     }
-    #[doc = "Active functionality 11"]
+    #[doc = "Active peripheral 11"]
     #[inline(always)]
     pub fn act_11(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_11)
     }
-    #[doc = "Active functionality 12"]
+    #[doc = "Active peripheral 12"]
     #[inline(always)]
     pub fn act_12(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_12)
     }
-    #[doc = "Active functionality 13"]
+    #[doc = "Active peripheral 13"]
     #[inline(always)]
     pub fn act_13(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_13)
     }
-    #[doc = "Active functionality 14"]
+    #[doc = "Active peripheral 14"]
     #[inline(always)]
     pub fn act_14(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_14)
     }
-    #[doc = "Active functionality 15"]
+    #[doc = "Active peripheral 15"]
     #[inline(always)]
     pub fn act_15(self) -> &'a mut W {
         self.variant(IO0_SEL_A::ACT_15)
     }
-    #[doc = "DeepSleep functionality 4"]
+    #[doc = "Deep Sleep peripheral 4"]
     #[inline(always)]
     pub fn ds_4(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DS_4)
     }
-    #[doc = "DeepSleep functionality 5"]
+    #[doc = "Deep Sleep peripheral 5"]
     #[inline(always)]
     pub fn ds_5(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DS_5)
     }
-    #[doc = "DeepSleep functionality 6"]
+    #[doc = "Deep Sleep peripheral 6"]
     #[inline(always)]
     pub fn ds_6(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DS_6)
     }
-    #[doc = "DeepSleep functionality 7"]
+    #[doc = "Deep Sleep peripheral 7"]
     #[inline(always)]
     pub fn ds_7(self) -> &'a mut W {
         self.variant(IO0_SEL_A::DS_7)
     }
 }
-#[doc = "Field `IO1_SEL` reader - Selects connection for IO pin 1 route."]
+#[doc = "Field `IO1_SEL` reader - Selects the peripheral connections of Pin 1."]
 pub type IO1_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `IO1_SEL` writer - Selects connection for IO pin 1 route."]
+#[doc = "Field `IO1_SEL` writer - Selects the peripheral connections of Pin 1."]
 pub type IO1_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PORT_SEL0_SPEC, u8, u8, 5, O>;
-#[doc = "Field `IO2_SEL` reader - Selects connection for IO pin 2 route."]
+#[doc = "Field `IO2_SEL` reader - Selects the peripheral connections of Pin 2."]
 pub type IO2_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `IO2_SEL` writer - Selects connection for IO pin 2 route."]
+#[doc = "Field `IO2_SEL` writer - Selects the peripheral connections of Pin 2."]
 pub type IO2_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PORT_SEL0_SPEC, u8, u8, 5, O>;
-#[doc = "Field `IO3_SEL` reader - Selects connection for IO pin 3 route."]
+#[doc = "Field `IO3_SEL` reader - Selects the peripheral connections of Pin 3."]
 pub type IO3_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `IO3_SEL` writer - Selects connection for IO pin 3 route."]
+#[doc = "Field `IO3_SEL` writer - Selects the peripheral connections of Pin 3."]
 pub type IO3_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PORT_SEL0_SPEC, u8, u8, 5, O>;
 impl R {
-    #[doc = "Bits 0:4 - Selects connection for IO pin 0 route."]
+    #[doc = "Bits 0:4 - Selects the peripheral connections of Pin 0. Note that available connectivity options vary depending on the device, port and the pin. See the device Datasheet for a list of peripheral connections available at each pin."]
     #[inline(always)]
     pub fn io0_sel(&self) -> IO0_SEL_R {
         IO0_SEL_R::new((self.bits & 0x1f) as u8)
     }
-    #[doc = "Bits 8:12 - Selects connection for IO pin 1 route."]
+    #[doc = "Bits 8:12 - Selects the peripheral connections of Pin 1."]
     #[inline(always)]
     pub fn io1_sel(&self) -> IO1_SEL_R {
         IO1_SEL_R::new(((self.bits >> 8) & 0x1f) as u8)
     }
-    #[doc = "Bits 16:20 - Selects connection for IO pin 2 route."]
+    #[doc = "Bits 16:20 - Selects the peripheral connections of Pin 2."]
     #[inline(always)]
     pub fn io2_sel(&self) -> IO2_SEL_R {
         IO2_SEL_R::new(((self.bits >> 16) & 0x1f) as u8)
     }
-    #[doc = "Bits 24:28 - Selects connection for IO pin 3 route."]
+    #[doc = "Bits 24:28 - Selects the peripheral connections of Pin 3."]
     #[inline(always)]
     pub fn io3_sel(&self) -> IO3_SEL_R {
         IO3_SEL_R::new(((self.bits >> 24) & 0x1f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - Selects connection for IO pin 0 route."]
+    #[doc = "Bits 0:4 - Selects the peripheral connections of Pin 0. Note that available connectivity options vary depending on the device, port and the pin. See the device Datasheet for a list of peripheral connections available at each pin."]
     #[inline(always)]
     #[must_use]
     pub fn io0_sel(&mut self) -> IO0_SEL_W<0> {
         IO0_SEL_W::new(self)
     }
-    #[doc = "Bits 8:12 - Selects connection for IO pin 1 route."]
+    #[doc = "Bits 8:12 - Selects the peripheral connections of Pin 1."]
     #[inline(always)]
     #[must_use]
     pub fn io1_sel(&mut self) -> IO1_SEL_W<8> {
         IO1_SEL_W::new(self)
     }
-    #[doc = "Bits 16:20 - Selects connection for IO pin 2 route."]
+    #[doc = "Bits 16:20 - Selects the peripheral connections of Pin 2."]
     #[inline(always)]
     #[must_use]
     pub fn io2_sel(&mut self) -> IO2_SEL_W<16> {
         IO2_SEL_W::new(self)
     }
-    #[doc = "Bits 24:28 - Selects connection for IO pin 3 route."]
+    #[doc = "Bits 24:28 - Selects the peripheral connections of Pin 3."]
     #[inline(always)]
     #[must_use]
     pub fn io3_sel(&mut self) -> IO3_SEL_W<24> {

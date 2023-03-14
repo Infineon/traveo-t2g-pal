@@ -34,9 +34,9 @@ impl From<crate::W<UART_RX_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `STOP_BITS` reader - Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of halve bit periods. Valid range is \\[1, 7\\]; i.e. a stop period should last at least one bit period. Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle ('1') time between data frames and the data frame value."]
+#[doc = "Field `STOP_BITS` reader - Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of half bit periods. Valid range is \\[1, 7\\]; i.e. a stop period should last at least one bit period. Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle time between data frames and the data frame value."]
 pub type STOP_BITS_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `STOP_BITS` writer - Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of halve bit periods. Valid range is \\[1, 7\\]; i.e. a stop period should last at least one bit period. Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle ('1') time between data frames and the data frame value."]
+#[doc = "Field `STOP_BITS` writer - Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of half bit periods. Valid range is \\[1, 7\\]; i.e. a stop period should last at least one bit period. Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle time between data frames and the data frame value."]
 pub type STOP_BITS_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, UART_RX_CTRL_SPEC, u8, u8, 3, O>;
 #[doc = "Field `PARITY` reader - Parity bit. When '0', the receiver expects an even parity. When '1', the receiver expects an odd parity. Only applicable in standard UART and SmartCard submodes."]
@@ -47,18 +47,18 @@ pub type PARITY_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_RX_CTRL_SPEC
 pub type PARITY_ENABLED_R = crate::BitReader<bool>;
 #[doc = "Field `PARITY_ENABLED` writer - Parity checking enabled ('1') or not ('0'). Only applicable in standard UART submode. In SmartCard submode, parity checking is always enabled through hardware. In IrDA submode, parity checking is always disabled through hardware."]
 pub type PARITY_ENABLED_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_RX_CTRL_SPEC, bool, O>;
-#[doc = "Field `POLARITY` reader - Inverts incoming RX line signal 'uart_rx_in'. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality."]
+#[doc = "Field `POLARITY` reader - Inverts incoming RX line signal. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality."]
 pub type POLARITY_R = crate::BitReader<bool>;
-#[doc = "Field `POLARITY` writer - Inverts incoming RX line signal 'uart_rx_in'. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality."]
+#[doc = "Field `POLARITY` writer - Inverts incoming RX line signal. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality."]
 pub type POLARITY_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_RX_CTRL_SPEC, bool, O>;
-#[doc = "Field `DROP_ON_PARITY_ERROR` reader - Behavior when a parity check fails. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field)."]
+#[doc = "Field `DROP_ON_PARITY_ERROR` reader - Behavior when a parity check fails. When '0', received data is sent to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field)."]
 pub type DROP_ON_PARITY_ERROR_R = crate::BitReader<bool>;
-#[doc = "Field `DROP_ON_PARITY_ERROR` writer - Behavior when a parity check fails. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field)."]
+#[doc = "Field `DROP_ON_PARITY_ERROR` writer - Behavior when a parity check fails. When '0', received data is sent to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field)."]
 pub type DROP_ON_PARITY_ERROR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, UART_RX_CTRL_SPEC, bool, O>;
-#[doc = "Field `DROP_ON_FRAME_ERROR` reader - Behavior when an error is detected in a start or stop period. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost."]
+#[doc = "Field `DROP_ON_FRAME_ERROR` reader - Behavior when an error is detected in a start or stop period. When '0', received data is sent to the RX FIFO. When '1', received data is dropped and lost."]
 pub type DROP_ON_FRAME_ERROR_R = crate::BitReader<bool>;
-#[doc = "Field `DROP_ON_FRAME_ERROR` writer - Behavior when an error is detected in a start or stop period. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost."]
+#[doc = "Field `DROP_ON_FRAME_ERROR` writer - Behavior when an error is detected in a start or stop period. When '0', received data is sent to the RX FIFO. When '1', received data is dropped and lost."]
 pub type DROP_ON_FRAME_ERROR_W<'a, const O: u8> =
     crate::BitWriter<'a, u32, UART_RX_CTRL_SPEC, bool, O>;
 #[doc = "Field `MP_MODE` reader - Multi-processor mode. When '1', multi-processor mode is enabled. In this mode, RX_CTRL.DATA_WIDTH should indicate a 9-bit data frame. In multi-processor mode, the 9th received bit of a data frame separates addresses (bit is '1') from data (bit is '0'). A received address is matched with RX_MATCH.DATA and RX_MATCH.MASK. In the case of a match, subsequent received data are sent to the RX FIFO. In the case of NO match, subsequent received data are dropped."]
@@ -83,7 +83,7 @@ pub type BREAK_LEVEL_R = crate::BitReader<bool>;
 #[doc = "Field `BREAK_LEVEL` writer - 0: low level pulse detection, like Break field in LIN protocol 1: high level pulse detection, like IFS field in CXPI protocol, or idle line state in UART"]
 pub type BREAK_LEVEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_RX_CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bits 0:2 - Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of halve bit periods. Valid range is \\[1, 7\\]; i.e. a stop period should last at least one bit period. Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle ('1') time between data frames and the data frame value."]
+    #[doc = "Bits 0:2 - Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of half bit periods. Valid range is \\[1, 7\\]; i.e. a stop period should last at least one bit period. Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle time between data frames and the data frame value."]
     #[inline(always)]
     pub fn stop_bits(&self) -> STOP_BITS_R {
         STOP_BITS_R::new((self.bits & 7) as u8)
@@ -98,17 +98,17 @@ impl R {
     pub fn parity_enabled(&self) -> PARITY_ENABLED_R {
         PARITY_ENABLED_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - Inverts incoming RX line signal 'uart_rx_in'. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality."]
+    #[doc = "Bit 6 - Inverts incoming RX line signal. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality."]
     #[inline(always)]
     pub fn polarity(&self) -> POLARITY_R {
         POLARITY_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 8 - Behavior when a parity check fails. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field)."]
+    #[doc = "Bit 8 - Behavior when a parity check fails. When '0', received data is sent to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field)."]
     #[inline(always)]
     pub fn drop_on_parity_error(&self) -> DROP_ON_PARITY_ERROR_R {
         DROP_ON_PARITY_ERROR_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - Behavior when an error is detected in a start or stop period. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost."]
+    #[doc = "Bit 9 - Behavior when an error is detected in a start or stop period. When '0', received data is sent to the RX FIFO. When '1', received data is dropped and lost."]
     #[inline(always)]
     pub fn drop_on_frame_error(&self) -> DROP_ON_FRAME_ERROR_R {
         DROP_ON_FRAME_ERROR_R::new(((self.bits >> 9) & 1) != 0)
@@ -140,7 +140,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:2 - Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of halve bit periods. Valid range is \\[1, 7\\]; i.e. a stop period should last at least one bit period. Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle ('1') time between data frames and the data frame value."]
+    #[doc = "Bits 0:2 - Stop bits. STOP_BITS + 1 is the duration of the stop period in terms of half bit periods. Valid range is \\[1, 7\\]; i.e. a stop period should last at least one bit period. Note that in case of a stop bits error, the successive data frames may get lost as the receiver needs to resynchronize its start bit detection. The amount of lost data frames depends on both the amount of stop bits, the idle time between data frames and the data frame value."]
     #[inline(always)]
     #[must_use]
     pub fn stop_bits(&mut self) -> STOP_BITS_W<0> {
@@ -158,19 +158,19 @@ impl W {
     pub fn parity_enabled(&mut self) -> PARITY_ENABLED_W<5> {
         PARITY_ENABLED_W::new(self)
     }
-    #[doc = "Bit 6 - Inverts incoming RX line signal 'uart_rx_in'. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality."]
+    #[doc = "Bit 6 - Inverts incoming RX line signal. Inversion is after local loopback. This functionality is intended for IrDA receiver functionality."]
     #[inline(always)]
     #[must_use]
     pub fn polarity(&mut self) -> POLARITY_W<6> {
         POLARITY_W::new(self)
     }
-    #[doc = "Bit 8 - Behavior when a parity check fails. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field)."]
+    #[doc = "Bit 8 - Behavior when a parity check fails. When '0', received data is sent to the RX FIFO. When '1', received data is dropped and lost. Only applicable in standard UART and SmartCard submodes (negatively acknowledged SmartCard data frames may be dropped with this field)."]
     #[inline(always)]
     #[must_use]
     pub fn drop_on_parity_error(&mut self) -> DROP_ON_PARITY_ERROR_W<8> {
         DROP_ON_PARITY_ERROR_W::new(self)
     }
-    #[doc = "Bit 9 - Behavior when an error is detected in a start or stop period. When '0', received data is send to the RX FIFO. When '1', received data is dropped and lost."]
+    #[doc = "Bit 9 - Behavior when an error is detected in a start or stop period. When '0', received data is sent to the RX FIFO. When '1', received data is dropped and lost."]
     #[inline(always)]
     #[must_use]
     pub fn drop_on_frame_error(&mut self) -> DROP_ON_FRAME_ERROR_W<9> {

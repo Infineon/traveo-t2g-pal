@@ -34,13 +34,13 @@ impl From<crate::W<SLOW_CA_CTL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WAY` reader - Specifies the cache way for which cache information is provided in SLOW_CA_STATUS0/1/2."]
+#[doc = "Field `WAY` reader - this is for debug purpose only, and should be hidden to customers in technical document"]
 pub type WAY_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `WAY` writer - Specifies the cache way for which cache information is provided in SLOW_CA_STATUS0/1/2."]
+#[doc = "Field `WAY` writer - this is for debug purpose only, and should be hidden to customers in technical document"]
 pub type WAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SLOW_CA_CTL_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SET_ADDR` reader - Specifies the cache set for which cache information is provided in SLOW_CA_STATUS0/1/2."]
+#[doc = "Field `SET_ADDR` reader - this is for debug purpose only, and should be hidden to customers in technical document"]
 pub type SET_ADDR_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SET_ADDR` writer - Specifies the cache set for which cache information is provided in SLOW_CA_STATUS0/1/2."]
+#[doc = "Field `SET_ADDR` writer - this is for debug purpose only, and should be hidden to customers in technical document"]
 pub type SET_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SLOW_CA_CTL_SPEC, u8, u8, 2, O>;
 #[doc = "Field `PREF_EN` reader - Prefetch enable: '0': Disabled. '1': Enabled. Prefetching requires the cache to be enabled; i.e. ENABLED is '1'."]
 pub type PREF_EN_R = crate::BitReader<bool>;
@@ -51,12 +51,12 @@ pub type ENABLED_R = crate::BitReader<bool>;
 #[doc = "Field `ENABLED` writer - Cache enable: '0': Disabled. '1': Enabled."]
 pub type ENABLED_W<'a, const O: u8> = crate::BitWriter<'a, u32, SLOW_CA_CTL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bits 16:17 - Specifies the cache way for which cache information is provided in SLOW_CA_STATUS0/1/2."]
+    #[doc = "Bits 16:17 - this is for debug purpose only, and should be hidden to customers in technical document"]
     #[inline(always)]
     pub fn way(&self) -> WAY_R {
         WAY_R::new(((self.bits >> 16) & 3) as u8)
     }
-    #[doc = "Bits 24:25 - Specifies the cache set for which cache information is provided in SLOW_CA_STATUS0/1/2."]
+    #[doc = "Bits 24:25 - this is for debug purpose only, and should be hidden to customers in technical document"]
     #[inline(always)]
     pub fn set_addr(&self) -> SET_ADDR_R {
         SET_ADDR_R::new(((self.bits >> 24) & 3) as u8)
@@ -73,13 +73,13 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:17 - Specifies the cache way for which cache information is provided in SLOW_CA_STATUS0/1/2."]
+    #[doc = "Bits 16:17 - this is for debug purpose only, and should be hidden to customers in technical document"]
     #[inline(always)]
     #[must_use]
     pub fn way(&mut self) -> WAY_W<16> {
         WAY_W::new(self)
     }
-    #[doc = "Bits 24:25 - Specifies the cache set for which cache information is provided in SLOW_CA_STATUS0/1/2."]
+    #[doc = "Bits 24:25 - this is for debug purpose only, and should be hidden to customers in technical document"]
     #[inline(always)]
     #[must_use]
     pub fn set_addr(&mut self) -> SET_ADDR_W<24> {

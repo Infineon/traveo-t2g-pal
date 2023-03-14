@@ -34,9 +34,9 @@ impl From<crate::W<CFG_SIO_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `VREG_EN01` reader - Selects the output buffer mode: '0': Unregulated output buffer '1': Regulated output buffer The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode. If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used."]
+#[doc = "Field `VREG_EN01` reader - The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used."]
 pub type VREG_EN01_R = crate::BitReader<bool>;
-#[doc = "Field `VREG_EN01` writer - Selects the output buffer mode: '0': Unregulated output buffer '1': Regulated output buffer The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode. If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used."]
+#[doc = "Field `VREG_EN01` writer - The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used."]
 pub type VREG_EN01_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_SIO_SPEC, bool, O>;
 #[doc = "Field `IBUF_SEL01` reader - Selects the input buffer mode: 0: Singled ended input buffer 1: Differential input buffer"]
 pub type IBUF_SEL01_R = crate::BitReader<bool>;
@@ -50,9 +50,17 @@ pub type VTRIP_SEL01_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_SIO_SPEC
 pub type VREF_SEL01_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VREF_SEL01` writer - Selects reference voltage (Vref) trip-point of the input buffer: '0': Trip-point reference from pin_ref '1': Trip-point reference of SRSS internal reference Vref (1.2 V) '2': Trip-point reference of AMUXBUS_A '3': Trip-point reference of AMUXBUS_B"]
 pub type VREF_SEL01_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_SIO_SPEC, u8, u8, 2, O>;
-#[doc = "Field `VOH_SEL01` reader - Selects the regulated Voh output level and trip point of the input buffer for a specific SIO pin pair. Voh depends on the selected reference voltage (VREF_SEL). '0': Voh = 1*reference; e.g. reference at 1.2V -> Voh = 1.2V '1': Voh = 1.25*reference; e.g. reference at 1.2V -> Voh = 1.5V '2': Voh = 1.49*reference; e.g. reference at 1.2V -> Voh = ~1.8V '3': Voh = 1.67*reference; e.g. reference at 1.2V -> Voh = 2V '4': Voh = 2.08*reference; e.g. reference at 1.2V -> Voh = 2.5V '5': Voh = 2.5*reference; e.g. reference at 1.2V -> Voh = 3V '6': Voh = 2.78*reference; e.g. reference at 1.2V -> Voh = ~3.3V '7': Voh = 4.16*reference; e.g. reference at 1.2V -> Voh = 5.0V Note: The upper value on Voh is limited to Vddio - 400mV"]
+#[doc = "Field `VOH_SEL01` reader - Selects trip-point of input buffer. In single ended input buffer mode (IBUF01_SEL = '0'): 0: input buffer functions as a CMOS input buffer. 1: input buffer functions as a LVTTL input buffer. In differential input buffer mode (IBUF01_SEL = '1'): VTRIP_SEL=0: a) VREF_SEL=00, VOH_SEL=X -> Trip point=50 percent of vddio b) VREF_SEL=01, VOH_SEL=000 -> Trip point=Vohref (buffered) c) VREF_SEL=01, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as CMOS input buffer. d) VREF_SEL=10/11, VOH_SEL=000 -> Trip point=Amuxbus_a/b (buffered) e) VREF_SEL=10/11, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as CMOS input buffer. VTRIP_SEL=1: a) VREF_SEL=00, VOH_SEL=X -> Trip point=40 percent of vddio b) VREF_SEL=01, VOH_SEL=000 -> Trip point=0.5*Vohref c) VREF_SEL=01, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as LVTTL input buffer. d) VREF_SEL=10/11, VOH_SEL=000 -> Trip point=0.5*Amuxbus_a/b (buffered) e) VREF_SEL=10/11, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as LVTTL input buffer."]
 pub type VOH_SEL01_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `VOH_SEL01` writer - Selects the regulated Voh output level and trip point of the input buffer for a specific SIO pin pair. Voh depends on the selected reference voltage (VREF_SEL). '0': Voh = 1*reference; e.g. reference at 1.2V -> Voh = 1.2V '1': Voh = 1.25*reference; e.g. reference at 1.2V -> Voh = 1.5V '2': Voh = 1.49*reference; e.g. reference at 1.2V -> Voh = ~1.8V '3': Voh = 1.67*reference; e.g. reference at 1.2V -> Voh = 2V '4': Voh = 2.08*reference; e.g. reference at 1.2V -> Voh = 2.5V '5': Voh = 2.5*reference; e.g. reference at 1.2V -> Voh = 3V '6': Voh = 2.78*reference; e.g. reference at 1.2V -> Voh = ~3.3V '7': Voh = 4.16*reference; e.g. reference at 1.2V -> Voh = 5.0V Note: The upper value on Voh is limited to Vddio - 400mV"]
+#[doc = "Field `VOH_SEL01` writer - Selects trip-point of input buffer. In single ended input buffer mode (IBUF01_SEL = '0'): 0: input buffer functions as a CMOS input buffer. 1: input buffer functions as a LVTTL input buffer. In differential input buffer mode (IBUF01_SEL = '1'): VTRIP_SEL=0: a) VREF_SEL=00, VOH_SEL=X -> Trip point=50 percent of vddio b) VREF_SEL=01, VOH_SEL=000 -> Trip point=Vohref (buffered) c) VREF_SEL=01, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as CMOS input buffer. d) VREF_SEL=10/11, VOH_SEL=000 -> Trip point=Amuxbus_a/b (buffered) e) VREF_SEL=10/11, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as CMOS input buffer. VTRIP_SEL=1: a) VREF_SEL=00, VOH_SEL=X -> Trip point=40 percent of vddio b) VREF_SEL=01, VOH_SEL=000 -> Trip point=0.5*Vohref c) VREF_SEL=01, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as LVTTL input buffer. d) VREF_SEL=10/11, VOH_SEL=000 -> Trip point=0.5*Amuxbus_a/b (buffered) e) VREF_SEL=10/11, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as LVTTL input buffer."]
 pub type VOH_SEL01_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_SIO_SPEC, u8, u8, 3, O>;
 #[doc = "Field `VREG_EN23` reader - See corresponding definition for IO pins 0 and 1"]
 pub type VREG_EN23_R = crate::BitReader<bool>;
@@ -115,7 +123,7 @@ pub type VOH_SEL67_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VOH_SEL67` writer - See corresponding definition for IO pins 0 and 1"]
 pub type VOH_SEL67_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CFG_SIO_SPEC, u8, u8, 3, O>;
 impl R {
-    #[doc = "Bit 0 - Selects the output buffer mode: '0': Unregulated output buffer '1': Regulated output buffer The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode. If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used."]
+    #[doc = "Bit 0 - The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used."]
     #[inline(always)]
     pub fn vreg_en01(&self) -> VREG_EN01_R {
         VREG_EN01_R::new((self.bits & 1) != 0)
@@ -135,7 +143,11 @@ impl R {
     pub fn vref_sel01(&self) -> VREF_SEL01_R {
         VREF_SEL01_R::new(((self.bits >> 3) & 3) as u8)
     }
-    #[doc = "Bits 5:7 - Selects the regulated Voh output level and trip point of the input buffer for a specific SIO pin pair. Voh depends on the selected reference voltage (VREF_SEL). '0': Voh = 1*reference; e.g. reference at 1.2V -> Voh = 1.2V '1': Voh = 1.25*reference; e.g. reference at 1.2V -> Voh = 1.5V '2': Voh = 1.49*reference; e.g. reference at 1.2V -> Voh = ~1.8V '3': Voh = 1.67*reference; e.g. reference at 1.2V -> Voh = 2V '4': Voh = 2.08*reference; e.g. reference at 1.2V -> Voh = 2.5V '5': Voh = 2.5*reference; e.g. reference at 1.2V -> Voh = 3V '6': Voh = 2.78*reference; e.g. reference at 1.2V -> Voh = ~3.3V '7': Voh = 4.16*reference; e.g. reference at 1.2V -> Voh = 5.0V Note: The upper value on Voh is limited to Vddio - 400mV"]
+    #[doc = "Bits 5:7 - Selects trip-point of input buffer. In single ended input buffer mode (IBUF01_SEL = '0'): 0: input buffer functions as a CMOS input buffer. 1: input buffer functions as a LVTTL input buffer. In differential input buffer mode (IBUF01_SEL = '1'): VTRIP_SEL=0: a) VREF_SEL=00, VOH_SEL=X -> Trip point=50 percent of vddio b) VREF_SEL=01, VOH_SEL=000 -> Trip point=Vohref (buffered) c) VREF_SEL=01, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as CMOS input buffer. d) VREF_SEL=10/11, VOH_SEL=000 -> Trip point=Amuxbus_a/b (buffered) e) VREF_SEL=10/11, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as CMOS input buffer. VTRIP_SEL=1: a) VREF_SEL=00, VOH_SEL=X -> Trip point=40 percent of vddio b) VREF_SEL=01, VOH_SEL=000 -> Trip point=0.5*Vohref c) VREF_SEL=01, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as LVTTL input buffer. d) VREF_SEL=10/11, VOH_SEL=000 -> Trip point=0.5*Amuxbus_a/b (buffered) e) VREF_SEL=10/11, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as LVTTL input buffer."]
     #[inline(always)]
     pub fn voh_sel01(&self) -> VOH_SEL01_R {
         VOH_SEL01_R::new(((self.bits >> 5) & 7) as u8)
@@ -217,7 +229,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Selects the output buffer mode: '0': Unregulated output buffer '1': Regulated output buffer The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode. If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used."]
+    #[doc = "Bit 0 - The regulated output mode is selected ONLY if the CFG.DRIVE_MODE bits are set to the strong pull up (Z_1 = '5') mode If the CFG.DRIVE_MODE bits are set to any other mode the regulated output buffer will be disabled and the standard CMOS output buffer is used."]
     #[inline(always)]
     #[must_use]
     pub fn vreg_en01(&mut self) -> VREG_EN01_W<0> {
@@ -241,7 +253,11 @@ impl W {
     pub fn vref_sel01(&mut self) -> VREF_SEL01_W<3> {
         VREF_SEL01_W::new(self)
     }
-    #[doc = "Bits 5:7 - Selects the regulated Voh output level and trip point of the input buffer for a specific SIO pin pair. Voh depends on the selected reference voltage (VREF_SEL). '0': Voh = 1*reference; e.g. reference at 1.2V -> Voh = 1.2V '1': Voh = 1.25*reference; e.g. reference at 1.2V -> Voh = 1.5V '2': Voh = 1.49*reference; e.g. reference at 1.2V -> Voh = ~1.8V '3': Voh = 1.67*reference; e.g. reference at 1.2V -> Voh = 2V '4': Voh = 2.08*reference; e.g. reference at 1.2V -> Voh = 2.5V '5': Voh = 2.5*reference; e.g. reference at 1.2V -> Voh = 3V '6': Voh = 2.78*reference; e.g. reference at 1.2V -> Voh = ~3.3V '7': Voh = 4.16*reference; e.g. reference at 1.2V -> Voh = 5.0V Note: The upper value on Voh is limited to Vddio - 400mV"]
+    #[doc = "Bits 5:7 - Selects trip-point of input buffer. In single ended input buffer mode (IBUF01_SEL = '0'): 0: input buffer functions as a CMOS input buffer. 1: input buffer functions as a LVTTL input buffer. In differential input buffer mode (IBUF01_SEL = '1'): VTRIP_SEL=0: a) VREF_SEL=00, VOH_SEL=X -> Trip point=50 percent of vddio b) VREF_SEL=01, VOH_SEL=000 -> Trip point=Vohref (buffered) c) VREF_SEL=01, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as CMOS input buffer. d) VREF_SEL=10/11, VOH_SEL=000 -> Trip point=Amuxbus_a/b (buffered) e) VREF_SEL=10/11, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as CMOS input buffer. VTRIP_SEL=1: a) VREF_SEL=00, VOH_SEL=X -> Trip point=40 percent of vddio b) VREF_SEL=01, VOH_SEL=000 -> Trip point=0.5*Vohref c) VREF_SEL=01, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as LVTTL input buffer. d) VREF_SEL=10/11, VOH_SEL=000 -> Trip point=0.5*Amuxbus_a/b (buffered) e) VREF_SEL=10/11, VOH_SEL=\\[1-7\\]
+-> Input buffer functions as LVTTL input buffer."]
     #[inline(always)]
     #[must_use]
     pub fn voh_sel01(&mut self) -> VOH_SEL01_W<5> {

@@ -34,130 +34,130 @@ impl From<crate::W<I2C_CFG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SDA_IN_FILT_TRIM` reader - Trim bits for 'i2c_sda_in' 50 ns filter. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SDA_IN_FILT_TRIM` reader - Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required"]
 pub type SDA_IN_FILT_TRIM_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SDA_IN_FILT_TRIM` writer - Trim bits for 'i2c_sda_in' 50 ns filter. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SDA_IN_FILT_TRIM` writer - Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required"]
 pub type SDA_IN_FILT_TRIM_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, I2C_CFG_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SDA_IN_FILT_SEL` reader - Selection of 'i2c_sda_in' filter delay: '0': 0 ns. '1: 50 ns (filter enabled)."]
+#[doc = "Field `SDA_IN_FILT_SEL` reader - Enable for 50ns glitch filter on SDA input '0': 0 ns. '1: 50 ns (filter enabled)."]
 pub type SDA_IN_FILT_SEL_R = crate::BitReader<bool>;
-#[doc = "Field `SDA_IN_FILT_SEL` writer - Selection of 'i2c_sda_in' filter delay: '0': 0 ns. '1: 50 ns (filter enabled)."]
+#[doc = "Field `SDA_IN_FILT_SEL` writer - Enable for 50ns glitch filter on SDA input '0': 0 ns. '1: 50 ns (filter enabled)."]
 pub type SDA_IN_FILT_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C_CFG_SPEC, bool, O>;
-#[doc = "Field `SCL_IN_FILT_TRIM` reader - Trim bits for 'i2c_scl_in' 50 ns filter. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SCL_IN_FILT_TRIM` reader - Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required"]
 pub type SCL_IN_FILT_TRIM_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SCL_IN_FILT_TRIM` writer - Trim bits for 'i2c_scl_in' 50 ns filter. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SCL_IN_FILT_TRIM` writer - Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required"]
 pub type SCL_IN_FILT_TRIM_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, I2C_CFG_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SCL_IN_FILT_SEL` reader - Selection of 'i2c_scl_in' filter delay: '0': 0 ns. '1: 50 ns (filter enabled)."]
+#[doc = "Field `SCL_IN_FILT_SEL` reader - Enable for 50ns glitch filter on SCL input '0': 0 ns. '1: 50 ns (filter enabled)."]
 pub type SCL_IN_FILT_SEL_R = crate::BitReader<bool>;
-#[doc = "Field `SCL_IN_FILT_SEL` writer - Selection of 'i2c_scl_in' filter delay: '0': 0 ns. '1: 50 ns (filter enabled)."]
+#[doc = "Field `SCL_IN_FILT_SEL` writer - Enable for 50ns glitch filter on SCL input '0': 0 ns. '1: 50 ns (filter enabled)."]
 pub type SCL_IN_FILT_SEL_W<'a, const O: u8> = crate::BitWriter<'a, u32, I2C_CFG_SPEC, bool, O>;
-#[doc = "Field `SDA_OUT_FILT0_TRIM` reader - Trim bits for 'i2c_sda_out' 50 ns filter 0. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SDA_OUT_FILT0_TRIM` reader - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
 pub type SDA_OUT_FILT0_TRIM_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SDA_OUT_FILT0_TRIM` writer - Trim bits for 'i2c_sda_out' 50 ns filter 0. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SDA_OUT_FILT0_TRIM` writer - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
 pub type SDA_OUT_FILT0_TRIM_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, I2C_CFG_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SDA_OUT_FILT1_TRIM` reader - Trim bits for 'i2c_sda_out' 50 ns filter 1. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SDA_OUT_FILT1_TRIM` reader - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
 pub type SDA_OUT_FILT1_TRIM_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SDA_OUT_FILT1_TRIM` writer - Trim bits for 'i2c_sda_out' 50 ns filter 1. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SDA_OUT_FILT1_TRIM` writer - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
 pub type SDA_OUT_FILT1_TRIM_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, I2C_CFG_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SDA_OUT_FILT2_TRIM` reader - Trim bits for 'i2c_sda_out' 50 ns filter 2. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SDA_OUT_FILT2_TRIM` reader - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
 pub type SDA_OUT_FILT2_TRIM_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SDA_OUT_FILT2_TRIM` writer - Trim bits for 'i2c_sda_out' 50 ns filter 2. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+#[doc = "Field `SDA_OUT_FILT2_TRIM` writer - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
 pub type SDA_OUT_FILT2_TRIM_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, I2C_CFG_SPEC, u8, u8, 2, O>;
-#[doc = "Field `SDA_OUT_FILT_SEL` reader - Selection of cumulative 'i2c_sda_out' filter delay: '0': 0 ns. '1': 50 ns (filter 0 enabled). '2': 100 ns (filters 0 and 1 enabled). '3': 150 ns (filters 0, 1 and 2 enabled)."]
+#[doc = "Field `SDA_OUT_FILT_SEL` reader - Selection of cumulative filter delay on SDA output to meet tHD_DAT parameter '0': 0 ns. '1': 50 ns (filter 0 enabled). '2': 100 ns (filters 0 and 1 enabled). '3': 150 ns (filters 0, 1 and 2 enabled)."]
 pub type SDA_OUT_FILT_SEL_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `SDA_OUT_FILT_SEL` writer - Selection of cumulative 'i2c_sda_out' filter delay: '0': 0 ns. '1': 50 ns (filter 0 enabled). '2': 100 ns (filters 0 and 1 enabled). '3': 150 ns (filters 0, 1 and 2 enabled)."]
+#[doc = "Field `SDA_OUT_FILT_SEL` writer - Selection of cumulative filter delay on SDA output to meet tHD_DAT parameter '0': 0 ns. '1': 50 ns (filter 0 enabled). '2': 100 ns (filters 0 and 1 enabled). '3': 150 ns (filters 0, 1 and 2 enabled)."]
 pub type SDA_OUT_FILT_SEL_W<'a, const O: u8> =
     crate::FieldWriter<'a, u32, I2C_CFG_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 0:1 - Trim bits for 'i2c_sda_in' 50 ns filter. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 0:1 - Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required"]
     #[inline(always)]
     pub fn sda_in_filt_trim(&self) -> SDA_IN_FILT_TRIM_R {
         SDA_IN_FILT_TRIM_R::new((self.bits & 3) as u8)
     }
-    #[doc = "Bit 4 - Selection of 'i2c_sda_in' filter delay: '0': 0 ns. '1: 50 ns (filter enabled)."]
+    #[doc = "Bit 4 - Enable for 50ns glitch filter on SDA input '0': 0 ns. '1: 50 ns (filter enabled)."]
     #[inline(always)]
     pub fn sda_in_filt_sel(&self) -> SDA_IN_FILT_SEL_R {
         SDA_IN_FILT_SEL_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bits 8:9 - Trim bits for 'i2c_scl_in' 50 ns filter. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 8:9 - Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required"]
     #[inline(always)]
     pub fn scl_in_filt_trim(&self) -> SCL_IN_FILT_TRIM_R {
         SCL_IN_FILT_TRIM_R::new(((self.bits >> 8) & 3) as u8)
     }
-    #[doc = "Bit 12 - Selection of 'i2c_scl_in' filter delay: '0': 0 ns. '1: 50 ns (filter enabled)."]
+    #[doc = "Bit 12 - Enable for 50ns glitch filter on SCL input '0': 0 ns. '1: 50 ns (filter enabled)."]
     #[inline(always)]
     pub fn scl_in_filt_sel(&self) -> SCL_IN_FILT_SEL_R {
         SCL_IN_FILT_SEL_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bits 16:17 - Trim bits for 'i2c_sda_out' 50 ns filter 0. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 16:17 - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
     #[inline(always)]
     pub fn sda_out_filt0_trim(&self) -> SDA_OUT_FILT0_TRIM_R {
         SDA_OUT_FILT0_TRIM_R::new(((self.bits >> 16) & 3) as u8)
     }
-    #[doc = "Bits 18:19 - Trim bits for 'i2c_sda_out' 50 ns filter 1. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 18:19 - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
     #[inline(always)]
     pub fn sda_out_filt1_trim(&self) -> SDA_OUT_FILT1_TRIM_R {
         SDA_OUT_FILT1_TRIM_R::new(((self.bits >> 18) & 3) as u8)
     }
-    #[doc = "Bits 20:21 - Trim bits for 'i2c_sda_out' 50 ns filter 2. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 20:21 - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
     #[inline(always)]
     pub fn sda_out_filt2_trim(&self) -> SDA_OUT_FILT2_TRIM_R {
         SDA_OUT_FILT2_TRIM_R::new(((self.bits >> 20) & 3) as u8)
     }
-    #[doc = "Bits 28:29 - Selection of cumulative 'i2c_sda_out' filter delay: '0': 0 ns. '1': 50 ns (filter 0 enabled). '2': 100 ns (filters 0 and 1 enabled). '3': 150 ns (filters 0, 1 and 2 enabled)."]
+    #[doc = "Bits 28:29 - Selection of cumulative filter delay on SDA output to meet tHD_DAT parameter '0': 0 ns. '1': 50 ns (filter 0 enabled). '2': 100 ns (filters 0 and 1 enabled). '3': 150 ns (filters 0, 1 and 2 enabled)."]
     #[inline(always)]
     pub fn sda_out_filt_sel(&self) -> SDA_OUT_FILT_SEL_R {
         SDA_OUT_FILT_SEL_R::new(((self.bits >> 28) & 3) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:1 - Trim bits for 'i2c_sda_in' 50 ns filter. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 0:1 - Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required"]
     #[inline(always)]
     #[must_use]
     pub fn sda_in_filt_trim(&mut self) -> SDA_IN_FILT_TRIM_W<0> {
         SDA_IN_FILT_TRIM_W::new(self)
     }
-    #[doc = "Bit 4 - Selection of 'i2c_sda_in' filter delay: '0': 0 ns. '1: 50 ns (filter enabled)."]
+    #[doc = "Bit 4 - Enable for 50ns glitch filter on SDA input '0': 0 ns. '1: 50 ns (filter enabled)."]
     #[inline(always)]
     #[must_use]
     pub fn sda_in_filt_sel(&mut self) -> SDA_IN_FILT_SEL_W<4> {
         SDA_IN_FILT_SEL_W::new(self)
     }
-    #[doc = "Bits 8:9 - Trim bits for 'i2c_scl_in' 50 ns filter. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 8:9 - Trim settings for the 50ns glitch filter on the SDA input. Default setting meets the I2C glitch rejections specs. Programmability available if required"]
     #[inline(always)]
     #[must_use]
     pub fn scl_in_filt_trim(&mut self) -> SCL_IN_FILT_TRIM_W<8> {
         SCL_IN_FILT_TRIM_W::new(self)
     }
-    #[doc = "Bit 12 - Selection of 'i2c_scl_in' filter delay: '0': 0 ns. '1: 50 ns (filter enabled)."]
+    #[doc = "Bit 12 - Enable for 50ns glitch filter on SCL input '0': 0 ns. '1: 50 ns (filter enabled)."]
     #[inline(always)]
     #[must_use]
     pub fn scl_in_filt_sel(&mut self) -> SCL_IN_FILT_SEL_W<12> {
         SCL_IN_FILT_SEL_W::new(self)
     }
-    #[doc = "Bits 16:17 - Trim bits for 'i2c_sda_out' 50 ns filter 0. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 16:17 - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
     #[inline(always)]
     #[must_use]
     pub fn sda_out_filt0_trim(&mut self) -> SDA_OUT_FILT0_TRIM_W<16> {
         SDA_OUT_FILT0_TRIM_W::new(self)
     }
-    #[doc = "Bits 18:19 - Trim bits for 'i2c_sda_out' 50 ns filter 1. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 18:19 - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
     #[inline(always)]
     #[must_use]
     pub fn sda_out_filt1_trim(&mut self) -> SDA_OUT_FILT1_TRIM_W<18> {
         SDA_OUT_FILT1_TRIM_W::new(self)
     }
-    #[doc = "Bits 20:21 - Trim bits for 'i2c_sda_out' 50 ns filter 2. for M0S8 platform, see s8i2cs BROS (001-59539) for more details on the trim bit values. For MXS40 platform, only the Least Significant Bit (LSB) is used, see s40iolib BROS (002-02511) for more details on the trim bit values."]
+    #[doc = "Bits 20:21 - Trim settings for the 50ns delay filter on SDA output used to guarantee tHD_DAT I2C parameter. Default setting meets the I2C spec. Programmability available if required"]
     #[inline(always)]
     #[must_use]
     pub fn sda_out_filt2_trim(&mut self) -> SDA_OUT_FILT2_TRIM_W<20> {
         SDA_OUT_FILT2_TRIM_W::new(self)
     }
-    #[doc = "Bits 28:29 - Selection of cumulative 'i2c_sda_out' filter delay: '0': 0 ns. '1': 50 ns (filter 0 enabled). '2': 100 ns (filters 0 and 1 enabled). '3': 150 ns (filters 0, 1 and 2 enabled)."]
+    #[doc = "Bits 28:29 - Selection of cumulative filter delay on SDA output to meet tHD_DAT parameter '0': 0 ns. '1': 50 ns (filter 0 enabled). '2': 100 ns (filters 0 and 1 enabled). '3': 150 ns (filters 0, 1 and 2 enabled)."]
     #[inline(always)]
     #[must_use]
     pub fn sda_out_filt_sel(&mut self) -> SDA_OUT_FILT_SEL_W<28> {

@@ -66,19 +66,19 @@ pub type SLOW6_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_OUT_SPEC, bool
 pub type SLOW7_R = crate::BitReader<bool>;
 #[doc = "Field `SLOW7` writer - Enables slow slew rate for IO pin 7"]
 pub type SLOW7_W<'a, const O: u8> = crate::BitWriter<'a, u32, CFG_OUT_SPEC, bool, O>;
-#[doc = "Field `DRIVE_SEL0` reader - Sets the GPIO drive strength for IO pin 0"]
+#[doc = "Field `DRIVE_SEL0` reader - Documentation: Note: DRIVE_SELx are used among GPIO cells and HSIO_STD but the encoding values may differ as shown on the right side of this table"]
 pub type DRIVE_SEL0_R = crate::FieldReader<u8, DRIVE_SEL0_A>;
-#[doc = "Sets the GPIO drive strength for IO pin 0\n\nValue on reset: 0"]
+#[doc = "Documentation: Note: DRIVE_SELx are used among GPIO cells and HSIO_STD but the encoding values may differ as shown on the right side of this table\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DRIVE_SEL0_A {
-    #[doc = "0: S40E GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec. S40E_GPIO_SMC: GPIO_SMC default mode. S40E_HSIO_STD: HSIO default mode. S40S GPIO cells and HSIO_STD cells: Full drive strength: GPIO drives current at its max rated spec."]
+    #[doc = "0: Traveo II: GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec. Traveo II:_GPIO_SMC: GPIO_SMC default mode. Traveo II:_HSIO_STD: HSIO default mode. PSoC 6: GPIO cells and HSIO_STD cells: Full drive strength: GPIO drives current at its max rated spec."]
     DRIVE_SEL_ZERO = 0,
-    #[doc = "1: S40E GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec. S40E_GPIO_SMC: GPIO full drive strength. S40E_HSIO_STD: GPIO full drive strength. S40S GPIO cells and HSIO_STD cells: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec"]
+    #[doc = "1: Traveo II: GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec. Traveo II:_GPIO_SMC: GPIO full drive strength. Traveo II:_HSIO_STD: GPIO full drive strength. PSoC 6: GPIO cells and HSIO_STD cells: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec"]
     DRIVE_SEL_ONE = 1,
-    #[doc = "2: S40E GPIO_STD/GPIO_ENH: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec. S40E_GPIO_SMC: GPIO 1/2 drive strength. S40E_HSIO_STD: GPIO 1/2 drive strength. S40S GPIO cells and HSIO_STD cells: 1/4 drive strength. GPIO drives current at 1/4 of its max rated spec."]
+    #[doc = "2: Traveo II: GPIO_STD/GPIO_ENH: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec. Traveo II:_GPIO_SMC: GPIO 1/2 drive strength. Traveo II:_HSIO_STD: GPIO 1/2 drive strength. PSoC 6: GPIO cells and HSIO_STD cells: 1/4 drive strength. GPIO drives current at 1/4 of its max rated spec."]
     DRIVE_SEL_TWO = 2,
-    #[doc = "3: S40E GPIO_STD/GPIO_ENH: 1/4 drive strength: GPIO drives current at 1/4 of its max rated spec. S40E_GPIO_SMC: GPIO 1/4 drive strength. S40E_HSIO_STD: GPIO 1/4 drive strength. S40S GPIO cells and HSIO_STD cells: 1/8 drive strength. GPIO drives current at 1/8 of its max rated spec."]
+    #[doc = "3: Traveo II: GPIO_STD/GPIO_ENH: 1/4 drive strength: GPIO drives current at 1/4 of its max rated spec. Traveo II:_GPIO_SMC: GPIO 1/4 drive strength. Traveo II:_HSIO_STD: GPIO 1/4 drive strength. PSoC 6: GPIO cells and HSIO_STD cells: 1/8 drive strength. GPIO drives current at 1/8 of its max rated spec."]
     DRIVE_SEL_THREE = 3,
 }
 impl From<DRIVE_SEL0_A> for u8 {
@@ -120,26 +120,26 @@ impl DRIVE_SEL0_R {
         *self == DRIVE_SEL0_A::DRIVE_SEL_THREE
     }
 }
-#[doc = "Field `DRIVE_SEL0` writer - Sets the GPIO drive strength for IO pin 0"]
+#[doc = "Field `DRIVE_SEL0` writer - Documentation: Note: DRIVE_SELx are used among GPIO cells and HSIO_STD but the encoding values may differ as shown on the right side of this table"]
 pub type DRIVE_SEL0_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, CFG_OUT_SPEC, u8, DRIVE_SEL0_A, 2, O>;
 impl<'a, const O: u8> DRIVE_SEL0_W<'a, O> {
-    #[doc = "S40E GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec. S40E_GPIO_SMC: GPIO_SMC default mode. S40E_HSIO_STD: HSIO default mode. S40S GPIO cells and HSIO_STD cells: Full drive strength: GPIO drives current at its max rated spec."]
+    #[doc = "Traveo II: GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec. Traveo II:_GPIO_SMC: GPIO_SMC default mode. Traveo II:_HSIO_STD: HSIO default mode. PSoC 6: GPIO cells and HSIO_STD cells: Full drive strength: GPIO drives current at its max rated spec."]
     #[inline(always)]
     pub fn drive_sel_zero(self) -> &'a mut W {
         self.variant(DRIVE_SEL0_A::DRIVE_SEL_ZERO)
     }
-    #[doc = "S40E GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec. S40E_GPIO_SMC: GPIO full drive strength. S40E_HSIO_STD: GPIO full drive strength. S40S GPIO cells and HSIO_STD cells: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec"]
+    #[doc = "Traveo II: GPIO_STD/GPIO_ENH: Full drive strengh: GPIO drives current at its max rated spec. Traveo II:_GPIO_SMC: GPIO full drive strength. Traveo II:_HSIO_STD: GPIO full drive strength. PSoC 6: GPIO cells and HSIO_STD cells: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec"]
     #[inline(always)]
     pub fn drive_sel_one(self) -> &'a mut W {
         self.variant(DRIVE_SEL0_A::DRIVE_SEL_ONE)
     }
-    #[doc = "S40E GPIO_STD/GPIO_ENH: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec. S40E_GPIO_SMC: GPIO 1/2 drive strength. S40E_HSIO_STD: GPIO 1/2 drive strength. S40S GPIO cells and HSIO_STD cells: 1/4 drive strength. GPIO drives current at 1/4 of its max rated spec."]
+    #[doc = "Traveo II: GPIO_STD/GPIO_ENH: 1/2 drive strength: GPIO drives current at 1/2 of its max rated spec. Traveo II:_GPIO_SMC: GPIO 1/2 drive strength. Traveo II:_HSIO_STD: GPIO 1/2 drive strength. PSoC 6: GPIO cells and HSIO_STD cells: 1/4 drive strength. GPIO drives current at 1/4 of its max rated spec."]
     #[inline(always)]
     pub fn drive_sel_two(self) -> &'a mut W {
         self.variant(DRIVE_SEL0_A::DRIVE_SEL_TWO)
     }
-    #[doc = "S40E GPIO_STD/GPIO_ENH: 1/4 drive strength: GPIO drives current at 1/4 of its max rated spec. S40E_GPIO_SMC: GPIO 1/4 drive strength. S40E_HSIO_STD: GPIO 1/4 drive strength. S40S GPIO cells and HSIO_STD cells: 1/8 drive strength. GPIO drives current at 1/8 of its max rated spec."]
+    #[doc = "Traveo II: GPIO_STD/GPIO_ENH: 1/4 drive strength: GPIO drives current at 1/4 of its max rated spec. Traveo II:_GPIO_SMC: GPIO 1/4 drive strength. Traveo II:_HSIO_STD: GPIO 1/4 drive strength. PSoC 6: GPIO cells and HSIO_STD cells: 1/8 drive strength. GPIO drives current at 1/8 of its max rated spec."]
     #[inline(always)]
     pub fn drive_sel_three(self) -> &'a mut W {
         self.variant(DRIVE_SEL0_A::DRIVE_SEL_THREE)
@@ -214,7 +214,7 @@ impl R {
     pub fn slow7(&self) -> SLOW7_R {
         SLOW7_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bits 16:17 - Sets the GPIO drive strength for IO pin 0"]
+    #[doc = "Bits 16:17 - Documentation: Note: DRIVE_SELx are used among GPIO cells and HSIO_STD but the encoding values may differ as shown on the right side of this table"]
     #[inline(always)]
     pub fn drive_sel0(&self) -> DRIVE_SEL0_R {
         DRIVE_SEL0_R::new(((self.bits >> 16) & 3) as u8)
@@ -304,7 +304,7 @@ impl W {
     pub fn slow7(&mut self) -> SLOW7_W<7> {
         SLOW7_W::new(self)
     }
-    #[doc = "Bits 16:17 - Sets the GPIO drive strength for IO pin 0"]
+    #[doc = "Bits 16:17 - Documentation: Note: DRIVE_SELx are used among GPIO cells and HSIO_STD but the encoding values may differ as shown on the right side of this table"]
     #[inline(always)]
     #[must_use]
     pub fn drive_sel0(&mut self) -> DRIVE_SEL0_W<16> {

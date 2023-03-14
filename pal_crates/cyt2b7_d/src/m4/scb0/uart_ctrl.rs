@@ -34,9 +34,9 @@ impl From<crate::W<UART_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `LOOPBACK` reader - Local loopback control (does NOT affect the information on the pins). When '0', the transmitter TX line 'uart_tx_out' is connected to the TX pin and the receiver RX line 'uart_rx_in' is connected to the RX pin. When '1', the transmitter TX line 'uart_tx_out' is connected to the receiver RX line 'uart_rx_in'. A similar connections scheme is followed for 'uart_rts_out' and 'uart_cts_in'. This allows a SCB UART transmitter to communicate with its receiver counterpart."]
+#[doc = "Field `LOOPBACK` reader - Local loopback control (does NOT affect the information on the pins). 0: Loopback is not enabled 1: UART_TX is connected to UART_RX. UART_RTS is connected to UART_CTS. This allows a SCB UART transmitter to communicate with its receiver counterpart."]
 pub type LOOPBACK_R = crate::BitReader<bool>;
-#[doc = "Field `LOOPBACK` writer - Local loopback control (does NOT affect the information on the pins). When '0', the transmitter TX line 'uart_tx_out' is connected to the TX pin and the receiver RX line 'uart_rx_in' is connected to the RX pin. When '1', the transmitter TX line 'uart_tx_out' is connected to the receiver RX line 'uart_rx_in'. A similar connections scheme is followed for 'uart_rts_out' and 'uart_cts_in'. This allows a SCB UART transmitter to communicate with its receiver counterpart."]
+#[doc = "Field `LOOPBACK` writer - Local loopback control (does NOT affect the information on the pins). 0: Loopback is not enabled 1: UART_TX is connected to UART_RX. UART_RTS is connected to UART_CTS. This allows a SCB UART transmitter to communicate with its receiver counterpart."]
 pub type LOOPBACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, UART_CTRL_SPEC, bool, O>;
 #[doc = "Field `MODE` reader - N/A"]
 pub type MODE_R = crate::FieldReader<u8, MODE_A>;
@@ -48,7 +48,7 @@ pub enum MODE_A {
     UART_STD = 0,
     #[doc = "1: SmartCard (ISO7816) submode. Support for negative acknowledgement (NACK) on the receiver side and retransmission on the transmitter side."]
     UART_SMARTCARD = 1,
-    #[doc = "2: Infrared Data Association (IrDA) submode. Return to Zero modulation scheme."]
+    #[doc = "2: Infrared Data Association (IrDA) submode. Return to Zero modulation scheme. In this mode, the oversampling factor should be 16, that is OVS should be set to 15."]
     UART_IRDA = 2,
 }
 impl From<MODE_A> for u8 {
@@ -97,14 +97,14 @@ impl<'a, const O: u8> MODE_W<'a, O> {
     pub fn uart_smartcard(self) -> &'a mut W {
         self.variant(MODE_A::UART_SMARTCARD)
     }
-    #[doc = "Infrared Data Association (IrDA) submode. Return to Zero modulation scheme."]
+    #[doc = "Infrared Data Association (IrDA) submode. Return to Zero modulation scheme. In this mode, the oversampling factor should be 16, that is OVS should be set to 15."]
     #[inline(always)]
     pub fn uart_irda(self) -> &'a mut W {
         self.variant(MODE_A::UART_IRDA)
     }
 }
 impl R {
-    #[doc = "Bit 16 - Local loopback control (does NOT affect the information on the pins). When '0', the transmitter TX line 'uart_tx_out' is connected to the TX pin and the receiver RX line 'uart_rx_in' is connected to the RX pin. When '1', the transmitter TX line 'uart_tx_out' is connected to the receiver RX line 'uart_rx_in'. A similar connections scheme is followed for 'uart_rts_out' and 'uart_cts_in'. This allows a SCB UART transmitter to communicate with its receiver counterpart."]
+    #[doc = "Bit 16 - Local loopback control (does NOT affect the information on the pins). 0: Loopback is not enabled 1: UART_TX is connected to UART_RX. UART_RTS is connected to UART_CTS. This allows a SCB UART transmitter to communicate with its receiver counterpart."]
     #[inline(always)]
     pub fn loopback(&self) -> LOOPBACK_R {
         LOOPBACK_R::new(((self.bits >> 16) & 1) != 0)
@@ -116,7 +116,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 16 - Local loopback control (does NOT affect the information on the pins). When '0', the transmitter TX line 'uart_tx_out' is connected to the TX pin and the receiver RX line 'uart_rx_in' is connected to the RX pin. When '1', the transmitter TX line 'uart_tx_out' is connected to the receiver RX line 'uart_rx_in'. A similar connections scheme is followed for 'uart_rts_out' and 'uart_cts_in'. This allows a SCB UART transmitter to communicate with its receiver counterpart."]
+    #[doc = "Bit 16 - Local loopback control (does NOT affect the information on the pins). 0: Loopback is not enabled 1: UART_TX is connected to UART_RX. UART_RTS is connected to UART_CTS. This allows a SCB UART transmitter to communicate with its receiver counterpart."]
     #[inline(always)]
     #[must_use]
     pub fn loopback(&mut self) -> LOOPBACK_W<16> {

@@ -54,9 +54,9 @@ pub type OVERFLOW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RX_SPEC, b
 pub type UNDERFLOW_R = crate::BitReader<bool>;
 #[doc = "Field `UNDERFLOW` writer - Attempt to read from an empty RX FIFO. Only used in FIFO mode."]
 pub type UNDERFLOW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RX_SPEC, bool, O>;
-#[doc = "Field `BLOCKED` reader - AHB-Lite read transfer can not get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
+#[doc = "Field `BLOCKED` reader - SW cannot get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
 pub type BLOCKED_R = crate::BitReader<bool>;
-#[doc = "Field `BLOCKED` writer - AHB-Lite read transfer can not get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
+#[doc = "Field `BLOCKED` writer - SW cannot get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
 pub type BLOCKED_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTR_RX_SPEC, bool, O>;
 #[doc = "Field `FRAME_ERROR` reader - Frame error in received data frame. Set to '1', when event is detected. Write with '1' to clear bit. This can be either a start or stop bit(s) error: Start bit error: after the detection of the beginning of a start bit period (RX line changes from '1' to '0'), the middle of the start bit period is sampled erroneously (RX line is '1'). Note: a start bit error is detected BEFORE a data frame is received. Stop bit error: the RX line is sampled as '0', but a '1' was expected. Note: a stop bit error may result in failure to receive successive data frame(s). Note: a stop bit error is detected AFTER a data frame is received. A stop bit error is detected after a data frame is received, and the UART_RX_CTL.DROP_ON_FRAME_ERROR field specifies whether the received frame is dropped or send to the RX FIFO. If UART_RX_CTL.DROP_ON_FRAME_ERROR is '1', the received data frame is dropped. If UART_RX_CTL.DROP_ON_FRAME_ERROR is '0', the received data frame is send to the RX FIFO. Note that Firmware can only identify the erroneous data frame in the RX FIFO if it is fast enough to read the data frame before the hardware writes a next data frame into the RX FIFO; i.e. the RX FIFO does not have error flags to tag erroneous data frames."]
 pub type FRAME_ERROR_R = crate::BitReader<bool>;
@@ -100,7 +100,7 @@ impl R {
     pub fn underflow(&self) -> UNDERFLOW_R {
         UNDERFLOW_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - AHB-Lite read transfer can not get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
+    #[doc = "Bit 7 - SW cannot get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
     #[inline(always)]
     pub fn blocked(&self) -> BLOCKED_R {
         BLOCKED_R::new(((self.bits >> 7) & 1) != 0)
@@ -157,7 +157,7 @@ impl W {
     pub fn underflow(&mut self) -> UNDERFLOW_W<6> {
         UNDERFLOW_W::new(self)
     }
-    #[doc = "Bit 7 - AHB-Lite read transfer can not get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
+    #[doc = "Bit 7 - SW cannot get access to the EZ memory (EZ_DATA accesses), due to an externally clocked EZ access. This may happen when STATUS.EC_BUSY is '1'."]
     #[inline(always)]
     #[must_use]
     pub fn blocked(&mut self) -> BLOCKED_W<7> {

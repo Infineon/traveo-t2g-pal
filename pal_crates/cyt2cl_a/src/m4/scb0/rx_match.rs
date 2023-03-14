@@ -38,9 +38,9 @@ impl From<crate::W<RX_MATCH_SPEC>> for W {
 pub type ADDR_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADDR` writer - Slave device address. In UART multi-processor mode, all 8 bits are used. In I2C slave mode, only bits 7 down to 1 are used. This reflects the organization of the first transmitted byte in a I2C transfer: the first 7 bits represent the address of the addressed slave, and the last 1 bit is a read/write indicator ('0': write, '1': read)."]
 pub type ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_MATCH_SPEC, u8, u8, 8, O>;
-#[doc = "Field `MASK` reader - Slave device address mask. This field is a mask that specifies which of the ADDR field bits in the ADDR field take part in the matching of the slave address: MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK))."]
+#[doc = "Field `MASK` reader - Slave device address mask. This field is a mask that specifies which of the slave address bits take part in the matching. MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK))."]
 pub type MASK_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `MASK` writer - Slave device address mask. This field is a mask that specifies which of the ADDR field bits in the ADDR field take part in the matching of the slave address: MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK))."]
+#[doc = "Field `MASK` writer - Slave device address mask. This field is a mask that specifies which of the slave address bits take part in the matching. MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK))."]
 pub type MASK_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_MATCH_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Slave device address. In UART multi-processor mode, all 8 bits are used. In I2C slave mode, only bits 7 down to 1 are used. This reflects the organization of the first transmitted byte in a I2C transfer: the first 7 bits represent the address of the addressed slave, and the last 1 bit is a read/write indicator ('0': write, '1': read)."]
@@ -48,7 +48,7 @@ impl R {
     pub fn addr(&self) -> ADDR_R {
         ADDR_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 16:23 - Slave device address mask. This field is a mask that specifies which of the ADDR field bits in the ADDR field take part in the matching of the slave address: MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK))."]
+    #[doc = "Bits 16:23 - Slave device address mask. This field is a mask that specifies which of the slave address bits take part in the matching. MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK))."]
     #[inline(always)]
     pub fn mask(&self) -> MASK_R {
         MASK_R::new(((self.bits >> 16) & 0xff) as u8)
@@ -61,7 +61,7 @@ impl W {
     pub fn addr(&mut self) -> ADDR_W<0> {
         ADDR_W::new(self)
     }
-    #[doc = "Bits 16:23 - Slave device address mask. This field is a mask that specifies which of the ADDR field bits in the ADDR field take part in the matching of the slave address: MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK))."]
+    #[doc = "Bits 16:23 - Slave device address mask. This field is a mask that specifies which of the slave address bits take part in the matching. MATCH = ((ADDR &amp; MASK) == ('slave address' &amp; MASK))."]
     #[inline(always)]
     #[must_use]
     pub fn mask(&mut self) -> MASK_W<16> {

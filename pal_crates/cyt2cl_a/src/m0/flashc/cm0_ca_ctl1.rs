@@ -40,11 +40,11 @@ pub type PWR_MODE_R = crate::FieldReader<u8, PWR_MODE_A>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum PWR_MODE_A {
-    #[doc = "0: Power OFF the CM0 cache SRAM."]
+    #[doc = "0: Power OFF the CM0 cache, no retain"]
     OFF = 0,
     #[doc = "1: Undefined"]
     RSVD = 1,
-    #[doc = "2: Put CM0 cache SRAM in retained mode."]
+    #[doc = "2: Put the CM0 cache in retained mode"]
     RETAINED = 2,
     #[doc = "3: Enable/Turn ON the CM0 cache SRAM."]
     ENABLED = 3,
@@ -92,7 +92,7 @@ impl PWR_MODE_R {
 pub type PWR_MODE_W<'a, const O: u8> =
     crate::FieldWriterSafe<'a, u32, CM0_CA_CTL1_SPEC, u8, PWR_MODE_A, 2, O>;
 impl<'a, const O: u8> PWR_MODE_W<'a, O> {
-    #[doc = "Power OFF the CM0 cache SRAM."]
+    #[doc = "Power OFF the CM0 cache, no retain"]
     #[inline(always)]
     pub fn off(self) -> &'a mut W {
         self.variant(PWR_MODE_A::OFF)
@@ -102,7 +102,7 @@ impl<'a, const O: u8> PWR_MODE_W<'a, O> {
     pub fn rsvd(self) -> &'a mut W {
         self.variant(PWR_MODE_A::RSVD)
     }
-    #[doc = "Put CM0 cache SRAM in retained mode."]
+    #[doc = "Put the CM0 cache in retained mode"]
     #[inline(always)]
     pub fn retained(self) -> &'a mut W {
         self.variant(PWR_MODE_A::RETAINED)
