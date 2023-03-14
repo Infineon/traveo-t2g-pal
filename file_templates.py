@@ -19,7 +19,7 @@ documentation = "https://docs.rs/{package_name}"
 repository = "https://github.com/Infineon/traveo-t2g-pal/{util.output_folder_name}/{package_name}"
 license-file = "LICENSE.txt"
 readme = "README.md"
-keywords = ["t2g", "{package_name}" ,"svd2rust", "no_std", "embedded", "traveo", "infineon"]
+keywords = ["cortex-m", "no_std", "traveo", "infineon"]
 categories = ["embedded", "no-std"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -66,7 +66,7 @@ documentation = "https://docs.rs/{package_name}"
 repository = "https://github.com/Infineon/traveo-t2g-pal/{util.output_folder_name}/{package_name}"
 license-file = "LICENSE.txt"
 readme = "README.md"
-keywords = ["t2g", "{package_name}" ,"svd2rust", "no_std", "embedded", "traveo", "infineon"]
+keywords = ["cortex-m", "no_std", "traveo", "infineon"]
 categories = ["embedded", "no-std"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -259,17 +259,17 @@ def get_license_text() :
     """
     text = f"""Copyright 2023 Infineon Technologies AG
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), 
-to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”),
+to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
 and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT 
-SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 """
