@@ -1,6 +1,7 @@
 # Peripheral access crate for T2G cyt2bl 
 
 Revision = rev_a
+
 svd version =  1.0.0
 ## Using device crate in your project
 

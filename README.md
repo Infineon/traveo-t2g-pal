@@ -47,3 +47,9 @@ Execution command e.g: *poetry run  python.exe generate_svd_crates.py --generate
 
 *config_input.ini* file where new version of crates can be added
 *config_output.ini* file has the up-to-date version of crates after running the script.
+
+### License
+
+crates and t2g_pal_generator are released under [LICENSE.txt](../LICENSE.txt)
+
+svd files of t2g_pal_generator are released under [LICENSE-SVD.txt](../LICENSE-SVD.txt)

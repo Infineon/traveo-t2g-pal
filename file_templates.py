@@ -16,7 +16,7 @@ edition = "2021"
 rust-version = "1.64"
 description = "Peripheral access crate for {package_name} T2G family"
 documentation = "https://docs.rs/{package_name}"
-repository = "https://github.com/Infineon/traveo-t2g-pal/{util.output_folder_name}/{package_name}"
+repository = "https://github.com/Infineon/traveo-t2g-pal/tree/develop/{util.output_folder_name}/{package_name}"
 license-file = "LICENSE.txt"
 readme = "README.md"
 keywords = ["cortex-m", "no_std", "traveo", "infineon"]
@@ -63,7 +63,7 @@ edition = "2021"
 rust-version = "1.64"
 description = "Peripheral access crate for {package_name} T2G family"
 documentation = "https://docs.rs/{package_name}"
-repository = "https://github.com/Infineon/traveo-t2g-pal/{util.output_folder_name}/{package_name}"
+repository = "https://github.com/Infineon/traveo-t2g-pal/tree/develop/{util.output_folder_name}/{package_name}"
 license-file = "LICENSE.txt"
 readme = "README.md"
 keywords = ["cortex-m", "no_std", "traveo", "infineon"]
@@ -222,6 +222,7 @@ def get_package_readme_text(package_name, package_details):
     text = f"""# Peripheral access crate for T2G {package_details["device"]} \n\n"""
 
     text += f"""Revision = rev_{package_details["rev"]}
+
 svd version =  {package_details["svd_version"]}\n"""
 
     text += f"""## Using device crate in your project
