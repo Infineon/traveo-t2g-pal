@@ -1,0 +1,31 @@
+[package]
+name = "cyt4dn_b"
+version = "0.0.1"
+authors = ["Infineon developers"]
+edition = "2021"
+rust-version = "1.64"
+description = "Peripheral access crate for cyt4dn_b T2G family"
+documentation = "https://docs.rs/cyt4dn_b"
+repository = "https://github.com/Infineon/traveo-t2g-pal/tree/develop/pal_crates/cyt4dn_b"
+license-file = "LICENSE.txt"
+readme = "README.md"
+keywords = ["cortex-m", "no_std", "traveo", "infineon"]
+categories = ["embedded", "no-std"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+critical-section = { version = "1.0", optional = true }
+cortex-m = "0.7.6"
+vcell = "0.1.2"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.7"
+
+[features]
+rt = ["cortex-m-rt/device"]
+
+[package.metadata.docs.rs]
+targets = ["thumbv6m-none-eabi" , "thumbv7em-none-eabihf"] 
+features = ["rt","critical-section"]
