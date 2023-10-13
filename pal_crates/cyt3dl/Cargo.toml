@@ -1,0 +1,34 @@
+[package]
+name = "cyt3dl"
+version = "0.0.1"
+authors = ["Infineon developers"]
+edition = "2021"
+rust-version = "1.64"
+description = "Peripheral access crate for cyt3dl T2G family"
+documentation = "https://docs.rs/cyt3dl"
+repository = "https://github.com/Infineon/traveo-t2g-pal/tree/develop/pal_crates/cyt3dl"
+license-file = "LICENSE.txt"
+readme = "README.md"
+keywords = ["cortex-m", "no_std", "traveo", "infineon"]
+categories = ["embedded", "no-std"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies] 
+cyt3dl_a = {version = "0.0.1",optional = true}
+
+cyt3dl_b = {version = "0.0.1",optional = true}
+
+cyt3dl_c = {version = "0.0.1",optional = true}
+
+[features]
+default = ["rev_c"]
+rev_a = ["cyt3dl_a"]
+rev_b = ["cyt3dl_b"]
+rev_c = ["cyt3dl_c"]
+rt = ["cyt3dl_a?/rt","cyt3dl_b?/rt","cyt3dl_c?/rt"]
+critical-section = ["cyt3dl_a?/critical-section","cyt3dl_b?/critical-section","cyt3dl_c?/critical-section"]
+
+[package.metadata.docs.rs]
+targets = ["thumbv6m-none-eabi","thumbv7em-none-eabihf"]
+features = ["rt","critical-section","rev_a","rev_b","rev_c"]

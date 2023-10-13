@@ -1,0 +1,28 @@
+[package]
+name = "cyt6bj"
+version = "0.0.1"
+authors = ["Infineon developers"]
+edition = "2021"
+rust-version = "1.64"
+description = "Peripheral access crate for cyt6bj T2G family"
+documentation = "https://docs.rs/cyt6bj"
+repository = "https://github.com/Infineon/traveo-t2g-pal/tree/develop/pal_crates/cyt6bj"
+license-file = "LICENSE.txt"
+readme = "README.md"
+keywords = ["cortex-m", "no_std", "traveo", "infineon"]
+categories = ["embedded", "no-std"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies] 
+cyt6bj_a = {version = "0.0.1",optional = true}
+
+[features]
+default = ["rev_a"]
+rev_a = ["cyt6bj_a"]
+rt = ["cyt6bj_a?/rt"]
+critical-section = ["cyt6bj_a?/critical-section"]
+
+[package.metadata.docs.rs]
+targets = ["thumbv6m-none-eabi","thumbv7em-none-eabihf"]
+features = ["rt","critical-section","rev_a"]
